@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<style type="text/css">
+			/*分组选择器*/
+			.labelList1
+			.label1, .label2{
+				color: orange;
+			}
+		</style>
+		<div class="labelList1">
+			<label class="label1">label</label>
+			<label class="label2">label</label>
+		</div>
+		<div class="labelList2">
+			<label class="label1">label</label>
+			<label class="label2">label</label>
+		</div>
+		
+		
+		<style type="text/css">
+			/*伪类选择符*/
+			/*结构性伪类选择符*/
+			/*E:nth-child(n)和E:nth-of-type(n)的区别
+			 * 要使该属性生效，E元素必须是某个元素的子元素。
+			 * 该选择符允许使用一个乘法因子(n)来作为换算方式，比如我们想选中所有的偶数子元素E，那么选择符可以写成：E:nth-child(2n)
+			 * nth-child当某一个元素下面的第n个子元素符合E的条件，才起作用
+			 * nth-of-type当某一个元素下面的符合E的条件的第n个子元素，才起作用
+			 */
+			
+			
+			/*伪对象选择符*/
+			/*:after ::after这两种写法是等效的，是css3为了区别伪类选择符*/
+			.style1::first-letter{/*第一个字符*/
+				float:left;
+				font-size:2em;
+				font-weight:bold;
+				line-height:1;
+			}
+			.style1::first-line{/*第一行*/
+				color:#090;
+			}
+			.style1::selection{/*被选中的文字*/
+				background-color: orange;
+				color: red;
+			}
+			.style1::before{/*插入到元素的内部，其他内容之前*/
+				background:#fff;
+				color:#000;
+				content:"插入在前面";
+				font-size:14px;
+			}
+			.style1::after{/*插入到元素的内部，其他内容之后*/
+				background:#fff;
+				color:#000;
+				content:"插入在后面";
+				font-size:14px;
+			}
+			/*修改placeholder文本的样式*/
+			input::-webkit-input-placeholder {
+				color: green;
+			}
+			input:-ms-input-placeholder { // IE10+
+				color: green;
+			}
+			input:-moz-placeholder { // Firefox4-18
+				color: green;
+			}
+			input::-moz-placeholder { // Firefox19+
+				color: green;
+			}
+		</style>
+		<p class="style1">
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+			演示伪对象选择符的各种效果。
+		</p>
+		<input id="test" placeholder="Placeholder text!">
+		
+		
+	</body>
+</html>

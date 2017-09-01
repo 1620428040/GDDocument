@@ -1,0 +1,12 @@
+body{
+	/*禁止用户选择文字*/
+	-moz-user-select: -moz-none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.form-group .selected{
+	background-color: #00A0FF;
+	color: white;
+}

@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>QUnit Test Suite</title>
+        <link rel="stylesheet" href="http://cdn.bootcss.com/qunit/2.1.1/qunit.css" type="text/css" media="screen">
+        <script type="text/javascript" src="http://cdn.bootcss.com/qunit/2.1.1/qunit.js"></script>
+        
+        <script src="../../../framework/jQuery/jquery/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="../js/function.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="../js/DataMagic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			QUnit.module("自定义表格/列表 model层");
+			
+			var host="http://192.168.1.3:81/bgmobile/SeparateModule/DataMagic2.php";
+			var data0={
+				begin_time: "656574",
+				duty_content: "自动化测试功能",
+				duty_data: "1458144000",
+				duty_name: "济南市财政局",
+				duty_userid: "ID_NccosUser_118",
+				duty_username: "李晓非",
+				end_time: "565675",
+				file: "0",
+				file_name: "ytjtyjt",
+				inputuserid: "45",
+				inputusername: "jytj",
+				visitor: "0",
+				visitor_name: "jtyjyt"
+			}
+			
+			var model,data1,index,insertedID=[];
+			
+//			QUnit.test("暂停一段时间", function(assert){
+//				var done = assert.async();
+//				setTimeout(function(){
+//					assert.ok(true,"暂停一段时间");
+//					done();
+//				},1000);
+//			});
+			
+			QUnit.test("创建model", function(assert){
+				var done = assert.async();
+			    model=new DataMagic.Model("duty",sessionStorage,host);
+				model.downloadMeta(function(result){
+					console.log(model);
+					assert.ok(model.meta,"创建model");
+					done();
+				});
+			});
+			
+			var insertTest=function(assert){
+				var done = assert.async();
+				model.insert(data0,function(result){
+					assert.ok(result.id,"插入成功，ID："+result.id);
+					model.search({id:result.id},function(data){
+						assert.ok(data,"确认插入成功，ID："+result.id);
+						insertedID.push(result.id);
+						done();
+					});
+				});
+			};
+			QUnit.test("插入新数据", insertTest);
+			QUnit.test("插入新数据2", insertTest);
+			QUnit.test("插入新数据3", insertTest);
+			
+			QUnit.test("修改最新的一条数据", function(assert){
+				var done = assert.async();
+				var latest=model.data.length-1;
+				data1=model.data[latest];
+				data1.duty_content="修改过后的内容";
+				model.update(latest,data1,function(result){
+					assert.deepEqual(result,data1,"修改成功，ID："+result.id);
+					model.search({id:result.id},function(data){
+						assert.deepEqual(data[0],data1,"确认修改成功，ID："+result.id);
+						done();
+					});
+				});
+			});
+			
+			QUnit.test("删除一条数据", function(assert){
+				var done = assert.async();
+				model.search({},function(data){
+					var latest=model.data.length-1;
+					model.delete([latest],function(result){
+						assert.ok(result,"删除成功，ID："+result);
+						model.search({id:result[0]},function(data){
+							assert.ok(data.length===0,"确认删除成功");
+							done();
+						});
+					});
+				});
+			});
+			
+			QUnit.test("删除两条数据", function(assert){
+				var done = assert.async();
+				model.search({},function(data){
+					var latest=model.data.length-1;
+					model.delete([latest-1,latest],function(result){
+						assert.ok(result,"删除成功，ID："+result);
+						model.search({id:result[0]},function(data){
+							assert.ok(data.length===0,"确认删除成功");
+							done();
+						});
+					});
+				});
+			});
+			
+			QUnit.test("单条件搜索", function(assert){
+				var done = assert.async();
+				model.search({duty_content: "werew"},function(data){
+					console.log(data);
+					assert.ok(data,"搜索成功，共搜索到"+data.length+"条数据");
+					done();
+				})
+			});
+			
+			QUnit.test("多条件搜索", function(assert){
+				var done = assert.async();
+				model.search({duty_content: "自动化测试",duty_name: "济南市财政局",duty_username: "李"},function(data){
+					console.log(data);
+					assert.ok(data,"搜索成功，共搜索到"+data.length+"条数据");
+					done();
+				})
+			});
+			
+			QUnit.test("条件搜索,null", function(assert){
+				var done = assert.async();
+				model.search(null,function(data){
+					console.log(data);
+					assert.ok(data,"搜索成功，共搜索到"+data.length+"条数据");
+					done();
+				})
+			});
+			
+			QUnit.test("条件搜索,{}", function(assert){
+				var done = assert.async();
+				model.search({},function(data){
+					console.log(data);
+					assert.ok(data,"搜索成功，共搜索到"+data.length+"条数据");
+					done();
+				})
+			});
+			
+		</script>
+    </head>
+    <body>
+        <h1 id="qunit-header">QUnit Test Suite</h1>
+        <h2 id="qunit-banner"></h2>
+        <div id="qunit-testrunner-toolbar"></div>
+        <h2 id="qunit-userAgent"></h2>
+        <ol id="qunit-tests"></ol>
+        <div id="qunit-fixture">test markup</div>
+    </body>
+</html>

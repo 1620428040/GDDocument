@@ -1,0 +1,282 @@
+矩阵		Matrix
+四元数	Quaternion
+投影		Projection
+欧拉角	Euler
+旋转轴	Axis
+角度		Angle
+向量		Vector
+顶点		vertex/vertices
+
+
+类名：Vector3
+作用：用来描述一个三维向量，也可以用来表示一个点
+
+类名：Object3D
+作用：用来描述一个三维物体。THREE中的三维物体，都是基于Object3D类或其子类创建的
+子类：Camera、Light、Line、Mesh、Bone
+重要属性：
+geometry  Geometry  几何性质
+material  Material  材质
+matrix、quaternion用来描述物体当前的旋转、缩放、位移等信息，可以相互转换
+
+类名：Geometry
+作用：用来描述物体的几何性质
+子类：CubeGeometry、BoxGeometry
+重要属性：
+vertices  THREE.Vector3[]  顶点数组
+faces  THREE.Face3[]  面数组
+注意事项:
+基于性能的原因，改变几何体(Geometry)的某些属性不会引起浏览器对几何体(Geometry)的重新绘制。
+比如改变顶点后需要调用geometry.verticesNeedUpdate=true
+
+类名：Material
+作用：用来描述物体的表面材质，会影响对光线的反射、散射等
+子类：MeshBasicMaterial
+重要属性：
+map  Texture  纹理/贴图
+
+
+类之间的继承关系
+1.Ray、Sphere、Frustum、Plane等类的名字，看起来是某种物体的形状。但不是Object3D的子类，是不能显示在三维空间中的。他们是THREE提供的数学工具的一部分
+
+
+Projector		投影仪
+CanvasRenderer	Canvas渲染器
+Color			颜色
+	ColorKeywords	枚举常用的颜色
+Channels		颜色通道
+Clock			计时器
+EventDispatcher	事件分发器
+
+
+数学工具类
+Quaternion		四元数
+Euler			欧拉角
+Vector2			二维向量
+Vector3			三维向量
+Vector4			四维向量
+Line3			三维线段对象
+Box2			在二维空间内创建一个二维矩形边界边界对象
+Box3			
+Matrix3			三阶矩阵
+Matrix4			四阶矩阵
+Ray				射线
+Sphere			球体
+Frustum			截头锥体/棱台
+Plane			平面
+Math			处理数学问题的函数
+Spline			曲线
+Triangle		三角形
+
+Face3			三角面
+Face4			四角面
+
+
+Object3D		三维物体，所有可以在三维空间中创建，移动，变换的对象的基类
+	Object3DIdCount	三维物体总数
+	Camera			摄像头
+	Light			光源
+	Line			直线
+	Mesh			网格结构
+	Bone			骨骼
+
+
+BufferAttribute	用来存储于bufferGeometry相关联的属性数据
+	其他以Attribute或Buffer为结尾的类，不知道是做什么的
+Geometry		几何体
+	GeometryIdCount	几何体总数
+	除了DirectGeometry、BufferGeometry、InstancedBufferGeometry其他以Geometry结尾的类继承此类
+DirectGeometry	
+BufferGeometry	带缓存的几何体
+InstancedBufferGeometry
+KeyframeTrack	关键帧
+	其他以KeyframeTrack结尾的类继承此类
+Loader			加载器
+Material		材质
+Texture			纹理
+
+
+
+
+
+Projector
+CanvasRenderer
+Color
+Quaternion
+Vector2
+Vector3
+Vector4
+Euler
+Line3
+Box2
+Box3
+Matrix3
+Matrix4
+Ray
+Sphere
+Frustum
+Plane
+Spline
+Triangle
+Channels
+Clock
+EventDispatcher
+Raycaster
+Object3D
+    Camera
+        OrthographicCamera
+        PerspectiveCamera
+    CubeCamera
+    Light
+        AmbientLight
+        DirectionalLight
+        HemisphereLight
+        PointLight
+        SpotLight
+    Group
+    Points
+    Line
+        LineSegments
+            AxisHelper
+            BoxHelper
+            CameraHelper
+            EdgesHelper
+            FaceNormalsHelper
+            GridHelper
+            SkeletonHelper
+            VertexNormalsHelper
+            WireframeHelper
+    Mesh
+        SkinnedMesh
+        BoundingBoxHelper
+        PointLightHelper
+        MorphBlendMesh
+    Bone
+    LOD
+    LensFlare
+    Scene
+    Audio
+    AudioListener
+    DirectionalLightHelper
+    HemisphereLightHelper
+    SpotLightHelper
+    ImmediateRenderObject
+Face3
+Face4
+BufferAttribute
+    InstancedBufferAttribute
+Int8Attribute
+Uint8Attribute
+Uint8ClampedAttribute
+Int16Attribute
+Uint16Attribute
+Int32Attribute
+Uint32Attribute
+Float32Attribute
+Float64Attribute
+DynamicBufferAttribute
+InterleavedBuffer
+    InstancedInterleavedBuffer
+InterleavedBufferAttribute
+Geometry
+    BoxGeometry
+    CircleGeometry
+    CylinderGeometry
+    ExtrudeGeometry
+    ShapeGeometry
+    LatheGeometry
+    PlaneGeometry
+    RingGeometry
+    SphereGeometry
+    TorusGeometry
+    TorusKnotGeometry
+    TubeGeometry
+    PolyhedronGeometry
+        DodecahedronGeometry
+        IcosahedronGeometry
+        OctahedronGeometry
+        TetrahedronGeometry
+    ParametricGeometry
+DirectGeometry
+BufferGeometry
+    InstancedBufferGeometry
+    CircleBufferGeometry
+    EdgesGeometry
+    PlaneBufferGeometry
+    SphereBufferGeometry
+    WireframeGeometry
+AnimationAction
+AnimationClip
+AnimationMixer
+KeyframeTrack
+    VectorKeyframeTrack
+    QuaternionKeyframeTrack
+    StringKeyframeTrack
+    BooleanKeyframeTrack
+    NumberKeyframeTrack
+PropertyBinding
+LightShadow
+Loader
+XHRLoader
+ImageLoader
+JSONLoader
+LoadingManager
+BufferGeometryLoader
+MaterialLoader
+ObjectLoader
+TextureLoader
+CubeTextureLoader
+BinaryTextureLoader
+CompressedTextureLoader
+Material
+    LineBasicMaterial
+    LineDashedMaterial
+    MeshBasicMaterial
+    MeshLambertMaterial
+    MeshPhongMaterial
+    MeshDepthMaterial
+    MeshNormalMaterial
+    PointsMaterial
+    ShaderMaterial
+        RawShaderMaterial
+    SpriteMaterial
+MultiMaterial
+PointCloudMaterial
+ParticleBasicMaterial
+ParticleSystemMaterial
+Texture
+    CanvasTexture
+    CubeTexture
+    CompressedTexture
+    DataTexture
+    VideoTexture
+PointCloud
+ParticleSystem
+Skeleton
+Fog
+FogExp2
+WebGLRenderer
+WebGLRenderTarget
+    WebGLRenderTargetCube
+WebGLBufferRenderer
+WebGLIndexedBufferRenderer
+WebGLExtensions
+WebGLCapabilities
+WebGLGeometries
+WebGLObjects
+WebGLPrograms
+WebGLProperties
+WebGLShadowMap
+WebGLState
+LensFlarePlugin
+SpritePlugin
+Curve
+    CurvePath
+        Path
+            Shape
+    LineCurve
+    QuadraticBezierCurve
+    CubicBezierCurve
+    SplineCurve
+    EllipseCurve
+        ArcCurve

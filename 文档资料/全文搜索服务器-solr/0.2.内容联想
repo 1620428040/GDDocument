@@ -1,0 +1,15 @@
+文本分析（内容联想？？？）
+文本字段通过把文本分割成单词以及运用各种转换方法（如：小写转换、复数移除、词干提取）后被索引，schema.xml文件中定义了字段在索引中，这些字段将作用于其中.
+默认情况下搜索”power-shot”是不能匹配”powershot”的，通过修改schema.xml文件(solr/example/solr/collection1/conf目录)，把features和text字段替换成”text_en_splitting”类型，就能索引到了。
+
+<field name="features" type="text_en_splitting" indexed="true" stored="true" multiValued="true"/>
+...
+<field name="text" type="text_en_splitting" indexed="true" stored="false" multiValued="true"/>
+修改完后重启solr，然后重新导入文档
+
+java -jar post.jar *.xml
+现在就可以匹配了
+
+power-shot—>Powershot
+features:recharing—>Rechargeable
+1 gigabyte –> 1G

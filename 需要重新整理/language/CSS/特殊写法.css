@@ -1,0 +1,37 @@
+/*水平居中*/
+.box
+{
+    margin: auto;
+    right: 0px;
+    left: 0px;
+    width: 300px;
+    height: 200px;
+}
+
+/*
+ * 绝对居中
+ * 在CSS样式表中这样设置，元素会被显示在父元素的中心，而且不用设定HTML，body的高度之类的
+ * 关键是要设定position: absolute;
+*/
+.box
+{
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 300px;
+    height: 200px;
+}
+/*铺满父视图*/
+.box
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: auto;
+    height: auto;
+}

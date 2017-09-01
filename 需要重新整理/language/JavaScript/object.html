@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			/*在JavaScript中，没有类的概念，取而代之的是原型prototype
+			 * 借用类的概念来解释
+			 * 建一个父类Animal，Animal.prototype是这个类的实例的原型
+			 * 实例化一个Animal的对象animal，则
+			 * 		animal.constructor=Animal//正常情况下
+			 * 		animal.__proto__=Object.getPrototypeOf(animal)=Animal.prototype
+			 * 		对象的原型一般是__proto__属性，不过在IE中直到IE11才支持。所以要查找原型，使用Object.getPrototypeOf(animal)兼容性更好
+			 * Object.create可以根据给出的原型和属性创建一个新的对象，或者将父类的原型复制到子类的原型上(IE9+)
+			 * Object.create和new的区别是。
+			 * 		Object.create不会调用构造函数。所以可以用在类继承中
+			 * 		Object.create可以直接设置属性
+			 * 		其他情况下Object.create(Animal.prototype);等效为new Animal();
+			 * 
+			 * 创建新的对象var object=Object.create(Object.prototype);
+			 * 子类继承父类。比如THREE中，Mesh类继承Object3D类是这样写的
+			 * 		在构造函数中调用父类的构造函数THREE.Object3D.call( this );
+			 * 		THREE.Mesh.prototype = Object.create( THREE.Object3D.prototype );
+			 * 注意：constructor指的是对象的构造函数，但使用上述方式，会连带着改变constructor。因为constructor定义在__proto__属性中
+			 * */
+			
+			//一个兼容性更好的类继承函数
+			//继承父类Cat.extend(Animal);
+			//在构造函数中调用父类的构造函数arguments.callee.parent.call(this);
+			//this.constructor可以获取到构造函数，不过最好不要用，因为如果这个方法被子类继承可能导致死循环
+			if(!Object.create){
+				Function.empty=function(){};
+				Function.prototype.extend=function(parent){
+					Function.empty.prototype=parent.prototype;
+					this.prototype=new Function.empty();
+					this.prototype.constructor=this;
+					this.parent=parent;
+				}
+			}
+			else{
+				Function.prototype.extend=function(parent){
+					this.prototype=Object.create(parent.prototype);
+					this.prototype.constructor=this;
+					this.parent=parent;
+				}
+			}
+			
+			//使用上面的类继承函数的例子
+			function Animal(){
+				console.log("1");
+			}
+			Animal.name="动物";
+			Animal.prototype.say=function(){
+				console.log(this.constructor.name);
+			};
+			
+			function Cat(){
+				arguments.callee.parent.call(this);
+				console.log("2");
+			}
+			Cat.extend(Animal);
+			Cat.name="猫";
+			
+			function Persian(){
+				arguments.callee.parent.call(this);
+				console.log("3");
+			}
+			Persian.extend(Cat);
+			Persian.name="波斯猫";
+			
+			function Shorthair(){
+				arguments.callee.parent.call(this);
+				console.log("4");
+			}
+			Shorthair.extend(Cat);
+			Shorthair.name="短毛猫";
+			
+			var persian=new Persian();
+			persian.say();
+			var shorthair=new Shorthair();
+			shorthair.say();
+			
+			//多次继承后constructor就不准了。因为constructor实际上定义在__proto__中
+//			var Class1=new Function();
+//			var Class2=new Function();
+//			Class2.prototype=new Class1();
+//			var object1=new Class2();
+//			console.log(object1.constructor===Class1);
+//			console.log(object1.__proto__===Class2.prototype);
+//			console.dir(object1);
+
+			/*检查对象的类型*/
+			console.log(typeof persian);//获取对象类型
+			console.log(persian instanceof Persian);//判断对象是否是某个原型的实例
+			console.log([] instanceof Array);//判断对象是否是数组
+
+//			/*创建类需要的函数*/
+//			function createClass(name,params){
+//				//	params.extend;父类
+//				//	params.construct;构造函数
+//				//	params.methods;方法
+//				//	params.statics;静态方法
+//				//	params.property;属性
+//				params=params||{};
+//				var methods=params.methods||{};
+//				var newClass=function(){
+//					this.construct(arguments);
+//				};
+//				newClass.prototype.className=name;//.className可以获取类名
+//				window[name]=newClass;
+//				methods.construct=function(){
+//					if(params.extend){
+//						arguments.callee.base.call(this,arguments);
+//					}
+//					if(params.property){
+//						for(var keyName in params.property){
+//							Object.defineProperty(this,keyName,params.property[keyName]);
+//						}
+//					}
+//					params.construct.call(this,arguments);
+//				}
+//				extendClass(newClass.prototype,methods);
+//				if(params.extend){
+//					newClass.extend=params.extend;
+//					extendClass(newClass,params.extend);
+//					extendClass(newClass.prototype,params.extend.prototype);
+//				}
+//				if(params.statics){
+//					extendClass(newClass,params.statics);
+//				}
+//				if(params.property){
+//					this.property=params.property;
+//				}
+//			}
+//			//将base中的方法添加到current中，如果已经有了，添加到.base的引用中
+//			//arguments.callee.base.call(this,...)//可以调用被重载的方法
+//			function extendClass(current,base){
+//				for(var keyName in base){
+//					if(current[keyName]==null){
+//						current[keyName]=base[keyName];
+//					}
+//					else{
+//						current[keyName].base=base[keyName];
+//					}
+//				}
+//			}
+//			/*创建类需要的函数*/
+//			
+//			
+//			//创建base类
+//			createClass("Base",{
+//				construct:function(){
+//					this.say("construct");
+//				},
+//				methods:{
+//					say:function(str){
+//						alert("base:"+str);
+//					}
+//				}
+//			});
+//			//创建object类,继承base类
+//			createClass("Object",{
+//				extend:Base,
+//				construct:function(){
+//					
+//				},
+//				methods:{
+//					say:function(str){
+//						arguments.callee.base.call(this,str);
+//						alert("oject:"+str);
+//					}
+//				}
+//			});
+//			
+//			//创建test类,继承object类
+//			createClass("Test",{
+//				extend:Object,
+//				construct:function(){
+//					
+//				},
+//				methods:{
+//					say:function(str){
+//						arguments.callee.base.call(this,str);
+//						alert("test:"+str);
+//					}
+//				}
+//			});
+//			var test=new Test();
+//			test.say("233");
+			
+			
+			/*qx框架中的方法*/
+//			function(name, F) {
+//				if(!F) {
+//					F = {};
+//				};
+//				if(F.include && !(qx.Bootstrap.getClass(F.include) === p)) {
+//					F.include = [F.include];
+//				};
+//				if(F.implement && !(qx.Bootstrap.getClass(F.implement) === p)) {
+//					F.implement = [F.implement];
+//				};
+//				var C = false;
+//				if(!F.hasOwnProperty(f) && !F.type) {
+//					F.type = q;
+//					C = true;
+//				}; {};
+//				var D = this.__P(name, F.type, F.extend, F.statics, F.construct, F.destruct, F.include);
+//				if(F.extend) {
+//					if(F.properties) {
+//						this.__R(D, F.properties, true);
+//					};
+//					if(F.members) {
+//						this.__T(D, F.members, true, true, false);
+//					};
+//					if(F.events) {
+//						this.__Q(D, F.events, true);
+//					};
+//					if(F.include) {
+//						for(var i = 0, l = F.include.length; i <
+//							l; i++) {
+//							this.__X(D, F.include[i], false);
+//						};
+//					};
+//				} else if(F.hasOwnProperty(o) && false) {
+//					throw new Error(w);
+//				};
+//				if(F.environment) {
+//					for(var E in F.environment) {
+//						qx.core.Environment.add(E, F.environment[E]);
+//					};
+//				};
+//				if(F.implement) {
+//					for(var i = 0, l = F.implement.length; i < l; i++) {
+//						this.__V(D, F.implement[i]);
+//					};
+//				}; {};
+//				if(F.defer) {
+//					F.defer.self = D;
+//					F.defer(D, D.prototype, {
+//						add: function(name, G) {
+//							var H = {};
+//							H[name] = G;
+//							qx.Class.__R(D, H, true);
+//						}
+//					});
+//				};
+//				return D;
+//			}
+		</script>
+	</body>
+</html>

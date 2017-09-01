@@ -1,0 +1,65 @@
+{
+	"describe": "\u65b0\u95fb",
+	"bindTable": "oa_news",
+	"primaryFields": "id",
+	"feature": [
+		"browse",
+		"insert",
+		"delete",
+		"update",
+		"search",
+		"refresh"
+	],
+	"urls": [],
+	"fieldList": {
+		"id": {
+			"title": "\u7f16\u53f7",
+			"type": "number"
+		},
+		"title": {
+			"title": "\u6807\u9898",
+			"notNull": "1"
+		},
+		"content": {
+			"title": "\u5185\u5bb9",
+			"notNull": "1"
+		},
+		"type": {
+			"title": "\u65b0\u95fb\u7c7b\u578b",
+			"type": "selector",
+			"valueRange": "1,\u5185\u90e8;0,\u5916\u90e8",
+			"defaultValue": "1",
+			"describe": "",
+			"notNull": "1",
+			"params": {
+				"isMulti": false,
+				"returnType": "number"
+			}
+		},
+		"add_time": {
+			"title": "\u6dfb\u52a0\u65f6\u95f4",
+			"type": "date",
+			"notNull": "1"
+		},
+		"tag": {
+			"title": "\u53d1\u5e03\u6216\u672a\u53d1\u5e03",
+			"type": "selector",
+			"valueRange": "1,\u53d1\u5e03;0,\u672a\u53d1\u5e03",
+			"defaultValue": "0",
+			"describe": "",
+			"notNull": "1",
+			"params": {
+				"isMulti": false,
+				"returnType": "number"
+			}
+		},
+		"userid": {
+			"title": "\u53d1\u5e03\u4ebaid",
+			"notNull": "1"
+		},
+		"username": {
+			"title": "\u53d1\u5e03\u4eba\u59d3\u540d",
+			"notNull": "1"
+		}
+	}
+}

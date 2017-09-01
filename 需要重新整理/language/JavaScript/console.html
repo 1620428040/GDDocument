@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//通过JavaScript控制台实现一些功能
+			//参考链接：
+			//http://www.open-open.com/lib/view/open1421131601390.html	Chrome 控制台console的用法
+			//http://www.jb51.net/article/56504.htm	js调试工具Console命令详解
+			console.log('hello');
+			console.info('信息');
+			console.error('错误');
+			console.warn('警告');
+			console.debug('debug');
+			console.table([{"name":"张三","age":"23"},{"name":"李四","age":"18"}]);
+			//console支持printf的占位符格式，支持的占位符有：字符（%s）、整数（%d或%i）、浮点数（%f）和对象（%o）%c文本格式
+			console.log("%d年%d月%d日",2011,3,26);
+			
+			//清空
+			console.clear();
+			
+			//只能在控制台中用的
+			//keys({"name":"张三","age":"23"});
+			//values({"name":"张三","age":"23"});
+			//copy();//将内容复制到剪切板
+			//monitor(funcName);//监听一个函数的执行
+			//unmonitor(funcName);
+			
+			//消息分组
+			console.group("第一组信息");
+			console.log("第一组第一条:我的XX(http://www.jb51.net)");
+			console.log("第一组第二条:xxx(http://jb51.net)");
+				console.group("第二组信息");
+				console.log("第二组第一条:程序爱好者QQ群： 80535344");
+				console.log("第二组第二条:欢迎你加入");
+				console.groupEnd();
+			console.groupEnd();
+			console.group("第二组信息");
+			console.log("第二组第一条:程序爱好者QQ群： 80535344");
+			console.log("第二组第二条:欢迎你加入");
+			console.groupEnd();
+			
+			//显示一个对象所有的属性和方法。
+			var info = {
+				blog:"http://www.jb51.net",
+				QQGroup:80535344,
+				message:"程序爱好者欢迎你的加入"
+			};
+			console.dir(info);
+			
+			//显示网页的某个节点（node）所包含的html/xml代码。
+			var info = document.getElementById('info');
+			console.dirxml(info);
+			
+			//断言，如果断言失败则输出相应的信息
+			var result = 1;
+			console.assert( result );
+			var year = 2014;
+			console.assert(year == 2018);
+			
+			//追踪函数的调用轨迹，堆栈
+			function add(a,b){
+				console.trace();
+				return a+b;
+			}
+			var x = add3(1,1);
+			function add3(a,b){return add2(a,b);}
+			function add2(a,b){return add1(a,b);}
+			function add1(a,b){return add(a,b);}
+			
+			//计时器
+			console.time("控制台计时器一");
+			for(var i=0;i<1000;i++){
+				for(var j=0;j<1000;j++){}
+			}
+			console.timeEnd("控制台计时器一");
+			
+			//性能分析,执行之后可以在控制台的性能分析页面看到
+			function All() {
+				//alert(11);　　　　
+				for(var i = 0; i < 10; i++) {
+					funcA(1000);
+				}
+				funcB(10000);　　
+			}
+			function funcA(count) {　　　　
+				for(var i = 0; i < count; i++) {}　　
+			}
+			function funcB(count) {　　　　
+				for(var i = 0; i < count; i++) {}　　
+			}
+			console.profile('性能分析器');　　
+			All();
+			console.profileEnd();
+			
+			//带格式的文字
+			console.log('%cRainbow Text ', 'background-image:-webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );color:transparent;-webkit-background-clip: text;font-size:5em;');
+			
+			//修改log函数
+			var format='background-image:-webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );color:transparent;-webkit-background-clip: text;font-size:5em;'
+			var _log=console.log;
+			console.log=function(){
+				_log.call(console,"%c"+[].slice.call(arguments).join(' '),format);
+			}
+			console.log("修改log函数");
+			
+			//禁用console控制台
+			var _console=console;
+			console=null;
+			console.log("禁用console控制台");
+		</script>
+	</body>
+</html>

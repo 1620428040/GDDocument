@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+/**
+ * 检测浏览器中是否存在此插件（在IE中无效）
+ * @param 插件名 name
+ * @return boolean 存在插件返回true，否则返回false
+ */
+function hasPlugin (name) {
+    name = name.toLowerCase();
+    for (var i = 0; i < navigator.plugins.length; i++) {
+        if (navigator.plugins[i].name.toLowerCase().indexOf(name) > -1) {
+            return true;
+        }
+    }
+    return false;
+}
+
+/**
+ * 检测IE中的插件
+ * @param 插件名 name
+ * @return boolean 存在插件返回true，否则返回false
+ */
+function hasIEPlugin (name) {
+    try {
+        new ActiveXObject(name);
+        return true;
+    } catch (ex) {
+        return false;
+    }
+}
+
+// 检测所有浏览器中的Flash
+function hasFlash () {
+    // return hasPlugin("Flash") || hasIEPlugin("ShockwaveFlash.ShockwaveFlash");
+    var result = hasPlugin("Flash");
+    if (!result) {
+        result = hasIEPlugin("ShockwaveFlash.ShockwaveFlash");
+    }
+    return result;
+}
+
+// 检测所有浏览器中的QuickTime
+function hasQuickTime () {
+    // return hasPlugin("QuickTime") || hasIEPlugin("QuickTime.QuickTime");
+    var result = hasPlugin("QuickTime");
+    if (!result) {
+        reseult = hasIEPlugin("QuickTime.QuickTime");
+    }
+    return result;
+}
+
+alert(hasFlash());        // 检测浏览器是否有Flash插件
+alert(hasQuickTime())    // 检测浏览器是否有QuickTime插件
+		</script>
+	</body>
+</html>

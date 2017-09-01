@@ -1,0 +1,88 @@
+{
+	"describe": "手机版的日程表",
+	"bindTable": "calendar_m",
+	"primaryFields": "id",
+	"tools": [
+		"browse",
+		"delete",
+		"search",
+		"refresh"
+	],
+	"alias": {
+		"people": "",
+		"title": "",
+		"date": ""
+	},
+	"fieldList": {
+		"id": {
+			"title": "编号",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"title": {
+			"title": "标题",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 100,
+			"type": "LongText"
+		},
+		"content": {
+			"title": "详情",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 500,
+			"type": "LongText"
+		},
+		"date": {
+			"title": "开始日期",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"start_time": {
+			"title": "开始时间",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Date"
+		},
+		"end_time": {
+			"title": "结束时间",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Date"
+		},
+		"remind_time": {
+			"title": "提醒时间",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 100,
+			"type": "LongText"
+		},
+		"cyclic_offset": {
+			"title": "偏移",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"cyclic_period": {
+			"title": "周期",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"cyclic_trigger": {
+			"title": "触发",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 100,
+			"type": "LongText"
+		}
+	}
+}

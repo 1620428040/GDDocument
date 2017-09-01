@@ -1,0 +1,98 @@
+{
+	"describe": "已办公文",
+	"bindTable": "bpm_task",
+	"primaryFields": "id",
+	"handler":"DataMagicInterim",
+	"tools": [
+		"browse",
+		"search",
+		"refresh"
+	],
+	"alias": {
+		"people": "creatorname",
+		"title": "title",
+		"date": "createtime"
+	},
+	"fieldList": {
+		"show_name": {
+			"title": "当前步骤",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 100,
+			"type": "Base"
+		},
+		"handler_name": {
+			"title": "处理人",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64,
+			"type": "Base"
+		},
+		"creatorid": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 30,
+			"type": "Base",
+			"hidden":true
+		},
+		"creatorname": {
+			"title": "创建者",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 60,
+			"type": "Base"
+		},
+		"state": {
+			"title": "任务状态",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Select",
+			"valueRange":"0,待处理;1,处理中;2,完成;3,暂停"
+		},
+		"createtime": {
+			"title": "创建时间",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Date"
+		},
+		"accept_time": {
+			"title": "接收时间",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Date"
+		},
+		"deal_time": {
+			"title": "处理时间",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Date"
+		},
+		"finish_time": {
+			"title": "结束时间",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Date"
+		},
+		"title": {
+			"title": "标题",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 200,
+			"type": "Base"
+		},
+		"result": {
+			"title": "结果",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 30,
+			"type": "Select",
+			"valueRange":"y,通过;n,未通过;,审核中;deleted,已取消"
+		}
+	}
+}

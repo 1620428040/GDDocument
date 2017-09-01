@@ -1,0 +1,12 @@
+﻿<jscompress public="http://www.jscompress.cn/" command="import-combineset">
+<combinefile path="datamagic.bootstrap.js">
+    <auto value="1" />
+    <sourcefile path="..\source\main.js" />
+    <sourcefile path="..\source\datatype.js" />
+    <sourcefile path="..\source\model.js" />
+    <sourcefile path="..\source\controller.js" />
+    <sourcefile path="..\source\view.js" />
+    <sourcefile path="..\source\test.js" />
+    <sourcefile path="..\source\bootstrap\DataMagic.bootstrap.js" />
+</combinefile>
+</jscompress>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://cdn.gbtags.com/jquery/1.11.1/jquery.min.js"></script>
+		<script src="http://cdn.gbtags.com/three.js/r68/three.min.js"></script>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			var container;
+			var camera;
+			var scene;
+			var renderer;
+			var start;
+			var plane;
+
+			function init() {
+				start = Date.now();
+				container = document.createElement('div');
+				document.body.appendChild(container);
+
+				camera = new THREE.PerspectiveCamera(70, window.innerWidth / window.innerHeight, 1, 1000);
+				camera.position.z = 600;
+
+				renderer = new THREE.WebGLRenderer({
+					antialias: false
+				});
+				renderer.setClearColor(0xffffff);
+				renderer.setSize(window.innerWidth, window.innerHeight);
+
+				container.appendChild(renderer.domElement);
+
+				scene = new THREE.Scene();
+
+				var light = new THREE.PointLight(0xffffff, .6);
+				light.position.set(0, 500, 0);
+				scene.add(light);
+
+				var geometry = new THREE.PlaneGeometry(1000, 1000, 20, 20);
+				geometry.applyMatrix(new THREE.Matrix4().makeRotationX(-Math.PI / 2));
+
+				for(var i = 0, j = geometry.faces.length; i < j; i++) {
+					var color = geometry.faces[i].color;
+					color.setHex(0x0352a0);
+					color.lerp(new THREE.Color(0x45b085), Math.random());
+				}
+
+				var material = new THREE.MeshPhongMaterial({
+					vertexColors: THREE.FaceColors,
+					emissive: 0x111111,
+					specular: 0xffffff,
+					ambient: 0x666666,
+					shininess: 30,
+					color: 0xfffffff,
+					opacity: 1,
+					transparent: true,
+					shading: THREE.FlatShading
+				});
+
+				plane = new THREE.Mesh(geometry, material);
+
+				plane.position.y = -50;
+				scene.add(plane)
+
+				//
+				addEvents();
+
+			}
+
+			function loop() {
+				var timer = Date.now() - start;
+
+				for(var i = 0; i < plane.geometry.vertices.length; i++) {
+					plane.geometry.vertices[i].y = Math.sin(i + timer * 0.006) * 20;
+				}
+				plane.geometry.computeFaceNormals();
+				plane.geometry.computeVertexNormals();
+				plane.geometry.verticesNeedUpdate = true;
+				plane.rotation.y += 0.005;
+				renderer.render(scene, camera);
+				requestAnimationFrame(loop);
+			}
+
+			function onResize() {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize(window.innerWidth, window.innerHeight);
+			}
+
+			function addEvents() {
+				window.addEventListener('resize', onResize, false);
+				loop();
+			}
+
+			$(init);
+		</script>
+	</body>
+
+</html>

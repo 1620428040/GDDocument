@@ -1,0 +1,103 @@
+{
+	"describe": "假事管理",
+	"bindTable": "oa_noteforleave",
+	"primaryFields": "id",
+	"tools": [
+		"search",
+		"refresh"
+	],
+	"alias":{
+		"people":"username",
+		"title":"leavereason",
+		"date":"addtime"
+	},
+	"external":{
+		"userid":"username",
+		"dept_id":"dept_name"
+	}
+	"fieldList": {
+		"id": {
+			"title": "编号",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"userid": {
+			"title": "用户ID",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"username": {
+			"title": "用户名",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"dept_id": {
+			"title": "部门ID",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"dept_name": {
+			"title": "部门名称",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"position": {
+			"title": "职务",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"leavetype": {
+			"title": "请假类别",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"leavebegintime": {
+			"title": "开始时间",
+			"type": "date",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"leaveendtime": {
+			"title": "截止时间",
+			"type": "date",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"leavereason": {
+			"title": "请假事由",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 512
+		},
+		"leavestatus": {
+			"title": "状态",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"flow_id": {
+			"title": "流程ID",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"addtime": {
+			"title": "创建时间",
+			"type": "date",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		}
+	}
+}

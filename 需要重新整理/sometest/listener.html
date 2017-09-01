@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="target" style="height: 100px;width: 100px;border: dashed 1px red;">
+			
+		</div>
+		<script type="text/javascript">
+			var target=document.getElementById("target");
+			target.addEventListener("click",click1);
+			function click1(event){
+				alert("click1");
+			}
+			target.addEventListener("click",click2);
+			function click2(event){
+				alert("click2");
+			}
+			target.removeEventListener("click",click1);
+			
+		</script>
+	</body>
+</html>

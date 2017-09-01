@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<input type="number" name="number" id="number" value="10000" />
+		<button onclick="append();">添加</button>
+		<button onclick="empty();">清空DOM</button>
+		<button onclick="clearDOM();">递归地清空DOM</button>
+		<button onclick="reuse();">添加(复用)</button>
+		<button onclick="removeDOM();">从DOM上移除</button>
+		<button onclick="clearNodes();">清空nodes</button>
+		<button onclick="CollectGarbage();">垃圾回收</button>
+		<div id="container"></div>
+		<script type="text/javascript">
+			var nodes=[];
+			var nodePoor=[];
+			function append(){
+				var number=document.getElementById("number").value;
+				var container=document.getElementById("container");
+				for(var i=0;i<number;i++){
+					var node=document.createElement("div");
+					node.innerText="这是第 "+nodes.length+" 个节点";
+					nodes.push(node);
+					container.appendChild(node);
+				}
+			}
+			function empty(){
+				var body=document.getElementsByTagName("body")[0];
+				body.removeChild(document.getElementById("container"));
+				var container=document.createElement("div");
+				container.id="container";
+				body.appendChild(container);
+			}
+			function clearDOM(){
+				for(var i=nodes.length-1;i>=0;i--){
+					delete document.getElementById("container").removeChild(nodes[i]);
+					delete nodes[i];
+				}
+				nodes=[];
+			}
+			
+			function removeDOM(){
+				for(var i=nodes.length-1;i>=0;i--){
+					nodePoor.push(document.getElementById("container").removeChild(nodes[i]));
+					delete nodes[i];
+				}
+				nodes=[];
+			}
+			function reuse(){
+				var number=document.getElementById("number").value;
+				var container=document.getElementById("container");
+				for(var i=0;i<number;i++){
+					var node=nodePoor.pop();
+					if(node){
+						node.innerText+=" 复用";
+					}
+					else{
+						node=document.createElement("div");
+						node.innerText="这是第 "+nodes.length+" 个节点";
+					}
+					nodes.push(node);
+					container.appendChild(node);
+				}
+			}
+			function clearNodes(){
+				nodes=[];
+			}
+		</script>
+	</body>
+</html>

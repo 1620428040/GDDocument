@@ -1,0 +1,8 @@
+﻿<jscompress public="http://www.jscompress.cn/" command="import-combineset">
+<combinefile path="datamagic.mui.css">
+    <css_fixedrelativeurl value="1" />
+    <auto value="1" />
+    <sourcefile path="..\source\base.css" />
+    <sourcefile path="..\source\mui\DataMagic.mui.css" />
+</combinefile>
+</jscompress>

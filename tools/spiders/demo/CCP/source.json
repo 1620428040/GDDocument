@@ -1,0 +1,374 @@
+{
+	"http://www.people.com.cn/img/2011people/jquery-1.4.3.min.js": {
+		"type": "js",
+		"fined": "http://www.people.com.cn/img/2011people/jquery-1.4.3.min.js",
+		"link": "js/jquery-1.4.3.min.js",
+		"sourceSavePath": "zgdsw/js/jquery-1.4.3.min.js"
+	},
+	"http://jx.people.com.cn/img/2011jiangxi/jcarousellite_1.0.1.min.js": {
+		"type": "js",
+		"fined": "http://jx.people.com.cn/img/2011jiangxi/jcarousellite_1.0.1.min.js",
+		"link": "js/jcarousellite_1.0.1.min.js",
+		"sourceSavePath": "zgdsw/js/jcarousellite_1.0.1.min.js"
+	},
+	"http://dcs.conac.cn/js/33/000/0000/60558053/CA330000000605580530001.js": {
+		"type": "js",
+		"fined": "http://dcs.conac.cn/js/33/000/0000/60558053/CA330000000605580530001.js",
+		"link": "js/CA330000000605580530001.js",
+		"sourceSavePath": "zgdsw/js/CA330000000605580530001.js"
+	},
+	"http://img02.people.com.cn/img/2011people/images/style_button_searchn.gif": {
+		"type": "js",
+		"fined": "http://img02.people.com.cn/img/2011people/images/style_button_searchn.gif",
+		"link": "img/style_button_searchn.gif",
+		"sourceSavePath": "zgdsw/img/style_button_searchn.gif"
+	},
+	"a.html/img/2012cpchistory/page.css": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/page.css",
+		"link": "css/page.css",
+		"sourceSavePath": "zgdsw/css/page.css"
+	},
+	"a.htmljs/jquery-1.4.3.min.js": {
+		"type": "js",
+		"fined": "js/jquery-1.4.3.min.js",
+		"link": "js/jquery-1.4.3.min.js",
+		"sourceSavePath": "zgdsw/js/jquery-1.4.3.min.js"
+	},
+	"a.html/img/2012cpchistory/js/swfobject.js": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/js/swfobject.js",
+		"link": "js/swfobject.js",
+		"sourceSavePath": "zgdsw/js/swfobject.js"
+	},
+	"a.html/css/search.js": {
+		"type": "js",
+		"fined": "/css/search.js",
+		"link": "js/search.js",
+		"sourceSavePath": "zgdsw/js/search.js"
+	},
+	"a.htmljs/jcarousellite_1.0.1.min.js": {
+		"type": "js",
+		"fined": "js/jcarousellite_1.0.1.min.js",
+		"link": "js/jcarousellite_1.0.1.min.js",
+		"sourceSavePath": "zgdsw/js/jcarousellite_1.0.1.min.js"
+	},
+	"a.htmljs/CA330000000605580530001.js": {
+		"type": "js",
+		"fined": "js/CA330000000605580530001.js",
+		"link": "js/CA330000000605580530001.js",
+		"sourceSavePath": "zgdsw/js/CA330000000605580530001.js"
+	},
+	"a.html/css/2010tianrun/webdig_test.js": {
+		"type": "js",
+		"fined": "/css/2010tianrun/webdig_test.js",
+		"link": "js/webdig_test.js",
+		"sourceSavePath": "zgdsw/js/webdig_test.js"
+	},
+	"a.htmlimg/style_button_searchn.gif": {
+		"type": "js",
+		"fined": "img/style_button_searchn.gif",
+		"link": "img/style_button_searchn.gif",
+		"sourceSavePath": "zgdsw/img/style_button_searchn.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_title1.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_title1.gif",
+		"link": "img/l_title1.gif",
+		"sourceSavePath": "zgdsw/img/l_title1.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit1.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit1.gif",
+		"link": "img/l_tit1.gif",
+		"sourceSavePath": "zgdsw/img/l_tit1.gif"
+	},
+	"a.html/NMediaFile/2015/0827/MAIN201508271646434830877622902.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2015/0827/MAIN201508271646434830877622902.jpg",
+		"link": "img/MAIN201508271646434830877622902.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201508271646434830877622902.jpg"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit2.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit2.gif",
+		"link": "img/l_tit2.gif",
+		"sourceSavePath": "zgdsw/img/l_tit2.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit3.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit3.gif",
+		"link": "img/l_tit3.gif",
+		"sourceSavePath": "zgdsw/img/l_tit3.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit4.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit4.gif",
+		"link": "img/l_tit4.gif",
+		"sourceSavePath": "zgdsw/img/l_tit4.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit5.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit5.gif",
+		"link": "img/l_tit5.gif",
+		"sourceSavePath": "zgdsw/img/l_tit5.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit6.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit6.gif",
+		"link": "img/l_tit6.gif",
+		"sourceSavePath": "zgdsw/img/l_tit6.gif"
+	},
+	"a.html/NMediaFile/2015/0616/MAIN201506161448447142001824540.png": {
+		"type": "js",
+		"fined": "/NMediaFile/2015/0616/MAIN201506161448447142001824540.png",
+		"link": "img/MAIN201506161448447142001824540.png",
+		"sourceSavePath": "zgdsw/img/MAIN201506161448447142001824540.png"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit8.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit8.gif",
+		"link": "img/l_tit8.gif",
+		"sourceSavePath": "zgdsw/img/l_tit8.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit9.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit9.gif",
+		"link": "img/l_tit9.gif",
+		"sourceSavePath": "zgdsw/img/l_tit9.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit10.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit10.gif",
+		"link": "img/l_tit10.gif",
+		"sourceSavePath": "zgdsw/img/l_tit10.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_title2.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_title2.gif",
+		"link": "img/l_title2.gif",
+		"sourceSavePath": "zgdsw/img/l_title2.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit11.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit11.gif",
+		"link": "img/l_tit11.gif",
+		"sourceSavePath": "zgdsw/img/l_tit11.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit12.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit12.gif",
+		"link": "img/l_tit12.gif",
+		"sourceSavePath": "zgdsw/img/l_tit12.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit13.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit13.gif",
+		"link": "img/l_tit13.gif",
+		"sourceSavePath": "zgdsw/img/l_tit13.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit14.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit14.gif",
+		"link": "img/l_tit14.gif",
+		"sourceSavePath": "zgdsw/img/l_tit14.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit15.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit15.gif",
+		"link": "img/l_tit15.gif",
+		"sourceSavePath": "zgdsw/img/l_tit15.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit16.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit16.gif",
+		"link": "img/l_tit16.gif",
+		"sourceSavePath": "zgdsw/img/l_tit16.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit17.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit17.gif",
+		"link": "img/l_tit17.gif",
+		"sourceSavePath": "zgdsw/img/l_tit17.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_title3.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_title3.gif",
+		"link": "img/l_title3.gif",
+		"sourceSavePath": "zgdsw/img/l_title3.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit18.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit18.gif",
+		"link": "img/l_tit18.gif",
+		"sourceSavePath": "zgdsw/img/l_tit18.gif"
+	},
+	"a.html/NMediaFile/2014/0718/MAIN201407180947045931795929960.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2014/0718/MAIN201407180947045931795929960.jpg",
+		"link": "img/MAIN201407180947045931795929960.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201407180947045931795929960.jpg"
+	},
+	"a.html/NMediaFile/2015/0619/MAIN201506191229082797083199204.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2015/0619/MAIN201506191229082797083199204.jpg",
+		"link": "img/MAIN201506191229082797083199204.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201506191229082797083199204.jpg"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit22.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit22.gif",
+		"link": "img/l_tit22.gif",
+		"sourceSavePath": "zgdsw/img/l_tit22.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit23.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit23.gif",
+		"link": "img/l_tit23.gif",
+		"sourceSavePath": "zgdsw/img/l_tit23.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/l_tit24.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/l_tit24.gif",
+		"link": "img/l_tit24.gif",
+		"sourceSavePath": "zgdsw/img/l_tit24.gif"
+	},
+	"a.html/img/2012cpchistory/images/title/r_tit2.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/r_tit2.gif",
+		"link": "img/r_tit2.gif",
+		"sourceSavePath": "zgdsw/img/r_tit2.gif"
+	},
+	"a.html/NMediaFile/2016/0622/MAIN201606221120399460400362113.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2016/0622/MAIN201606221120399460400362113.jpg",
+		"link": "img/MAIN201606221120399460400362113.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201606221120399460400362113.jpg"
+	},
+	"a.html/NMediaFile/2016/0622/MAIN201606221127006875077663395.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2016/0622/MAIN201606221127006875077663395.jpg",
+		"link": "img/MAIN201606221127006875077663395.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201606221127006875077663395.jpg"
+	},
+	"a.html/img/2012cpchistory/images/title/r_tit3.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/r_tit3.gif",
+		"link": "img/r_tit3.gif",
+		"sourceSavePath": "zgdsw/img/r_tit3.gif"
+	},
+	"a.html/NMediaFile/2015/1010/MAIN201510101308244455566673535.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2015/1010/MAIN201510101308244455566673535.jpg",
+		"link": "img/MAIN201510101308244455566673535.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201510101308244455566673535.jpg"
+	},
+	"a.html/NMediaFile/2014/0512/MAIN201405121538489076457793442.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2014/0512/MAIN201405121538489076457793442.jpg",
+		"link": "img/MAIN201405121538489076457793442.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201405121538489076457793442.jpg"
+	},
+	"a.html/img/2012cpchistory/images/title/r_tit4.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/r_tit4.gif",
+		"link": "img/r_tit4.gif",
+		"sourceSavePath": "zgdsw/img/r_tit4.gif"
+	},
+	"a.html/NMediaFile/2016/0602/MAIN201606021516350205780191064.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2016/0602/MAIN201606021516350205780191064.jpg",
+		"link": "img/MAIN201606021516350205780191064.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201606021516350205780191064.jpg"
+	},
+	"a.html/NMediaFile/2016/0608/MAIN201606081631562506525128272.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2016/0608/MAIN201606081631562506525128272.jpg",
+		"link": "img/MAIN201606081631562506525128272.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201606081631562506525128272.jpg"
+	},
+	"a.html/img/2012cpchistory/images/title/r_tit5.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/r_tit5.gif",
+		"link": "img/r_tit5.gif",
+		"sourceSavePath": "zgdsw/img/r_tit5.gif"
+	},
+	"a.html/img/2012cpchistory/images/left.png": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/left.png",
+		"link": "img/left.png",
+		"sourceSavePath": "zgdsw/img/left.png"
+	},
+	"a.html/NMediaFile/2016/0426/MAIN201604261112049038060093840.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2016/0426/MAIN201604261112049038060093840.jpg",
+		"link": "img/MAIN201604261112049038060093840.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201604261112049038060093840.jpg"
+	},
+	"a.html/NMediaFile/2015/1224/MAIN201512241443582806060498026.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2015/1224/MAIN201512241443582806060498026.jpg",
+		"link": "img/MAIN201512241443582806060498026.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201512241443582806060498026.jpg"
+	},
+	"a.html/NMediaFile/2015/1214/MAIN201512141518429081946090032.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2015/1214/MAIN201512141518429081946090032.jpg",
+		"link": "img/MAIN201512141518429081946090032.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201512141518429081946090032.jpg"
+	},
+	"a.html/NMediaFile/2015/0618/MAIN201506181510046335294526824.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2015/0618/MAIN201506181510046335294526824.jpg",
+		"link": "img/MAIN201506181510046335294526824.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201506181510046335294526824.jpg"
+	},
+	"a.html/NMediaFile/2015/0529/MAIN201505291131255165514840326.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2015/0529/MAIN201505291131255165514840326.jpg",
+		"link": "img/MAIN201505291131255165514840326.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201505291131255165514840326.jpg"
+	},
+	"a.html/NMediaFile/2015/0528/MAIN201505281125102924218130681.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2015/0528/MAIN201505281125102924218130681.jpg",
+		"link": "img/MAIN201505281125102924218130681.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201505281125102924218130681.jpg"
+	},
+	"a.html/NMediaFile/2015/0526/MAIN201505261243389353725209979.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2015/0526/MAIN201505261243389353725209979.jpg",
+		"link": "img/MAIN201505261243389353725209979.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201505261243389353725209979.jpg"
+	},
+	"a.html/NMediaFile/2015/0505/MAIN201505051515337775963207937.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2015/0505/MAIN201505051515337775963207937.jpg",
+		"link": "img/MAIN201505051515337775963207937.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201505051515337775963207937.jpg"
+	},
+	"a.html/NMediaFile/2014/0912/MAIN201409121003165499227676372.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2014/0912/MAIN201409121003165499227676372.jpg",
+		"link": "img/MAIN201409121003165499227676372.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201409121003165499227676372.jpg"
+	},
+	"a.html/NMediaFile/2014/0730/MAIN201407301600187757942125465.jpg": {
+		"type": "js",
+		"fined": "/NMediaFile/2014/0730/MAIN201407301600187757942125465.jpg",
+		"link": "img/MAIN201407301600187757942125465.jpg",
+		"sourceSavePath": "zgdsw/img/MAIN201407301600187757942125465.jpg"
+	},
+	"a.html/img/2012cpchistory/images/right.png": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/right.png",
+		"link": "img/right.png",
+		"sourceSavePath": "zgdsw/img/right.png"
+	},
+	"a.html/img/2012cpchistory/images/title/r_tit8.gif": {
+		"type": "js",
+		"fined": "/img/2012cpchistory/images/title/r_tit8.gif",
+		"link": "img/r_tit8.gif",
+		"sourceSavePath": "zgdsw/img/r_tit8.gif"
+	}
+}

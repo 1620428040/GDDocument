@@ -1,0 +1,24 @@
+全文搜索功能，基于Solr/Lucene搜索引擎
+版本
+	Solr		4.10.4
+	Java		1.8.0_91
+	
+	
+启动程序(jetty服务器)		solr4\example\start.jar
+通过命令行启动 可以查看错误信息  
+		跳到对应的磁盘，比如 d:
+		cd 到solr4\example\目录
+		java -jar start.jar
+
+控制面板		http://localhost:8983/solr/
+	左侧最后一项下拉框可以选择集合进行搜索之类的操作
+	
+查询示例		http://localhost:8983/solr/collection1/select?q=*%3A*&wt=json&indent=true
+	其中”%3A”是URL编码后的”:”
+
+Solr自带jetty服务器，也可以部署到tomcat服务器上
+socre是一条搜索记录根据相关度计算出来的一个分数。
+
+配置schema.xml文件后reload一下就能用了，但加载插件需要重启
+
+要实现中文分词需要下载IKAnalyzer/“庖丁解牛”等中文分词器

@@ -1,0 +1,23 @@
+由于浏览器同源策略，凡是发送请求url的协议、域名、端口三者之间任意一与当前页面地址不同即为跨域。
+
+当使用XMLHttpRequest发送请求时，浏览器发现该请求不符合同源策略，会给该请求加一个请求头：Origin，
+后台如果确定接受请求则在返回结果中加入一个响应头：Access-Control-Allow-Origin;
+浏览器判断该相应头中是否包含Origin的值，如果有则浏览器会处理响应，我们就可以拿到响应数据，
+如果不包含浏览器直接驳回，这时我们无法拿到响应数据。
+
+通过setRequestHeader('X-Request-With', null)可以避免浏览器发送OPTIONS请求。
+
+Origin请求头
+Origin:http://localhost
+
+//如果接受跨域请求，服务器端应该这样写
+if (req.headers.origin) {
+	res.writeHead(200, {
+		"Content-Type": "text/html; charset=UTF-8",
+		"Access-Control-Allow-Origin":'http://localhost'/*,
+		'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+		'Access-Control-Allow-Headers': 'X-Requested-With, Content-Type'*/
+	});
+	res.write('cors');
+	res.end();
+}

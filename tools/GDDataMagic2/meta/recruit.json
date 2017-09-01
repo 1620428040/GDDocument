@@ -1,0 +1,180 @@
+{
+	"describe": "招聘管理",
+	"bindTable": "oa_hr_recruit",
+	"primaryFields": "id",
+	"tools": [
+		"browse",
+		"delete",
+		"search",
+		"refresh"
+	],
+	"alias":{
+		"title":"recruit_position",
+		"people":"recruit_department",
+		"date":"salary"
+	},
+	"fieldList": {
+		"id": {
+			"title": "",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"recruit_position": {
+			"title": "招聘岗位",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"recruit_departmentid": {
+			"title": "招聘部门ID",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"recruit_department": {
+			"title": "招聘部门",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"recruit_leader": {
+			"title": "招聘负责人",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"recruit_leader_id": {
+			"title": "招聘负责人ID",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"first_interviewer": {
+			"title": "招聘面试官(一面)",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"first_interviewer_id": {
+			"title": "招聘面试官(一面)ID",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"second_interviewer": {
+			"title": "招聘面试官(二面)",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"second_interviewer_id": {
+			"title": "招聘面试官(二面)ID",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"release_date": {
+			"title": "招聘发布时间",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"written_date": {
+			"title": "招聘笔试时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"written_address": {
+			"title": "招聘笔试地点",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200
+		},
+		"firstinter_date": {
+			"title": "招聘一面时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"firstinter_address": {
+			"title": "招聘一面地点",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200
+		},
+		"secondinter_date": {
+			"title": "招聘二面时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"secondinter_address": {
+			"title": "招聘二面地点",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200
+		},
+		"work_experience": {
+			"title": "工作经验",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"work_nature": {
+			"title": "工作性质",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30
+		},
+		"minimum_education": {
+			"title": "学历要求",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30
+		},
+		"management_experience": {
+			"title": "管理经验",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"salary": {
+			"title": "职位月薪",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"recruit_num": {
+			"title": "招聘人数",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"work_address": {
+			"title": "工作地点",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30
+		},
+		"job_response": {
+			"title": "岗位职责",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 1024
+		},
+		"job_qualification": {
+			"title": "任职资格",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 1024
+		}
+	}
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//参考链接
+			//js中的arguments,apply,call,callee,caller
+			//http://www.cnblogs.com/ForFreeDom/archive/2010/03/24/1693547.html
+			
+			//arguments记录了函数被调用时传入的所有的参数，数量不受函数定义时的形参的限制
+			//arguments看起来像数组，但其实并不是argument.length也不会随着参数的个数自动变化
+			function func1(a,b,c){
+				console.log(arguments);
+			}
+			func1("a","b","c","d","e");
+			
+			//arguments.callee.caller调用当前函数的函数
+			function func2(){
+				console.log(func2.caller);
+				console.log(arguments.callee.caller);
+			}
+			function func3(){
+				func2();
+			}
+			func3();
+			
+			//arguments.callee返回函数本身
+			//arguments.callee.length参数的数量
+			function func4(){
+				console.log(arguments.callee);
+				console.log(arguments.callee.length);
+			}
+			func4();
+			
+			//call,apply函数的作用相同，但参数的传递方式不同
+			function base(member) {
+			    this.member = member;
+			}
+			function extend(){
+			    base.call(this,"dnnsun_Member");
+			    base.apply(this,["gre"]);
+			    window.alert(member);
+			}
+			extend();
+			//apply使在函数中将参数全传给另一个函数更加方便
+			function func1(mess,from){
+				alert("say:"+mess+"  from:"+from);
+			}
+			function func2(mess,from){
+				func1.apply(this,arguments);
+			}
+			func2("hello word","diw");
+			
+			
+			
+			/* JavaScript scope
+			 * 相关链接：https://my.oschina.net/bgmemo/blog/195761  干货！你一直想知道的关于JavaScript scope的一切
+			 * 在js中，没有块作用域，只有函数作用域！
+			 * 在域内可以调用域外部的变量和函数，在外部调用不到域内部
+			 * 根据函数之间的包含关系，会形成一条作用于链，调用函数时会沿着作用于链 查找
+			 * 
+			 * 概念：
+			 * 域（scope）
+			 * 闭包（closure）
+			 * 关键字this
+			 * 命名空间（namespace）
+			 * 函数域（function scope）
+			 * 全局域（global scope）
+			 * 词法作用域（lexical scope）
+			 * 公共域和私有域（public/private scope）
+			 */
+			
+			//var关键字，用来在当前的作用域声明一个变量，用var创建的变量是不能用delete删除的
+			//如果不用var声明变量，则变量属于windows
+			//scope="global";等同于windows.scope="global";所以此处的scope是全局作用域中，window变量的一个属性
+			(function func1(){
+				var scope="local";
+			})();
+			alert(scope);//undefined
+			(function func1(){
+				scope="global";//===windows.scope
+			})();
+			alert(scope);//global
+			
+			var scope="global";
+			(function func1(){
+				var scope="func1";
+				(function func2(){
+					var scope="func2";
+					alert(scope);
+				})()
+				alert(scope);
+			})()
+			alert(scope);
+			
+			
+			//使用with可以将一个对象添加到作用域链的末端
+			//但是with是运行缓慢的代码块，不推荐使用
+			
+			var obj={};
+			obj.str="2333";
+			obj.fun=function(){
+				console.log(this.str);
+			}
+			obj.fun();//正常调用
+			with(obj){
+				fun();//使用with后，默认的对象（或者是域），从global变成with调用的对象
+				this.fun();//使用with，并不会改变this所指对象
+				function fun(){
+					alert("2ddwd");
+				}
+				function fun2(){
+					alert("2ddwd");
+				}
+				console.dir(fun);//首先查找with调用的对象，如果其中没有，才查找作用域链的下一级
+				console.dir(fun2);
+			}
+			
+			
+			
+			
+			/* this的指向问题
+			 * 之前以为this是指向当前的域的，这种说法是错误的！this的指向和当前的域完全是两个问题！
+			 * this始终指向当前所在的对象或者当前函数所在的对象
+			 */
+			//self和this
+			this;//window。当前所在的对象是window，而window是可以省略的
+			function func1(){
+				this;//window。当前的函数所在的对象是window
+			}
+			o.func2=function(){
+				this;//o。当前函数所在的对象是o，所以this也指向o
+			}
+			//直接定义的函数，仍然属于window，即使这个函数是在一个对象的方法内部定义的
+			//但是他的作用域却包含在所在的方法中，所以在作用域外无法调用
+			o.func3=function(){
+				function func4(){
+					this;//window。像这种直接定义的函数，仍然属于window。即使他的作用域链是Global->func3->func4
+				}
+			}
+			
+			//在构造函数中，this指向新的对象
+			function func1(){
+				this;//指向新对象
+			}
+			var o=new func1();
+			
+			
+			//self意为当前窗口，但是在日常的使用中，经常会用self保存当前的对象
+			self===window.self;//self意为当前窗口
+			var self=this;//保存当前的上下文
+			
+			//要修改函数所在的对象，需要将这个函数作为一个对象的方法
+			//或者使用call,apply,bind等函数，可以临时的改变函数的对象
+			//.call()和.apply()函数，用来修改函数所在的对象
+			function func1(a,b,c){
+				
+			}
+			func1.call(this,a,b,c);
+			func2.apply(this,arguments);
+			//.bind()和call类似，但返回值是一个函数，这个函数可以直接运行，不需要再传入参数(ie9+)
+			//用来在函数运行之前绑定一个域,bind方法会创建一个新函数,称为绑定函数.
+			var func3=func1.bind(this,a,b,c);
+			func3();//function bound func1() { [native code] }
+			
+			//词法域
+			//词法域是块结构的更进一步，如果嵌套过程中的参数如果外部过程已经定义过了（从外面过程传递进来），对于该嵌套过程，可以省略参数，但是过程内部仍然可以使用外部过程定义过的参数。这种块结构称为词法域。
+			//就是说，在一个作用域内，可以使用外部的作用域的参数，但是外部的作用域不能使用这个作用域内的参数
+			
+			//闭包
+			//闭包本来是一个离散数学中的概念
+			//闭包是指可以包含自由（未绑定到特定对象）变量的代码块；这些变量不是在这个代码块内或者任何全局上下文中定义的，而是在定义代码块的环境中定义（局部变量）。
+			//在js中，是指，如果一个函数A运行后，返回了一个函数B。那么函数B仍然可以访问被定义时所在的作用域(函数A),函数A的作用域此时不会被释放
+			var theThing = null;
+			var replaceThing = function () {
+			  var originalThing = theThing;
+			  var unused = function () {
+			    if (originalThing)
+			      console.log("hi");
+			  };
+			  theThing = {
+			    longStr: new Array(1000000).join('*'),
+			    someMethod: function () {
+			      console.log(someMessage);
+			    }
+			  };
+			};
+			setInterval(replaceThing, 1000);
+			//运行时，占用的内存会稳定的增长而不受GC的影响
+			//如果不定义unused或者someMethod，会明显的看到GC释放内存的过程
+		</script>
+	</body>
+</html>

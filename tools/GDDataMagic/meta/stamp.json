@@ -1,0 +1,102 @@
+{
+	"describe": "印章管理 日期11.2",
+	"bindTable": "oa_stamp_log",
+	"primaryFields": "id",
+	"feature": [
+		"browse",
+		"insert",
+		"delete",
+		"update",
+		"search",
+		"refresh"
+	],
+	"fieldList": {
+		"id": {
+			"title": "编号",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"user_id": {
+			"title": "申请人ID",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"user_name": {
+			"title": "申请人姓名",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"dept_id": {
+			"title": "部门编号",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"dept_name": {
+			"title": "部门名称",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"manager_id": {
+			"title": "部门负责人id",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"manager_name": {
+			"title": "部门负责人姓名",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"leader_id": {
+			"title": "分管领导ID",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"leader_name": {
+			"title": "分管领导姓名",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"stamp_type": {
+			"title": "印章类型",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"stamp_remak": {
+			"title": "申请事由",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 1000
+		},
+		"stamp_time": {
+			"title": "申请时间",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"stamp_state": {
+			"title": "申请状态",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"flow_id": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		}
+	}
+}

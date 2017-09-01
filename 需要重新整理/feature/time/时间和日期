@@ -1,0 +1,26 @@
+在程序中的时间设置
+
+
+在php中
+
+需要先设置默认时区
+在脚本开头添加date_default_timezone_set('PRC');
+或者在php.ini文件中修改date.timezone = "PRC"
+
+time();//1488157274
+获取当前的unix时间戳(秒数)
+date();
+将时间表示为指定的格式
+cal_days_in_month(CAL_GREGORIAN, $month, $year);//获取公历中某一月有几天
+
+
+在JavaScript中
+
+var date=new Date();
+
+date.getUTCMonth();
+date.getMonth();
+获取到的月份实际是索引，要知道是几月需要+1	但是php中不用这样
+
+date.getTime();//1488157274468
+获取到的是毫秒数

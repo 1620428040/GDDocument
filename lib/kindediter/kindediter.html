@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="ui-dialog.css" rel="stylesheet" type="text/css" />
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<script src="kindediter.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			try{
+				var opt={
+					"name":"filemanager",
+					"width":"650",
+					"height":"510",
+					"title":"文件空间",
+					"body": '<div style="padding:10px 20px;"><div class="ke-plugin-filemanager-header"><div class="ke-left"><img class="ke-inline-block" name="moveupImg" src="http://localhost:35708/editor/plugins/filemanager/images/go-up.gif" width="16" height="16" border="0" alt="" /> <a class="ke-inline-block" name="moveupLink" href="javascript:;">移到上一级文件夹</a></div><div class="ke-right">显示方式： <select class="ke-inline-block" name="viewType"><option value="VIEW">缩略图</option><option value="LIST">详细信息</option></select> 排序方式： <select class="ke-inline-block" name="orderType"><option value="NAME">名称</option><option value="SIZE">大小</option><option value="TYPE">类型</option></select></div><div class="ke-clearfix"></div></div><div class="ke-plugin-filemanager-body"></div></div>',
+					"z": "811216",
+					"shadowMode": "true",
+//					"closeBtn": "[object Object]",
+//					"noBtn": "[object Object]",
+					"cls": "ke-dialog-default",
+					"showMask":"false"};
+				opt.closeBtn = _undef(opt.closeBtn, {
+					name: 'close',
+					click: function (e) {
+					}
+				});
+				opt.noBtn = _undef(opt.noBtn, {
+					name:  'close',
+					click: function (e) {
+					}
+				});
+				alert("wq1");
+				new KDialog(opt);
+				alert("over");
+			}
+			catch (e) {
+				alert(e);
+			}
+		</script>
+	</body>
+</html>

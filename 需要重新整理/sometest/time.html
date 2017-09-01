@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="div1"></div>
+		
+		
+		<script type="text/javascript" id="scr1">
+			
+		</script>
+		
+		<script type="text/javascript">
+			alert("start");
+		</script>
+		
+		<script type="text/javascript" id="scr2">
+			
+		</script>
+		
+		<script type="text/javascript">
+			var scr1=document.getElementById("scr1");
+			scr1.createAttribute("src");
+			scr1.setAttribute("src","js/alert.js");
+			
+			var scr2=document.getElementById("scr2");
+			scr2.createAttribute("src");
+			scr2.setAttribute("src","js/alert.js");
+		</script>
+	</body>
+</html>

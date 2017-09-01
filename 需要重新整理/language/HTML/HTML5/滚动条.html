@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+		/*内容溢出时的设置overflow属性
+		 * overflow属性: 检索或设置当对象的内容超过其指定高度及宽度时如何显示内容 
+		 * overflow-x: hidden; 禁止横向的滚动条 
+		 * overflow-y: scroll; 总是显示纵向滚动条 
+		 * 
+		 * visible 将内容显示在区域之外
+		 * scroll 任何超出"width"和"height"的内容都会不可见。 
+		 * hidden 无论内容是否超越范围，都将显示滚动条。 
+		 * auto 当内容超出范围时，显示滚动条，否则不显示。
+		 * */
+			.test1{
+				height: 300px;
+				width: 300px;
+				overflow: scroll;
+			}
+			.test2{
+				height: 3000px;
+				width: 3000px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="test1">
+		<div class="test2">ecercverv</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8"/>
+		<script src="../framework/jQuery/jquery/jquery-3.0.0.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<button onclick="create()">创建</button>
+		<button onclick="destroy()">销毁</button>
+		<button onclick="$('iframe').toggle();">显示/隐藏</button>
+		<br />
+		<script type="text/javascript">
+			function create(){
+				$("body").append($('<iframe src="/bgmobile/index.php"></iframe>'));
+			}
+			function destroy(){
+				$('iframe').eq(0).remove().destroy();
+			}
+		</script>
+	</body>
+</html>

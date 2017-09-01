@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			$.ajax({
+				type:"post",
+				url:"http://192.168.1.3:81/GDDocument/sometest/form/server/submit.php",
+				async:true,
+				data:{
+					name:"张三",
+					age:33
+				},
+				success:function(data){
+					console.log(arguments);
+				}
+			});
+			$(function(){
+				setInterval(function(){
+					post({
+						type:"post",
+						url:"http://192.168.1.3:81/GDDocument/sometest/form/server/submit.php",
+						async:true,
+						data:{
+							name:"张三",
+							age:33
+						},
+						success:function(data){
+							console.log(arguments);
+						}
+					});
+				},1000);
+			})
+			
+			function post(params){
+				params.type=params.type||"post";
+				var iframe=$('<iframe name="post-iframe"></iframe>');
+				var form=$('<form method="'+params.type+'" action="'+params.url+'"></form>');
+				for(var kn in params.data){
+					var kv=params.data[kn];
+					var item=$('<input name="'+kn+'" value="'+kv+'" />').val(kv);
+					form.append(item);
+				}
+				
+				
+				var doc=window.frames["post-iframe"].document;
+				doc.write(form.prop("outerHTML"));
+				$(doc).find("form").submit();
+			}
+		</script>
+		<iframe name='post-iframe' hidden="hidden" onload="console.log('load');"></iframe>
+	</body>
+</html>

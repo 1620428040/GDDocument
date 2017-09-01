@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body id="bod">
+		<!--脚本完全可以分布在不同的文件中相互调用，而且可以动态创建-->
+		<script id="js1" src="js1.js" type="text/javascript" charset="utf-8"></script>
+		<script id="js2" src="js2.js" type="text/javascript" charset="utf-8" onload="alert('')" onerror="alert('')"></script>
+		<script type="text/javascript">
+			var div1=document.getElementById("bod");
+			var js1=document.getElementById("js1");
+			var js2=document.getElementById("js2");
+			div1.removeChild(js1);
+			div1.removeChild(js2);
+			alert("1111111111111111111111111111111111111111111");
+		</script>
+	</body>
+	
+</html>

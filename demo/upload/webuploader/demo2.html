@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<form action="" method="post">
+			<label for="file">上传文件</label>
+			<input type="text" name="file" id="file" value="" />
+			<span id="state"></span>
+			<button onclick="$('#picker label').click();">选择</button>
+			<div id="picker" style="left: 80px;top: 10px;">选择文件</div>
+		</form>
+		
+		<script src="../../../framework/jQuery/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="../../../framework/webuploader-0.1.5/webuploader.css">
+		<script type="text/javascript" src="../../../framework/webuploader-0.1.5/webuploader.js"></script>
+		
+		<script type="text/javascript">
+			var uploader = WebUploader.create({
+				auto:true,
+			    swf:'Uploader.swf',
+			    server: 'fileupload.php',
+			    pick: '#picker',
+			    chunked: true,
+			    chunkSize:1024*1024
+			});
+			
+			var state_span=$("#state");
+			var file_input=$("#file");
+			// 当有文件被添加进队列的时候
+			uploader.on( 'fileQueued', function( file ) {
+				state_span.text("等待上传...");
+			});
+			// 文件上传过程中创建进度条实时显示。
+			uploader.on( 'uploadProgress', function( file, percentage ) {
+			    state_span.text("已上传 "+percentage * 100 + '%');
+			});
+			//成功、失败时的处理
+			uploader.on( 'uploadSuccess', function( file ) {
+			    state_span.text('已上传');
+			    file_input.val(file.name);
+			    console.log(file);
+			});
+			
+			uploader.on( 'uploadError', function( file ) {
+			   	state_span.text('上传出错');
+			});
+			
+			uploader.on( 'uploadComplete', function( file ) {
+				
+			});
+		</script>
+	</body>
+</html>

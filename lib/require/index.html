@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="js/abc.css"/>
+		<script src="lib/require.min.js" data-main="js/main" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			require.loaded=function(){
+				console.log("main 加载完成");
+				require(["jquery","abc","text!../index2.html","text!a.css"],function($,abc,html,css){
+					console.log($);
+					console.log(abc);
+					console.log(html);
+					console.log(css);
+				});
+			};
+			require.allReady=function(){
+				console.log("dom ready");
+			}
+		</script>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+		<div></div>
+	</body>
+</html>

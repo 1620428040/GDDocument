@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//不同的事件有不同的属性，用来传递事件需要的数据
+			//相关链接:http://www.w3school.com.cn/jsref/dom_obj_event.asp
+			function on(ev){
+				ev.preventDefault();//阻止执行默认的操作
+				ev.stopPropagation();//不再派发事件
+				ev.target;//触发此事件的元素
+				
+				//拖拽事件中
+				ev.dataTransfer;//拖拽中使用的一个剪切板对象
+				ev.x//x,y;相对上级元素的位置
+				ev.offsetX//offsetX,offsetY;相对原来的偏移
+				
+				//鼠标点击，移动等事件中
+/*
+clientX 设置或获取鼠标指针位置相对于当前窗口的 x 坐标，其中客户区域不包括窗口自身的控件和滚动条。 
+clientY 设置或获取鼠标指针位置相对于当前窗口的 y 坐标，其中客户区域不包括窗口自身的控件和滚动条。 
+offsetX 设置或获取鼠标指针位置相对于触发事件的对象的 x 坐标。 
+offsetY 设置或获取鼠标指针位置相对于触发事件的对象的 y 坐标。 
+screenX 设置或获取获取鼠标指针位置相对于用户屏幕的 x 坐标。 
+screenY 设置或获取鼠标指针位置相对于用户屏幕的 y 坐标。 
+x 设置或获取鼠标指针位置相对于父文档的 x 像素坐标(亦即相对于当前窗口)。 
+y 设置或获取鼠标指针位置相对于父文档的 y 像素坐标(亦即相对于当前窗口)。
+*/
+			}
+		</script>
+	</body>
+</html>

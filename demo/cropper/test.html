@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../../lib/jQuery/jquery-3.0.0.min.js"></script>
+		<link  href="../../lib/cropper/cropper.min.css" rel="stylesheet">
+		<script src="../../lib/cropper/cropper.min.js"></script>
+		<style type="text/css">
+			.originalView{
+				position: relative;
+				float: left;
+				margin: 20px;
+				width: 600px;
+				height: 450px;
+			}
+			.container-right{
+				position: relative;
+				float: left;
+			}
+			.resultView{
+				margin: 20px;
+				width: 400px;
+				height: 300px;
+				background-color: rgba(100,100,100,0.3);
+				overflow: hidden;
+			}
+			#result{
+				max-width: 100%;
+				max-height: 100%;
+			}
+			.container-button{
+				margin: 20px;
+			}
+			.button{
+				width: 80px;
+				height: 30px;
+			}
+			.params{
+				width: 100px;
+			}
+		</style>
+		<script type="text/javascript">
+		function createCropper(){
+			return $('#original').cropper({
+				crop: function(data) {
+//					$("#cutWidth").val(data.width);
+//					$("#cutHeight").val(data.height);
+				},
+				built: function () {
+//					var data={
+//						"x":127.99999999999993,
+//						"y":71.99999999999999,
+//						"width":$("#cutWidth").val(),
+//						"height":$("#cutHeight").val(),
+//						"rotate":0,
+//						"scaleX":1,
+//						"scaleY":1
+//					}
+//				    $('#original').cropper("setData",data);
+				}
+			});
+		}
+		function listenEvent(){
+			$("#cut").click(function(){
+				var width=$("#cutWidth").val();
+				var height=$("#cutHeight").val();
+				var styleWidth="";
+				var styleHeight="";
+				var dataUrl=$('#original').cropper('getCroppedCanvas').toDataURL("image/png");
+				$("#result").attr("src",dataUrl);
+				if(width<400){
+					var left=(400-width)/2;
+					styleWidth="left: "+left+"px;width:"+width+"px;";
+				}
+				if(height<300){
+					var top=(300-height)/2;
+					styleHeight="top: "+top+"px;height:"+height+"px;";
+				}
+				$("#result").attr("style","position: relative;"+styleWidth+styleHeight);
+			});
+			$("#cancel").click(function(){
+				
+			});
+			$("#confirm").click(function(){
+				var dataUrl=$('#original').cropper('getCroppedCanvas').toDataURL("image/png");
+				var formData = new FormData();
+				formData.append('croppedImage', dataUrl);
+				$.ajax({
+					url:'server.php',
+					type: 'POST',
+				    data: formData,
+				    processData: false,
+				    contentType: false,  
+				    success: function (data) {
+				    	alert('上传成功');
+						alert(data);
+				      	console.log('Upload success');
+						console.log(data);
+						document.write(data);
+				    },
+				    error: function () {
+				    	alert('上传失败');
+				      	console.log('Upload error');
+				    }
+				});
+			});
+			$("#cutWidth").change(function(){
+				$('#original').cropper("setData", {"width":parseInt($("#cutWidth").eq(0).val())});
+			});
+			$("#cutHeight").change(function(){
+				$('#original').cropper("setData", {"height":parseInt($("#cutHeight").eq(0).val())});
+			});
+		}
+		
+		try{
+			$(function(){
+				createCropper();
+				listenEvent();
+			});
+		}catch(e){
+			alert(e);
+		}
+		</script>
+	</head>
+	<body>
+		<div class="originalView">
+			<img id="original" src="test.png">
+		</div>
+		<div class="container-right">
+			<div class="resultView">
+				<div class="resultBox">
+					<img id="result" src="">
+				</div>
+			</div>
+			<div class="container-button">
+				<label for="cutWidth">宽度</label>
+				<input type="text" id="cutWidth" class="params" value="100" />
+				<label for="cutWidth">px</label>
+				<label for="cutHeight">高度</label>
+				<input type="text" id="cutHeight" class="params" value="100" />
+				<label for="cutHeight">px</label>
+			</div>
+			<div class="container-button">
+				<input type="button" class="button" style="background-color: orange;" id="cut" value="裁剪" />
+				<input type="button" class="button" style="background-color: #00BC8C;" id="cancel" value="取消" />
+				<input type="button" class="button" style="background-color: #0BB1E1;" id="confirm" value="确定" />
+			</div>
+		</div>
+	</body>
+</html>

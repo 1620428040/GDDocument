@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//__defineGetter__/__defineSetter__
+			var obj2 = {
+				val:200
+        	}
+	        obj2.__defineGetter__('name',function(){
+	        	console.log("getter");
+	        	return this.val
+	        });
+	        obj2.__defineSetter__('name',function(name){
+	        	console.log("setter");
+	        	this.val = name;
+	        });
+	        console.log(obj2.name)
+	        obj2.name = 201;
+	        console.log(obj2.name);
+	        
+	        //defineProperty
+			//参考链接：http://www.cnblogs.com/rubylouvre/archive/2010/09/19/1831128.html
+			var obj1={
+				_name:"ferfer"//属性对应的值
+			}
+			Object.defineProperty(obj1,"name",{//属性
+	        	get:function(){
+	        		console.log("getter");
+	        		return this._name;
+	        	},
+	        	set:function(name){
+	        		console.log("setter");
+	        		this._name=name
+	        	}
+	        });
+	        console.log(obj1.name);
+			obj1.name="2333";
+			console.log(obj1.name);
+			
+		</script>
+	</body>
+</html>

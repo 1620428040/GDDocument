@@ -1,0 +1,81 @@
+网页中重复的内容可以用Repeater创建
+注意，要将重复的内容放在相应的标签中，例如
+<HeaderTemplate></HeaderTemplate>
+<AlternatingItemTemplate></AlternatingItemTemplate>//交替出现的item
+<ItemTemplate></ItemTemplate>
+<SeparatorTemplate></SeparatorTemplate>//两个item之间用来分隔的内容
+<FooterTemplate></FooterTemplate>
+
+输出绑定的值
+<%#Eval("title") %>
+<%# Convert.ToDateTime(Eval("add_time")).ToString("MM-dd")%>
+
+输出序号
+Container.ItemIndex
+
+
+<asp:Repeater ID="Repeater1" runat="server">
+	<HeaderTemplate></HeaderTemplate>
+	<ItemTemplate>
+        
+		<div topClassName='top1' topSwitch='on' newsId='105' newsName='<%#Eval("title") %>' class='line g_item   fk-newsLineHeight   ' >
+			<table id='lineBody105' class='lineBody'  cellpadding='0' cellspacing='0'>
+				<tr id='module314tr105'>
+					<td class='contentLineIcon' ></td>
+					<td class='newsTitle' valign='top'>
+						<div class='' ></div>
+						<a hidefocus='true' href="nd.jsp?id=105&_np=2_314"  title="<%#Eval("title") %>"><%#Eval("title") %></a>
+					</td>
+					<td class='newsCalendar' valign='top'>
+						<a hidefocus='true' href="nd.jsp?id=105&_np=2_314" target=_blank ><%# Convert.ToDateTime(Eval("add_time")).ToString("MM-dd")%></a>
+					</td>
+				</tr>
+			</table>
+		</div>
+		
+	</ItemTemplate>
+</asp:Repeater>
+
+
+//绑定数据
+protected void Page_Load(object sender, EventArgs e)
+{
+	this.bindTopArticle();
+}
+private void bindTopArticle()
+{
+	//中央新闻
+	this.Repeater1.DataSource = get_article_list("news", 10, 9, "status=0");
+	this.Repeater1.DataBind();
+
+	//文献资料
+	this.Repeater2.DataSource = get_article_list("news", 10, 9, "status=0");
+	this.Repeater2.DataBind();
+
+	//学习教育
+	this.Repeater3.DataSource = get_article_list("video", 32, 9, "status=0");
+	this.Repeater3.DataBind();
+}
+//获取文章列表
+protected DataTable get_article_list(string channel_name, int category_id, int top, string strwhere)
+{
+	DataTable dt = new DataTable();
+	if (!string.IsNullOrEmpty(channel_name))
+	{
+		dt = new BLL.article().GetList(channel_name, category_id, top, strwhere, "sort_id asc,add_time desc").Tables[0];
+	}
+   // dt.ToString();
+   // Response.Write(dt.DataSet.ToString());
+	return dt;
+}
+
+
+补充，Repeater中有一个onItemDataBound事件，当ItemTemplate绑定数据时会触发
+在对应的服务器方法中，可以使用
+e.Item.FindControl("")获取控件；
+(e.Item.ItemData as DataRowView).Row获取对应的数据(如果是数据类型是DataRow)
+
+在Repeater外部可以用以下方式获取控件
+rpt.items[i].FindControl("hid_id")
+rpt.Controls[0].FindControl("header_hidId")//HeaderTemplate
+rpt.Controls[rpt.Controls.Count-1].FindControl("FooterId")//FooterTemplate

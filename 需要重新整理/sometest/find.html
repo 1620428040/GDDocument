@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			//这个文件用来测试闭包的性能消耗和不使用闭包的性能消耗
+			//测试函数是一个在多维数组(对象或者数组)中查找特定字符串的函数
+
+			//			searchTool={
+			//				from:{},//只能是没有循环引用的对象
+			//				search:[],//只能是一组字符串
+			//				scope:1,//0,只搜索键名；1，只搜索健值；2，搜索键名或者健值
+			//				layer:1,//最多搜索几层，暂时没用
+			//				onFind:function(key,value){
+			////					console.log("===");
+			////					console.log(key);
+			////					console.log(data);
+			//				},//默认的处理函数
+			//				action:function(){
+			//					for(var key in this.from){
+			//						if(this.search.indexOf(key)){
+			//							this.onFind(key,this.from[key]);
+			//						}
+			//					}
+			//				}
+			//			}
+			var menuData = {
+				"approval": {
+					"icon": "systemManage.png",
+					"title": "公文审批",
+					"children": {
+						"TodoList": {
+							"href": "modules/approval/approval.html",
+							"icon": "To-doTask.png",
+							"title": "待办任务"
+						},
+						"HandledTask": {
+							"href": "reject.html",
+							"icon": "AlreadyDoTask.png",
+							"title": "已办任务"
+						},
+						"empower": {
+							"href": "reject.html",
+							"icon": "impower.png",
+							"title": "授权"
+						},
+						"niwenstatistic": {
+							"href": "reject.html",
+							"icon": "zhuzhuangtu.png",
+							"title": "公文统计"
+						},
+						"empowerlog": {
+							"href": "reject.html",
+							"icon": "impowerLog.png",
+							"title": "授权记录"
+						}
+					}
+				},
+				"file": {
+					"icon": "system-file-manager1.png",
+					"title": "文件管理",
+					"children": {
+						"personal file": {
+							"href": "modules/file/file_list.html",
+							"icon": "20103221016267.png",
+							"title": "个人电子文档"
+						},
+						"oafileinternal": {
+							"href": "modules/file/file_list.html?name=oafileinternal",
+							"icon": "Internal_newspapers.png",
+							"title": "期刊简报管理"
+						}
+					}
+				},
+				"notice": {
+					"icon": "konversation.png",
+					"title": "消息管理",
+					"children": {
+						"announcements": {
+							"href": "reject.html",
+							"icon": "notice.png",
+							"title": "信息发布"
+						},
+						"message": {
+							"href": "modules/notice/notice_list.html",
+							"icon": "sendBox.png",
+							"title": "消息"
+						},
+						"oaaddresslist": {
+							"href": "modules/addressBook/list.html",
+							"icon": "adressList.png",
+							"title": "通讯录"
+						},
+						"lately": {
+							"href": "modules/im/main.html",
+							"icon": "_notice.png",
+							"title": "即时通讯"
+						}
+					}
+				},
+				"administrative": {
+					"icon": "ftemplate.png",
+					"title": "行政管理",
+					"children": {
+						"receptionlist": {
+							"href": "reject.html",
+							"icon": "relationship.png",
+							"title": "接待管理"
+						}
+					}
+				},
+				"schedule": {
+					"icon": "calendar.png",
+					"title": "日程管理",
+					"children": {
+						"Common Agenda": {
+							"href": "modules/calendar/calendar.html",
+							"icon": "calendars.png",
+							"title": "工作计划"
+						},
+						"oaworkloglist": {
+							"href": "reject.html",
+							"icon": "worklog.png",
+							"title": "工作记录"
+						}
+					}
+				},
+				"officeManage": {
+					"icon": "lingdaoricheng.png",
+					"title": "办公管理",
+					"children": {
+						"oadutylist": {
+							"href": "reject.html",
+							"icon": "view-calendar-time-spent.png",
+							"title": "值班管理"
+						},
+						"businesslist": {
+							"href": "reject.html",
+							"icon": "workTravel.png",
+							"title": "出差管理"
+						},
+						"MeettingManager": {
+							"href": "reject.html",
+							"icon": "meettingroom.png",
+							"title": "会议室管理"
+						}
+					}
+				},
+				"meetting": {
+					"icon": "lingdaoricheng.png",
+					"title": "会议管理",
+					"children": {
+						"MeettingManager": {
+							"href": "reject.html",
+							"icon": "meettingroom.png",
+							"title": "会议申请"
+						},
+						"meettingroom": {
+							"href": "reject.html",
+							"icon": "associationUnit.png",
+							"title": "会议室管理"
+						}
+					}
+				},
+				"Recruit": {
+					"icon": "hr.png",
+					"title": "人才招聘",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "招聘信息发布"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "应聘人员信息录入"
+						}
+					}
+				},
+				"hremployeelist": {
+					"icon": "employeebasic.png",
+					"title": "员工信息",
+					"children": {
+						"1": {
+							"href": "modules/info/person.html",
+							"icon": "user_process.png",
+							"title": "员工自助平台"
+						}
+					}
+				},
+				"hrattendance": {
+					"icon": "workgroup.png",
+					"title": "考勤管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "排班"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "签到签退"
+						}
+					}
+				},
+				"everyday": {
+					"icon": "goodsIcon.png",
+					"title": "日常办公",
+					"children": {
+						"oatrainlist": {
+							"href": "reject.html",
+							"icon": "trainrecord.png",
+							"title": "员工培训"
+						},
+						"Travel requests": {
+							"href": "reject.html",
+							"icon": "workTravel.png",
+							"title": "出差管理"
+						},
+						"Leave Application": {
+							"href": "reject.html",
+							"icon": "leaveapplications.png",
+							"title": "假事管理"
+						}
+					}
+				},
+				"a1": {
+					"icon": "industry.png",
+					"title": "产业发展",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "industrialdistribution.png",
+							"title": "产业布局"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "industrialmap.png",
+							"title": "产业地图"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "cashbox.png",
+							"title": "企业列表"
+						}
+					}
+				},
+				"a2": {
+					"icon": "projectconstruction.png",
+					"title": "项目建设",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "overallsituation.png",
+							"title": "总体情况"
+						}
+					}
+				},
+				"a3": {
+					"icon": "statistical.png",
+					"title": "数据分析",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "report.png",
+							"title": "数据图"
+						}
+					}
+				},
+				"a4": {
+					"icon": "administrative.png",
+					"title": "党员管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "dangfei.png",
+							"title": "党费缴纳"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "danghui.png",
+							"title": "我要入党"
+						}
+					}
+				},
+				"a51": {
+					"icon": "xiezuo.png",
+					"title": "组织体系建设",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "kplato.png",
+							"title": "党组织活动"
+						}
+					}
+				},
+				"a5": {
+					"icon": "flib.png",
+					"title": "两学一做",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "party1.png",
+							"title": "文件资料"
+						}
+					}
+				},
+				"a6": {
+					"icon": "okteta.png",
+					"title": "在线答题",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "okteta.png",
+							"title": "答题"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "okteta.png",
+							"title": "查看分数"
+						}
+					}
+				},
+				"a7": {
+					"icon": "document.png",
+					"title": "案件管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "serchcase.png",
+							"title": "案件综合查询"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "newcase.png",
+							"title": "新建案件"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "check.png",
+							"title": "冲突检索"
+						},
+						"4": {
+							"href": "reject.html",
+							"icon": "templatelaw.png",
+							"title": "案件审批"
+						},
+						"5": {
+							"href": "reject.html",
+							"icon": "placefile.png",
+							"title": "律师业务情况统计"
+						},
+						"6": {
+							"href": "reject.html",
+							"icon": "baobiao.png",
+							"title": "案件分类统计"
+						},
+						"7": {
+							"href": "reject.html",
+							"icon": "anjianfenxi.png",
+							"title": "诉讼收费计算器"
+						},
+						"8": {
+							"href": "reject.html",
+							"icon": "court.png",
+							"title": "开庭记录"
+						}
+					}
+				},
+				"a8": {
+					"icon": "kehu.png",
+					"title": "客户关系",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "employeerelptions.png",
+							"title": "自然人客户管理"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "legalPerson.png",
+							"title": "法人客户管理"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "relationship.png",
+							"title": "顾客客户管理"
+						}
+					}
+				},
+				"a9": {
+					"icon": "calendar.png",
+					"title": "日程管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "calendars.png",
+							"title": "工作计划"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "caselog.png",
+							"title": "案件日志"
+						}
+					}
+				},
+				"a10": {
+					"icon": "financial.png",
+					"title": "案件收费",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "yingshoufei.png",
+							"title": "应收费管理"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "ChargeManagement.png",
+							"title": "收费管理"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "shouldCharge.png",
+							"title": "应收费情况统计"
+						}
+					}
+				},
+				"a11": {
+					"icon": "lawyerlibrary.png",
+					"title": "法律图书馆",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "law.png",
+							"title": "法律资源库"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "templatelaw.png",
+							"title": "合同模板"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "lawBook.png",
+							"title": "裁判文书"
+						}
+					}
+				},
+				"b1": {
+					"icon": "workgroup.png",
+					"title": "采购管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "询价单管理"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "采购单管理"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "到货提醒"
+						},
+						"4": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "质检单管理"
+						},
+						"5": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "退货单管理"
+						}
+					}
+				},
+				"b2": {
+					"icon": "workgroup.png",
+					"title": "库存管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "仓库管理"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "入库单管理"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "出库单管理"
+						}
+					}
+				},
+				"b3": {
+					"icon": "workgroup.png",
+					"title": "生产管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "生产计划"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "生产订单"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "委外加工"
+						}
+					}
+				},
+				"b4": {
+					"icon": "workgroup.png",
+					"title": "车间管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "生产下达"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "生产派工"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "生产领料"
+						},
+						"4": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "生产退料"
+						},
+						"5": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "进度汇报"
+						}
+					}
+				},
+				"b5": {
+					"icon": "workgroup.png",
+					"title": "返工管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "返工管理"
+						}
+					}
+				},
+				"b6": {
+					"icon": "workgroup.png",
+					"title": "产品管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "供应商管理"
+						}
+					}
+				},
+				"b7": {
+					"icon": "workgroup.png",
+					"title": "销售管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "销售合同"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "销售退货"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "销售管理"
+						},
+						"4": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "销售维修"
+						}
+					}
+				},
+				"b8": {
+					"icon": "workgroup.png",
+					"title": "财务中心",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "预付款管理"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "应收应付"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "退款管理"
+						}
+					}
+				},
+				"b9": {
+					"icon": "workgroup.png",
+					"title": "工作管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "我的计划"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "协同计划"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "我的汇报"
+						},
+						"4": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "协同汇报"
+						}
+					}
+				},
+				"b10": {
+					"icon": "workgroup.png",
+					"title": "下属信息",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "下属日程"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "下属计划"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "下属汇报"
+						}
+					}
+				},
+				"b11": {
+					"icon": "workgroup.png",
+					"title": "任务管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "我的任务"
+						}
+					}
+				},
+				"b12": {
+					"icon": "workgroup.png",
+					"title": "资产管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "设备设置"
+						}
+					}
+				},
+				"b13": {
+					"icon": "workgroup.png",
+					"title": "办公用品",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "领用记录"
+						}
+					}
+				},
+				"b14": {
+					"icon": "workgroup.png",
+					"title": "考试学习",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "题库管理"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "在线考试"
+						}
+					}
+				},
+				"b15": {
+					"icon": "workgroup.png",
+					"title": "公告新闻",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "公告通知"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "新闻资讯"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "投票调查"
+						}
+					}
+				},
+				"b16": {
+					"icon": "workgroup.png",
+					"title": "信息交流",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "在线沟通"
+						}
+					}
+				},
+				"b17": {
+					"icon": "workgroup.png",
+					"title": "法务管理",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "合同模板"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "合同管理"
+						},
+						"3": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "案件登记"
+						},
+						"4": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "法律图书馆"
+						},
+						"5": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "案件统计"
+						}
+					}
+				},
+				"b18": {
+					"icon": "workgroup.png",
+					"title": "附件程序",
+					"children": {
+						"1": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "法律法规查询"
+						},
+						"2": {
+							"href": "reject.html",
+							"icon": "workgroup.png",
+							"title": "常用网址"
+						}
+					}
+				}
+			};
+			GDTools = {};
+			//range:1,只搜索键名；2，只搜索健值；3，搜索键名或者健值；通过位操作符实现
+			GDTools.search = function(from, search, range, isRecursion, onFind) {
+				for(var key in from) {
+					for(var i = 0; i < search.length; i++) {
+						if(search[i] === key) {
+							onFind(key, from[key], "key");
+						} else if(search[i] === from[key]) {
+							onFind(key, from[key], "value");
+						}
+					}
+					if(typeof from[key] === "object") { //数组也算object类型
+						GDTools.search(from[key], search, range, isRecursion, onFind);
+					}
+				}
+			}
+			GDTools.search3 = function(from, search, range, isRecursion, onFind) {
+				for(var key in from) {
+					for(var i = 0; i < search.length; i++) {
+						if(search[i] === key && (range & 1)) {
+							onFind(key, from[key], "key");
+						} 
+						else if(search[i] === from[key] && (range & 2)) {
+							onFind(key, from[key], "value");
+						}
+					}
+					if(typeof from[key] === "object" && isRecursion) { //数组也算object类型
+						GDTools.search3(from[key], search, range, isRecursion, onFind);
+					}
+				}
+			}
+			
+			
+
+			function onfind(key, value, where) {
+	//				console.log(where);
+	//				console.log(key);
+	//				console.log(value);
+			}
+			console.time("search1");　
+			for(var i = 0; i < 1000; i++) {
+				GDTools.search(menuData, ["常用网址", menuData["notice"]], null, null, onfind);
+			}
+			console.timeEnd("search1");
+
+			console.time("search3");　
+			for(var i = 0; i < 1000; i++) {
+				GDTools.search3(menuData, ["常用网址", menuData["notice"]], 3, true, onfind);
+			}
+			console.timeEnd("search3");
+			
+			console.time("search4");　
+			for(var i = 0; i < 1000; i++) {
+				GDTools.search4(menuData, ["常用网址", menuData["notice"]], null, null, onfind);
+			}
+			console.timeEnd("search4");
+		</script>
+	</body>
+
+</html>

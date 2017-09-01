@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.align{
+				text-align: center;
+			}
+			.decoration{
+				text-decoration: underline;
+			}
+			.decoration-css3{
+				-webkit-text-decoration:#f00 wavy underline;
+				-moz-text-decoration:#f00 solid underline;
+				text-decoration:#f00 solid underline;
+			}
+			.direction{
+				direction: rtl;
+				unicode-bidi: bidi-override;
+			}
+			.transform{
+				text-transform: capitalize;
+			}
+			.shadow{
+				text-shadow: 5px 5px 10px #FF0000;
+			}
+			.ellipsis{/*只能定义在内联元素(a,label,span,style="display: inline;")的父级容器上，然后对其中的内联元素生效，也可以用display: inline;*/
+			    overflow:hidden;
+			    width:200px;
+			    white-space:nowrap;
+			    text-overflow:ellipsis;
+			}
+			.font-family{ 
+				font-size: 40px;
+				font-style: oblique;
+				font-family: helvetica, verdana, sans-serif; 
+			}
+			/*常用字体的英文名称
+				宋体	SimSun
+				黑体	SimHei
+				微软雅黑	Microsoft YaHei
+				微软正黑体	Microsoft JhengHei
+				新宋体	NSimSun
+				新细明体	PMingLiU
+				细明体	MingLiU
+				标楷体	DFKai-SB
+				仿宋	FangSong
+				楷体	KaiTi
+				仿宋_GB2312	FangSong_GB2312
+				楷体_GB2312	KaiTi_GB2312
+			  */
+		</style>
+	</head>
+	<body>
+		<textarea class="decoration">带下划线文字</textarea>
+		
+		<textarea class="decoration-css3">带彩色下划线文字</textarea>
+		
+		<textarea class="direction">书写方向不同的文字</textarea>
+		
+		<textarea class="transform">abc首字母大写</textarea>
+		
+		<label class="shadow">文字阴影</label>
+		
+		<div class="ellipsis">
+			<a>占用的空间超过一定长度的字符串用省略号替代</a>
+			<br />
+			<label>
+				占用的空间超过一定长度的字符串用省略号替代
+			</label>
+			<br />
+			<div style="display: inline;">
+				占用的空间超过一定长度的字符串用省略号替代
+			</div>
+			<br />
+			<div>
+				占用的空间超过一定长度的字符串用省略号替代
+			</div>
+		</div>
+		
+		<label class="font-family">40像素，斜体，改变字体</label>
+	</body>
+</html>

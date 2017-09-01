@@ -1,0 +1,270 @@
+{
+	"describe": null,
+	"bindTable": "bpm_task",
+	"primaryFields": "id",
+	"feature": [
+		"browse",
+		"delete",
+		"search",
+		"refresh"
+	],
+	"alias": {
+		"people": "",
+		"title": "",
+		"date": ""
+	},
+	"fieldList": {
+		"id": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"branch_id": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"parent_id": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"func": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 100,
+			"type": "LongText"
+		},
+		"callback": {
+			"title": "子流程结束后的回掉流程",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 100,
+			"type": "LongText"
+		},
+		"flow_id": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"proc_id": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"last_task_id": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"name": {
+			"title": "流程英文名",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 100,
+			"type": "LongText"
+		},
+		"show_name": {
+			"title": "任务显示名称",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 100,
+			"type": "LongText"
+		},
+		"parent_proc": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 100,
+			"type": "LongText"
+		},
+		"handler_id": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 32,
+			"type": "Base"
+		},
+		"handler_name": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64,
+			"type": "LongText"
+		},
+		"creatorid": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 30,
+			"type": "Base"
+		},
+		"creatorname": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 60,
+			"type": "LongText"
+		},
+		"state": {
+			"title": "任务状态0待处理，1处理中，2完成，3暂停",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"createtime": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"accept_time": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"deal_time": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"finish_time": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"result_table": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64,
+			"type": "LongText"
+		},
+		"title": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 200,
+			"type": "LongText"
+		},
+		"url": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 100,
+			"type": "LongText"
+		},
+		"task_type": {
+			"title": "root|task|subroot",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"proc_path_id": {
+			"title": "流程路径id",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"proc_path_name": {
+			"title": "流程路径名",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 60,
+			"type": "LongText"
+		},
+		"result": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 30,
+			"type": "Base"
+		},
+		"remark": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 200,
+			"type": "LongText"
+		},
+		"permission": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"pr": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"userpr": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"module": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"data_model": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"sync_id": {
+			"title": "同步ID",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"wait_for": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 30,
+			"type": "Base"
+		},
+		"merge_key": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 30,
+			"type": "Base"
+		}
+	}
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script src="json2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var txt = '{ "a":"abc","employees" : [' +
+				'{ "firstName":"Bill" , "lastName":"Gates" },' +
+				'{ "firstName":"George" , "lastName":"Bush" },' +
+				'{ "firstName":"Thomas" , "lastName":"Carter" } ]}';
+			var obj=JSON.parse(txt);
+			var txt2=JSON.stringify(obj,function(k,v){
+				if(k=="a"){
+					return v.toString().toUpperCase();
+				}
+				return v
+				//alert(data);
+			},4);
+			alert(txt2);
+			//var employees=txt.parseJSON();
+			//alert(obj['employees'][1]['firstName']);
+		</script>
+	</body>
+</html>

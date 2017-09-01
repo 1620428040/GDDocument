@@ -1,0 +1,6 @@
+更新数据
+如果同一份文档solr.xml重复导入会出现什么情况呢？实际上solr会根据文档的字段id来唯一标识文档，如果导入的文档的id已经存在solr中，那么这份文档就被最新导入的同id的文档自动替换。你可以自己尝试试验一下，观察替换前后管理界面的几个参数：Num Docs，Max Doc，Deleted Docs的变化。
+
+numDocs：当前系统中的文档数量，它有可能大于xml文件个数，因为一个xml文件可能有多个<doc>标签。
+maxDoc：maxDoc有可能比numDocs的值要大，比如重复post同一份文件后，maxDoc值就增大了。
+deletedDocs：重复post的文件会替换掉老的文档，同时deltedDocs的值也会加1，不过这只是逻辑上的删除，并没有真正从索引中移除掉

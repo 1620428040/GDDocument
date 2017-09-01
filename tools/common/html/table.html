@@ -1,0 +1,61 @@
+<!--
+	HTML表格的常用功能
+	可编辑状态、单击、鼠标移动到表格上之类的
+-->
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML表格</title>
+		<script type="text/javascript">
+			//处理点击事件
+			function clickHandler(){
+				alert("onload");
+			}
+			function moveHandler(button){
+				button.backgroundColor="red";
+			}
+		</script>
+	</head>
+
+	<body>
+		<table class="table table-bordered table-condensed table-hover" contenteditable="true">
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>产品</th>
+					<th>交付时间</th>
+					<th>状态</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr class="success" onclick="clickHandler()">
+					<td>1</td>
+					<td>TB - Monthly</td>
+					<td>01/04/2012</td>
+					<td>Approved</td>
+				</tr>
+				<tr class="error" onmousemove="moveHandler()">
+					<td>2</td>
+					<td>TB - Monthly</td>
+					<td>02/04/2012</td>
+					<td>Declined</td>
+				</tr>
+				<tr class="warning">
+					<td>3</td>
+					<td>TB - Monthly</td>
+					<td>03/04/2012</td>
+					<td>Pending</td>
+				</tr>
+				<tr class="info">
+					<td>4</td>
+					<td>TB - Monthly</td>
+					<td>04/04/2012</td>
+					<td>Call in to confirm</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+
+</html>

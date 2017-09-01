@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//在JavaScript中的数组是没有remove之类的方法的，要在数组中删除某一项，可以用两种方法
+			
+			//arrayObject.splice(index,howmany,item1,.....,itemX);index开始的索引，howmany替换的个数，item...用来替换的项，如果没有则为空
+			var list=["a","b","c","d","e","f"];
+			list.splice(2,1);
+			console.log(list);
+			
+			//delect关键词，可以用来移除其中的某一项，然后将剩下的元素全部移到另一个数组中
+			var list=["a","b","c","d","e","f"];
+			delete list[1];
+			var newList=[];
+			for (var key in list) {
+				newList.push(list[key]);
+			}
+			console.log(newList);
+		</script>
+	</body>
+</html>

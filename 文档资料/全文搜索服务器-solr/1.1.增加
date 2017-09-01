@@ -1,0 +1,7 @@
+导入数据到Solr的方式也是多种多样的：
+
+可以使用DIH(DataImportHandler)从数据库导入数据
+支持CSV文件导入，因此Excel数据也能轻松导入
+支持JSON格式文档
+二进制文档比如：Word、PDF
+还能以编程的方式来自定义导入

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+
+	<body>
+		<div id="test">
+
+		</div>
+		<script type="text/javascript">
+			
+			var obj=new GDObject();
+			obj.obj1();
+			obj.obj2();
+			obj.vie1();
+			
+			var vie=new GDView();
+			vie.obj1();
+			vie.obj2();
+			vie.vie1();
+			
+			function GDObject(){
+				//如果类还没有初始化，则先初始化类，参数：当前类，父类，初始化函数
+				initClassIfUnInit(GDObject,null,function(){
+					GDObject.prototype.obj1=function(){
+						alert("object1");
+					}
+					GDObject.prototype.obj2=function(){
+						alert("object2");
+					}
+				});
+				
+			}
+			function GDView(width,height,css){
+				initClassIfUnInit(GDView,GDObject,function(){
+					GDView.prototype.vie1=function(){
+						alert("view1");
+					}
+				});
+				
+			}
+			function initClassIfUnInit(thisClass,superClass,initMethod){
+				alert("init  "+thisClass);
+				if(thisClass.prototype.isInit==true){
+					return;
+				}
+				thisClass.prototype.isInit=true;
+				if(superClass!=null){
+					if(superClass.prototype.isInit!=true){
+						var superObject=new superClass();
+					}
+					for(var pro in superClass.prototype){
+						thisClass.prototype[pro]=superClass.prototype[pro];
+					}
+				}
+				initMethod();
+			}
+
+		</script>
+		
+	</body>
+
+</html>

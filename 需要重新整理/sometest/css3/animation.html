@@ -1,0 +1,43 @@
+<!--
+	css3的渐变和动画等效果
+	不支持IE9及以下版本，不同浏览器需要加不同的前缀
+-->
+
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+		<style>
+			@keyframes change{
+				from{
+					background-color: red;
+				}
+				to{
+					background-color: green;
+				}
+			}
+			@-webkit-keyframes change{
+				0%{
+					background: -webkit-linear-gradient(right, red , green , blue );
+				}
+				50%{
+					background: -webkit-linear-gradient(right , green , blue , red);
+				}
+				100%{
+					background: -webkit-linear-gradient(right , blue , red , green);
+				}
+			}
+			.animation{
+				
+				animation: change 10s;
+				-webkit-animation: change 1s;
+				-webkit-animation-iteration-count: 0;
+				width: 100px;
+				height: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="animation"></div>
+	</body>
+</html>

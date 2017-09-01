@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+
+	<head>
+		<title>分割大文件上传</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<style>
+			#test {
+				width: 200px;
+				height: 100px;
+				border: 1px solid green;
+				display: none;
+			}
+			
+			#img {
+				width: 50px;
+				height: 50px;
+				display: none;
+			}
+			
+			#progressBar {
+				text-align: center;
+				font: 8px/10px '微软雅黑', '黑体', sans-serif;
+				width: 300px;
+				height: 10px;
+				border: 1px solid green;
+			}
+			
+			#progress {
+				width: 0%;
+				height: 100%;
+				background: green;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form enctype="multipart/form-data" action="file.php" method="post">
+			<!-- 
+			<input type="file" name="pic" />
+			<div id="img"></div>
+			<input type="button" value="uploadimg" onclick="upimg();" /><br />
+			-->
+			<div id="progressBar">
+				<div id="progress"></div>
+			</div>
+			<input type="file" id="uploadFile" multiple="multiple" />
+			<input type="button" value="uploadfile" onclick="uploadFileWithSlice()" />
+			<input type="submit" value="submit" />
+		</form>
+		<div id="test">
+			测试是否DIV消失
+		</div>
+		<script type="text/javascript">
+			var progressBar = document.getElementById('progressBar');
+			var progress = document.getElementById('progress');
+			var length = 1 * 1024 * 1024;
+			var file = null;
+			var strat = 0;
+			var end = 0;
+
+			function uploadFileWithSlice() {
+				//alert("开始上传文件");
+				file = document.getElementById('uploadFile').files[0];
+				if (!file) {
+					alert('请选择文件');
+					return;
+				}
+				start = 0;
+				uploadSlice();
+			}
+
+			function uploadFileFinsh() {
+				alert("文件上传结束");
+			}
+
+			function uploadSlice() {
+				//alert("开始上传分片");
+				if (start < file.size) {
+					var request = new XMLHttpRequest();
+					request.open('POST', 'upload.php', true);
+					//xhr.setRequestHeader('Content-Type','application/x-www-form-urlencoded');
+					request.onreadystatechange = function() {
+						if (this.readyState == 4) {
+							if (this.status >= 200 && this.status < 300) {
+								if (this.responseText.indexOf('failed') >= 0) {
+									alert('文件发送失败，请重新发送');
+									progress.style.width = '0%';
+								} else {
+									uploadSliceProgress(end);
+									start = end;
+									uploadSlice();
+								}
+							}
+						}
+					}
+					request.upload.onprogress = function(ev) {
+						if (ev.lengthComputable) {
+							uploadSliceProgress(ev.loaded + start);
+						}
+					}
+					//分割文件核心部分slice
+					end = start + length;
+					blob = file.slice(start, end);
+					fd = new FormData();
+					fd.append('fileData', blob);
+					fd.append('fileName', file.name);
+					//console.log(fd);
+					//pending=true;
+					request.send(fd);
+				} else {
+					uploadFileFinsh();
+				}
+			}
+
+			function uploadSliceProgress(byteLength) {
+				//alert("更新上传进程：byteLength:"+byteLength);
+				pecent = 100 * byteLength / file.size;
+				if (pecent > 100) {
+					pecent = 100;
+				}
+				//num.innerHTML=parseInt(pecent)+'%';
+				progress.style.width = pecent + '%';
+				progress.innerHTML = parseInt(pecent) + '%';
+			}
+		</script>
+	</body>
+</html>

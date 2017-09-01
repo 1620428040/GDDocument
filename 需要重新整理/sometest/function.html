@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function say(){
+				if(this===window){
+					console.log("当前窗口");
+				}
+				else{
+					console.log(this.name);
+				}
+			}
+			var a={
+				name:"张三"
+			}
+			var b=Object.create(a);
+			b.name="李四";
+			var c=Object.create(b);
+			c.name="王五";
+			var d=Object.create(c);
+			d.name="赵六";
+		</script>
+	</body>
+</html>

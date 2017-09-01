@@ -1,0 +1,4 @@
+与文件操作相关的代码，在System.IO命名空间中
+主要是File类，可以完成文件的读写之类的操作
+
+另外在System.Xml.XmlDocument中，有处理xml文件的方法

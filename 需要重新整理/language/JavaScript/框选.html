@@ -1,0 +1,119 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>鼠标框选效果</title>
+		<style>
+			* {
+				padding: 0;
+				margin: 0;
+			}
+			.tempDiv {
+				border: 1px dashed blue;
+				background: #5a72f8;
+				
+				width: 0;
+				height: 0;
+				/*filter: alpha(opacity: 10);*/
+				opacity: 0.1
+			}
+			.selectable{
+				float: left;
+				width: 100px;
+				height: 100px;
+				background-color: lightblue;
+				margin: 10px;
+			}
+			.selected{
+				background-color: lightseagreen;
+			}
+		</style>
+		
+		<!--下面一部分是自己实现的，能被矩形选中的元素-->
+		<script src="../../../framework/jQuery/jquery/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			//$(function(){$("body").rectSelect("tempDiv","selectable","selected");});
+			//sel,cell,selected皆为类名;sel选择框的样式，cell可以被选择的元素，selected选中后的样式
+			$.fn.rectSelect=function(sel,cell,selected){
+				var box= $(this);//选择的范围
+				var div= null;//选择框
+				var posx = null;
+				var posy = null;
+				box.bind("mousedown",selectStart);
+				console.log(box);
+				function selectStart(ev){
+					posx = ev.clientX;
+					posy = ev.clientY;
+					$("."+selected).removeClass(selected);
+					if(div){
+						div.remove();
+					}
+					div = $('<div class="'+sel+'" style="position: absolute;left: '+posx+'px;top: '+posy+'px;"></div>');
+					box.append(div);
+					box.bind("mousemove",selecting);
+					box.bind("mouseup",selectEnd);
+					box.bind("mouseleave",selectEnd);
+				}
+				function selecting(ev){
+					div.attr("style",'position: absolute;left:'+Math.min(ev.clientX, posx)+'px;top:'+Math.min(ev.clientY, posy)+'px;width:'+Math.abs(posx - ev.clientX)+'px;height:'+Math.abs(posy - ev.clientY)+'px;');
+				}
+				function selectEnd(){
+					selectSubmit(div);
+					div.remove();
+					box.unbind("mousemove");
+					box.unbind("mouseup");
+					box.unbind("mouseleave");
+				}
+				function selectSubmit(selectDom){
+					var selectRect=getRect(selectDom);
+					$("."+cell).each(function(){
+						var currentRect=getRect(this);
+						if(
+							(currentRect.xMin<selectRect.xMax)&&
+							(currentRect.xMax>selectRect.xMin)&&
+							(currentRect.yMin<selectRect.yMax)&&
+							(currentRect.yMax>selectRect.yMin)
+						){
+							$(this).addClass(selected);
+						}
+					});
+					//获取元素的范围
+					function getRect(dom){
+						var jq=$(dom);
+						var offset=jq.offset();
+						var rect={
+							xMin:offset.left,
+							xMax:offset.left+jq.width(),
+							yMin:offset.top,
+							yMax:offset.top+jq.height()
+						}
+						return rect;
+					}
+				}
+			}
+			$(function(){$("body").rectSelect("tempDiv","selectable","selected");});
+		</script>
+	</head>
+	<body>
+		<div class="selectable"></div>
+		<div class="selectable"></div>
+		<div class="selectable"></div>
+		<div class="selectable"></div>
+		<div class="selectable"></div>
+		<div class="selectable"></div>
+		<div class="selectable"></div>
+		<div class="selectable"></div>
+		<div class="selectable"></div>
+		<div class="selectable"></div>
+		<div class="selectable"></div>
+		<div class="selectable"></div>
+		<div class="selectable"></div>
+		<div class="selectable"></div>
+		<div style="clear: both;">
+			
+		</div>
+	</body>
+
+</html>

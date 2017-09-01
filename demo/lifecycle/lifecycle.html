@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//页面加载
+			window.onload=function(){
+				console.log("window.onload");
+			}
+			window.onpageshow=function(){
+				console.log("window.onpageshow");
+			}
+			//页面退出，这个事件比较有用
+			window.onbeforeunload=function(){
+//				alert("onbeforeunload");
+				console.log("window.onbeforeunload");
+				return "onbeforeunload";
+			}
+			window.onpagehide=function(){
+//				alert("onpagehide");
+				console.log("window.onpagehide");
+				return "onpagehide";
+			}
+			window.onunload=function(){
+//				alert("onpagehide");
+				console.log("window.onunload");
+				return "onpagehide";
+			}
+		</script>
+	</body>
+</html>

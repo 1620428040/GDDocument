@@ -1,0 +1,37 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+		<script src="../js/compare.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+		var obj1={
+			"a":"2222",
+			"b":{
+				"ba":"erger",
+				"bb":["dgr","rgre"]
+			},
+			"c":"reerg"
+		};
+		var obj2={
+			"a":"2222",
+			"b":{
+				"ba":"erger",
+				"bb":["dgr","rgre"]
+			},
+			"c":"reerg"
+		};
+		
+		var test1=navigator.plugins[0];
+		var test2=navigator.plugins[0][0]["enabledPlugin"];
+		
+		try{
+			var result=compareObject(test1,test2);
+			alert("result:"+result);
+		}catch(e){
+			alert(e);
+		}
+		</script>
+	</body>
+</html>

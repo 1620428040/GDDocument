@@ -1,0 +1,103 @@
+{
+	"describe": null,
+	"bindTable": "oa_duty",
+	"primaryFields": "id",
+	"feature": [
+		"browse",
+		"insert",
+		"delete",
+		"update",
+		"search",
+		"refresh"
+	],
+	"fieldList": {
+		"id": {
+			"title": "",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"duty_name": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 256
+		},
+		"duty_content": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 1024
+		},
+		"duty_userid": {
+			"title": "值班人员",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 256
+		},
+		"duty_username": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 512
+		},
+		"inputuserid": {
+			"title": "录入人",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"inputusername": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"duty_data": {
+			"title": "值班日期",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"begin_time": {
+			"title": "开始时间",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"end_time": {
+			"title": "结束时间",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"visitor": {
+			"title": "有无访问者",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"visitor_name": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 128
+		},
+		"file": {
+			"title": "有无文件",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"file_name": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 128
+		}
+	}
+}

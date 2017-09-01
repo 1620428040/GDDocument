@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<p>首先，输入数据库连接信息，然后点确认</p>
+		<form id="link-form">
+			<div>
+				<label for="host"></label>
+				<input type="text" id="host" name="host" value="127.0.0.1" />
+			</div>
+			<div>
+				<label for="user"></label>
+				<input type="text" id="user" name="user" value="root" />
+			</div>
+			<div>
+				<label for="password"></label>
+				<input type="text" id="password" name="password" value="" />
+			</div>
+			<div>
+				<label for="db"></label>
+				<input type="text" id="db" name="db" value="zc" />
+			</div>
+			<div>
+				<label for="table"></label>
+				<input type="text" id="table" name="table" value="" />
+			</div>
+			<button type="button" onclick="linkSubmit();">确认</button>
+		</form>
+		<textarea id="fields-all"></textarea>
+		
+		
+		<p>然后输入要输入的字段，确认SQL语句的模板</p>
+		<form id="field-form">
+			<textarea id="fields"></textarea>
+			<button type="button" onclick="fieldSubmit();">确认</button>
+		</form>
+		<textarea id="sql"></textarea>
+		
+		
+		<p>最后输入数据，点击确认。字段之间用</p>
+		<form id="data-form">
+			<textarea id="data"></textarea>
+			<button type="button" onclick="dataSubmit();">确认</button>
+		</form>
+		<textarea id="result"></textarea>
+		
+		
+		<script>
+			function linkSubmit(){
+				$.post("server.php?action=link",$("#link-form").serialize(),function(res){
+					$("#fields-all").val(res);
+				});
+			}
+			function fieldSubmit(){
+				$.post("server.php?action=field",$("#field-form").serialize(),function(res){
+					$("#sql").val(res);
+				});
+			}
+			function dataSubmit(){
+				$.post("server.php?action=data",$("#data-form").serialize(),function(res){
+					$("#result").val(res);
+				});
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,105 @@
+{
+	"describe": "工作记录",
+	"bindTable": "oa_work_log",
+	"primaryFields": "id",
+	"feature": [
+		"browse",
+		"insert",
+		"delete",
+		"update",
+		"search",
+		"refresh"
+	],
+	"fieldList": {
+		"id": {
+			"title": "编号",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"user_id": {
+			"title": "用户编号",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 60
+		},
+		"user_name": {
+			"title": "用户姓名",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 40
+		},
+		"help_lawyer_id": {
+			"title": "协同人编号",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 300
+		},
+		"help_lawyer_name": {
+			"title": "协同人姓名",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 300
+		},
+		"type": {
+			"title": "类型",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"case_id": {
+			"title": "",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"work_content": {
+			"title": "工作内容",
+			"notNull": true,
+			"dataType": "text",
+			"maxlength": 0
+		},
+		"work_place": {
+			"title": "工作地点",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200
+		},
+		"begin_time": {
+			"title": "开始时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"end_time": {
+			"title": "结束时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"finish_time": {
+			"title": "完成日期",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"workname": {
+			"title": "工作名称",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200
+		},
+		"elapsedTime": {
+			"title": "耗时",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 32
+		}
+	}
+}

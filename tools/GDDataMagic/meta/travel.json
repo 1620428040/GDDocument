@@ -1,0 +1,140 @@
+{
+	"describe": "出差管理",
+	"bindTable": "oa_travel",
+	"primaryFields": "id",
+	"feature": [
+		"search",
+		"refresh"
+	],
+	"alias":{
+		"people":"tripuser_name",
+		"title":"trip_purpose",
+		"date":"trip_begintime"
+	},
+	"fieldList": {
+		"id": {
+			"title": "编号",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"userid": {
+			"title": "用户ID",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"username": {
+			"title": "用户名",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"dept_id": {
+			"title": "部门ID",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"dept_name": {
+			"title": "部门名称",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"triptype": {
+			"title": "出差类型",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"tripuser_id": {
+			"title": "出差人员ID",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 512
+		},
+		"tripuser_name": {
+			"title": "出差人员",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 512
+		},
+		"trip_address": {
+			"title": "地址",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 512
+		},
+		"trip_purpose": {
+			"title": "出差目的",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 512
+		},
+		"trip_goods": {
+			"title": "出差物品",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 512
+		},
+		"trip_begintime": {
+			"title": "出差时间",
+			"type": "date",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"trip_endtime": {
+			"title": "返回时间",
+			"type": "date",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"add_time": {
+			"title": "创建时间",
+			"type": "date",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"trip_costname": {
+			"title": "花费项目",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 256
+		},
+		"trip_cost": {
+			"title": "花费金额",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"cost_type": {
+			"title": "经费支出类型",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"loan_money": {
+			"title": "借款金额",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"flow_id": {
+			"title": "流程ID",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"trip_status": {
+			"title": "审批状态",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 64
+		}
+	}
+}

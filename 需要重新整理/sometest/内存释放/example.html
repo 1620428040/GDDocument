@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<button onclick="timer=setInterval(grow,1000);">开始</button>
+		<button onclick="clearInterval(timer);">停止</button>
+		<button onclick="testArr.push('测试！')">测试</button>
+		<div id="nodes">
+			
+		</div>
+		<script type="text/javascript">
+			//通过一个例子学习如何使用chrome查找内存泄漏
+			//链接:http://web.jobbole.com/88463/
+			var x = [],timer;
+			function createSomeNodes() {
+			    var div,frag = document.createDocumentFragment();
+			    for (var i=100;i > 0; i--) {
+			        div = document.createElement("div");
+			        div.appendChild(document.createTextNode(i + " - "+ new Date().toTimeString()));
+			        frag.appendChild(div);
+			    }
+			    console.log(div);
+			    console.log(frag);
+			    document.getElementById("nodes").appendChild(frag);
+			}
+			function grow() {
+			    x.push(new Array(1000000).join('x'));
+			    createSomeNodes();
+			}
+			
+			var testArr=[];
+			
+			function cla(){
+				
+			}
+			var obj=new cla();
+			obj.title="ewfer";
+			var obj2=new cla();
+			obj2.title="ccccc";
+		</script>
+	</body>
+</html>

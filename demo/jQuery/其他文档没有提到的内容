@@ -1,0 +1,7 @@
+如果用jQuery创建新的DOM时，HTML里有两个同级的元素，jQuery会创建两个DOM对象
+var a=$("<div>abc</div><div>abc</div>");
+[<div>​abc​</div>,<div>​abc​</div>​]
+
+jQuery的add函数，能将一个DOM对象添加到jq对象里
+a.add("<div>ewfewfwe</div>")
+[<div>​abc​</div>​,<div>​abc​</div>​,<div>​ewfewfwe​</div>]

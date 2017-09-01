@@ -1,0 +1,155 @@
+{
+	"describe": "部门",
+	"bindTable": "oa_hr_unit_info",
+	"primaryFields": "UNIT_ID",
+	"tools": [
+		"browse",
+		"delete",
+		"search",
+		"refresh"
+	],
+	"alias": {
+		"id":"UNIT_ID",
+		"parent":"UPER_UNIT_ID",
+		"people": "UPER_UNIT_NAME",
+		"title": "UNIT_NAME",
+		"date": "path"
+	},
+	"fieldList": {
+		"UNIT_ID": {
+			"title": "id",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"UNIT_NAME": {
+			"title": "名称",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"UNIT_TYPE": {
+			"title": "部门类型",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Select",
+			"valueRange":"0,省;1,市;2,县"
+		},
+		"LEVEL": {
+			"title": "层级",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"UPER_UNIT_ID": {
+			"title": "父节点id",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"UPER_UNIT_NAME": {
+			"title": "父节点名称",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"formation_count": {
+			"title": "???",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"manager": {
+			"title": "正职",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 512,
+			"type": "LongText"
+		},
+		"assistant_manager": {
+			"title": "副职",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 512,
+			"type": "LongText"
+		},
+		"user_id": {
+			"title": "正职ID",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 512,
+			"type": "LongText"
+		},
+		"assistant_user_id": {
+			"title": "副职ID",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 512,
+			"type": "LongText"
+		},
+		"leadership_id": {
+			"title": "分管领导ID",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 100,
+			"type": "LongText"
+		},
+		"leadership_name": {
+			"title": "分管领导姓名",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 100,
+			"type": "LongText"
+		},
+		"REMARK": {
+			"title": "备注",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 500,
+			"type": "LongText"
+		},
+		"orderby": {
+			"title": "排序",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"Phone": {
+			"title": "电话",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 64,
+			"type": "LongText"
+		},
+		"displayStatus": {
+			"title": "是否显示",
+			"notNull": false,
+			"dataType": "tinyint",
+			"maxlength": 1,
+			"type":"Select",
+			"valueRange":"0,不显示;1,显示"
+		},
+		"path": {
+			"title": "路径",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 500,
+			"type": "LongText"
+		},
+		"pathname": {
+			"title": "部门层级名称",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 512,
+			"type": "LongText"
+		}
+	}
+}

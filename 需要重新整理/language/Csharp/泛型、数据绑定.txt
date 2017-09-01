@@ -1,0 +1,91 @@
+在C#中
+char[] split = { '|' };
+string[] strs ={"edfgreg","ewfefew"};
+
+string[] strs = { "abc", "abc", "abc",'g' };
+Array strArray = strs;
+IEnumerable<string> strIEable = strs;
+strArray = strIEable;
+string[]是一个固定个数的数组，不能增加删除？
+string[]能隐式的转化成IEnumerable<string>或Array，但IEnumerable<string>不能隐式的转化成Array，string[]继承于IEnumerable<string>或Array还是其他原因？
+
+
+数组，比较奇怪
+string[] strs = { "abc", "abc", "abc" };
+strs[0]="gvreg";
+strs.SetValue("udfu",0);
+
+Array strArray = Array.CreateInstance(string,10);
+strArray.SetValue("hahaha",0);
+
+strs=strArray;//错，不知道为啥
+strs=Array.CreateInstance(string,10);
+strArray=strs;
+
+//两种泛型，可以作为数组和词典使用
+List<string> strList =new List<string>;
+strList.Add("regerg");
+strList.Remove("regerg");
+strList.RemoveAt(0);
+
+Dictionary<string,object>dict=new Dictionary<string,object>;
+dict.Add("a","rdgege");
+dict.Remove("a");
+
+
+
+泛型，模板
+C#中数据绑定除了可以绑定datatable之外，也可以绑定泛型
+泛型的<>中的部分是一个实体类，他的参数都要被包装成属性才能用
+
+数据绑定泛型的例子：
+List<ImageQuote> switchoverImageList = new List<ImageQuote>();
+XmlNodeList imgList = setting.SelectNodes("switchoverImage");
+if (imgList != null)
+{
+	for (int i = 0; i < imgList.Count; i++)
+	{
+		ImageQuote switchoverImage = new ImageQuote();
+		XmlElement imageEle = imgList[i] as XmlElement;
+		switchoverImage.Id = imageEle.GetAttribute("id");
+		switchoverImage.Original_path = imageEle.GetAttribute("original_path");
+		switchoverImage.Thumb_path = imageEle.GetAttribute("thumb_path");
+		switchoverImage.Remark = imageEle.GetAttribute("remark");
+		switchoverImageList.Add(switchoverImage);
+	}
+}
+this.Repeater1.DataSource = switchoverImageList;
+this.Repeater1.DataBind();
+
+
+class ImageQuote
+{
+	private string id="0";
+
+	public string Id
+	{
+		get { return id; }
+		set { id = value; }
+	}
+	private string original_path="null";
+
+	public string Original_path
+	{
+		get { return original_path; }
+		set { original_path = value; }
+	}
+	private string thumb_path = "null";
+
+	public string Thumb_path
+	{
+		get { return thumb_path; }
+		set { thumb_path = value; }
+	}
+	private string remark = "null";
+
+	public string Remark
+	{
+		get { return remark; }
+		set { remark = value; }
+	}
+}

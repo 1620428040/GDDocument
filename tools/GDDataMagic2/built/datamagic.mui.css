@@ -1,0 +1,47 @@
+﻿
+/***<jscompress sourcefile="base.css" />*/
+.DMTable{
+	border-width: 1px;
+	border-style: dashed;
+	border-color: lightblue;
+	width: 100%;
+}
+.DMTable .DMHead{
+	background-color: lightsalmon !important;
+}
+.DMTable .DMItem:nth-child(2n){
+	background-color: rgb(230,230,230);
+}
+.DMItem:hover{
+	background-color: lightgray;
+}
+.DMItem.selected{
+	background-color: dodgerblue !important;
+}
+.input-error{
+	border: solid 1px #a94442 !important;
+	border-radius: 5px !important;
+}
+.input-success{
+	border: solid 1px #3c763d !important;
+	border-radius: 5px !important;
+}
+#select-options .selected{
+	background-color: #00A0FF;
+	color: white;
+}
+/*当通过picker选择输入的值的时候，用label代替input。这个类使label跟原来的input显示效果相同*/
+.picker-input{
+	padding-left: 0px !important;
+	height: 40px;
+	margin: 0px;
+	width: 65% !important;
+}
+.DMTemplate{
+	display: none;
+}
+
+
+/***<jscompress sourcefile="DataMagic.mui.css" />*/
+
+

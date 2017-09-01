@@ -1,0 +1,5 @@
+提供了一套容易使用的样式
+
+使用mui()函数，可以获取到相应的DOM对象，并且其中封装了一些操作，比如popover、progressbar、pullRefresh
+
+mui.init初始化mui并且进行一些设置

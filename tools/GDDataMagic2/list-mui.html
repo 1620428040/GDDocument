@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>基本的列表页面</title>
+		<script src="framework/jquery/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--引用mui框架中的文件-->
+		<link rel="stylesheet" type="text/css" href="framework/mui/css/mui.min.css"/>
+		<script src="framework/mui/mui.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="framework/mui/mui.picker.min.css"/>
+		<script src="framework/mui/mui.picker.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--datamagic for mui-->
+		<script src="built/datamagic.mui.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="built/datamagic.mui.min.css"/>
+		
+		<script type="text/javascript">
+			var duty=new DataMagic.Controller("duty",sessionStorage,"php/DataMagic2.php");
+		</script>
+	</head>
+	<body class="DataMagic default">
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title"></h1>
+		</header>
+		<nav class="mui-bar mui-bar-tab DMToolbar"></nav>
+		
+		<div class="mui-content">
+			<ul class="mui-table-view DMList" style="margin-top: 0px;"></ul>
+			<div class="mui-input-group DMForm"></div>
+		</div>
+	</body>
+</html>

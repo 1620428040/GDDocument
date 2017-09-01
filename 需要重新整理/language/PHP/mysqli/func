@@ -1,0 +1,153 @@
+函数和属性
+MySQLi {
+/* 属性 */
+int $mysqli->affected_rows;
+string $mysqli->client_info;
+int $mysqli->client_version;
+int $mysqli->connect_errno;
+string $mysqli->connect_error;
+int $errno;
+array $mysqli->error_list;
+string $mysqli->error;
+int $mysqli->field_count;
+int $mysqli->client_version;
+string $mysqli->host_info;
+string $mysqli->protocol_version;
+string $mysqli->server_info;
+int $mysqli->server_version;
+string $mysqli->info;
+mixed $mysqli->insert_id;
+string $mysqli->sqlstate;
+int $mysqli->thread_id;
+int $mysqli->warning_count;
+/* 方法 */
+int mysqli_affected_rows ( mysqli $link )
+bool mysqli::autocommit ( bool $mode )
+public bool mysqli::begin_transaction ([ int $flags [, string $name ]] )
+bool mysqli::change_user ( string $user , string $password , string $database )
+string mysqli::character_set_name ( void )
+string mysqli_get_client_info ( mysqli $link )
+int mysqli_get_client_version ( mysqli $link )
+bool mysqli::close ( void )
+bool mysqli::commit ( void )
+int mysqli_connect_errno ( void )
+string mysqli_connect_error ( void )
+mysqli mysqli_connect ([ string $host = ini_get("mysqli.default_host") [, string $username = ini_get("mysqli.default_user") [, string $passwd = ini_get("mysqli.default_pw") [, string $dbname = "" [, int $port = ini_get("mysqli.default_port") [, string $socket = ini_get("mysqli.default_socket") ]]]]]] )
+bool mysqli::debug ( string $message )
+bool mysqli::dump_debug_info ( void )
+int mysqli_errno ( mysqli $link )
+array mysqli_error_list ( mysqli $link )
+string mysqli_error ( mysqli $link )
+int mysqli_field_count ( mysqli $link )
+object mysqli::get_charset ( void )
+string mysqli::get_client_info ( void )
+array mysqli_get_client_stats ( void )
+int mysqli_get_client_version ( mysqli $link )
+bool mysqli::get_connection_stats ( void )
+string mysqli_get_host_info ( mysqli $link )
+int mysqli_get_proto_info ( mysqli $link )
+string mysqli_get_server_info ( mysqli $link )
+int mysqli_get_server_version ( mysqli $link )
+mysqli_warning mysqli::get_warnings ( void )
+string mysqli_info ( mysqli $link )
+mysqli mysqli::init ( void )
+mixed mysqli_insert_id ( mysqli $link )
+bool mysqli::kill ( int $processid )
+bool mysqli::more_results ( void )
+bool mysqli::multi_query ( string $query )
+bool mysqli::next_result ( void )
+bool mysqli::options ( int $option , mixed $value )
+bool mysqli::ping ( void )
+public static int mysqli::poll ( array &$read , array &$error , array &$reject , int $sec [, int $usec ] )
+mysqli_stmt mysqli::prepare ( string $query )
+mixed mysqli::query ( string $query [, int $resultmode = MYSQLI_STORE_RESULT ] )
+bool mysqli::real_connect ([ string $host [, string $username [, string $passwd [, string $dbname [, int $port [, string $socket [, int $flags ]]]]]]] )
+string mysqli::escape_string ( string $escapestr )
+bool mysqli::real_query ( string $query )
+public mysqli_result mysqli::reap_async_query ( void )
+public bool mysqli::refresh ( int $options )
+public bool mysqli::release_savepoint ( string $name )
+bool mysqli::rollback ( void )
+int mysqli::rpl_query_type ( string $query )
+public bool mysqli::savepoint ( string $name )
+bool mysqli::select_db ( string $dbname )
+bool mysqli::send_query ( string $query )
+bool mysqli::set_charset ( string $charset )
+void mysqli_set_local_infile_default ( mysqli $link )
+bool mysqli::set_local_infile_handler ( mysqli $link , callable $read_func )
+string mysqli_sqlstate ( mysqli $link )
+bool mysqli::ssl_set ( string $key , string $cert , string $ca , string $capath , string $cipher )
+string mysqli::stat ( void )
+mysqli_stmt mysqli::stmt_init ( void )
+mysqli_result mysqli::store_result ([ int $option ] )
+int mysqli_thread_id ( mysqli $link )
+bool mysqli_thread_safe ( void )
+mysqli_result mysqli::use_result ( void )
+int mysqli_warning_count ( mysqli $link )
+}
+
+常用函数
+mysqli::$affected_rows — Gets the number of affected rows in a previous MySQL operation
+mysqli::autocommit — 打开或关闭本次数据库连接的自动命令提交事务模式
+mysqli::begin_transaction — Starts a transaction
+mysqli::change_user — Changes the user of the specified database connection
+mysqli::character_set_name — 返回当前数据库连接的默认字符编码
+mysqli::$client_info — Get MySQL client info
+mysqli::$client_version — Returns the MySQL client version as a string
+mysqli::close — 关闭先前打开的数据库连接
+mysqli::commit — 提交一个事务
+mysqli::$connect_errno — Returns the error code from last connect call
+mysqli::$connect_error — Returns a string description of the last connect error
+mysqli::__construct — Open a new connection to the MySQL server
+mysqli::debug — Performs debugging operations
+mysqli::dump_debug_info — 将调试信息输出到日志
+mysqli::errno — 返回最近函数调用的错误代码
+mysqli::$error_list — Returns a list of errors from the last command executed
+mysqli::$error — Returns a string description of the last error
+mysqli::$field_count — Returns the number of columns for the most recent query
+mysqli::get_charset — Returns a character set object
+mysqli::get_client_info — Get MySQL client info
+mysqli_get_client_stats — Returns client per-process statistics
+mysqli_get_client_version — 作为一个整数返回MySQL客户端的版本
+mysqli::get_connection_stats — Returns statistics about the client connection
+mysqli::$host_info — 返回一个表述使用的连接类型的字符串
+mysqli::$protocol_version — 返回MySQL使用的协议版本号
+mysqli::$server_info — 返回MySQL服务器的版本号
+mysqli::$server_version — 作为一个整数返回MySQL服务器的版本
+mysqli::get_warnings — Get result of SHOW WARNINGS
+mysqli::$info — Retrieves information about the most recently executed query
+mysqli::init — Initializes MySQLi and returns a resource for use with mysqli_real_connect()
+mysqli::$insert_id — Returns the auto generated id used in the last query
+mysqli::kill — Asks the server to kill a MySQL thread
+mysqli::more_results — Check if there are any more query results from a multi query
+mysqli::multi_query — Performs a query on the database
+mysqli::next_result — Prepare next result from multi_query
+mysqli::options — Set options
+mysqli::ping — Pings a server connection, or tries to reconnect if the connection has gone down
+mysqli::poll — Poll connections
+mysqli::prepare — Prepare an SQL statement for execution
+mysqli::query — 对数据库执行一次查询
+mysqli::real_connect — 建立一个 MySQL 服务器连接
+mysqli::real_escape_string — Escapes special characters in a string for use in an SQL statement, taking into account the current charset of the connection
+mysqli::real_query — 执行一个mysql查询
+mysqli::reap_async_query — Get result from async query
+mysqli::refresh — Refreshes
+mysqli::release_savepoint — Removes the named savepoint from the set of savepoints of the current transaction
+mysqli::rollback — 回退当前事务
+mysqli::rpl_query_type — Returns RPL query type
+mysqli::savepoint — Set a named transaction savepoint
+mysqli::select_db — 选择用于数据库查询的默认数据库
+mysqli::send_query — 发送请求并返回结果
+mysqli::set_charset — 设置默认字符编码
+mysqli::set_local_infile_default — Unsets user defined handler for load local infile command
+mysqli::set_local_infile_handler — Set callback function for LOAD DATA LOCAL INFILE command
+mysqli::$sqlstate — Returns the SQLSTATE error from previous MySQL operation
+mysqli::ssl_set — Used for establishing secure connections using SSL
+mysqli::stat — Gets the current system status
+mysqli::stmt_init — 初始化一条语句并返回一个用于mysqli_stmt_prepare(调用)的对象
+mysqli::store_result — Transfers a result set from the last query
+mysqli::$thread_id — Returns the thread ID for the current connection
+mysqli::thread_safe — 返回是否是线程安全的
+mysqli::use_result — Initiate a result set retrieval
+mysqli::$warning_count — Returns the number of warnings from the last query for the given link
+add a note add a note

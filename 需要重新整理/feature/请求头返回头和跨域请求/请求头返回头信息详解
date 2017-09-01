@@ -1,0 +1,25 @@
+请求头信息的参数说明如下  
+一.Accept 表示能够接受的返回数据的范围 */*表示所有  
+二.accbept-encoding： 表明了浏览器可以接受的除了纯文本内容之外的内容编码的类型，比如gzip 压缩 还是deflate 压缩内容  
+三.connection keep-alive 保持TCP连接，备注 在HTTP工作开始之前，web浏览器首先要通过网络与web服务器建立连接，该链接是通过TCP来完成的，TCP协议与IP协议共同构成了Internet服务  
+即著名的TCP/IP协议族，因此Internet又被称为是TCP/IP网络，HTTP是比TCP更高层次的应用层协议，根据规则，只有低层协议建立之后才能进行更高层次协议的连接，因此首先要建立TCP连接，一般TCP协议的端口号是 80   
+四.host：说明主机的名称  
+五.refer：说明是从哪个链接进入该请求来的 就是说明上一个请求链接的  
+六.user-agent：客户端浏览器的类型  
+  
+返回头信息的说明如下  
+accept-ranges ：http请求范围的度量单位  
+age：http接受到请求操作响应后的缓存时间  
+Cache-control:max-age=3600 一个用于定义缓存指令的通用头标  
+conection:keep-alive 保持tcp请求链接  
+Date：发送http信息的时间  
+etag：一种实体头标 它向被发送的资源分配一个唯一的标识符  
+expire：指示实体的有效时间  
+last-modified：指定被请求的资源上次被修改的日期和时间  
+server：表名web服务器的软件和版本号  
+x-cache：表示你的http request 是有proxy server 返回来的 就说你使用了代理服务器，并不是真的服务器返回来的  
+  
+另外 post 发送 虽然可以在url上面看不到请求的参数 但是post发送数据也有下面几个编码方式：  
+一.text/plain 以纯文本的形式发送  
+二.application/x-www-form-urlencoded 默认的编码方式 即 url编码方式  
+三.multipart/form-data MIME编码 上传文件表单时使用这个  

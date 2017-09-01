@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+      // 下面代码都是处理IE浏览器的情况 
+      flag=false;
+      if (window.ActiveXObject || "ActiveXObject" in window) {
+        //判断是否为IE浏览器，"ActiveXObject" in window判断是否为IE11
+        //判断是否安装了adobe Reader
+        for (x = 2; x < 10; x++) {
+          try {
+            oAcro = eval("new ActiveXObject('PDF.PdfCtrl." + x + "');");
+            if (oAcro) {alert(x);
+              flag = true;
+            }
+          } catch (e) {
+            flag = false;
+          }
+        }
+        try {
+          oAcro4 = new ActiveXObject('PDF.PdfCtrl.1');
+          if (oAcro4) {
+            flag = true;
+			alert("PDF.PdfCtrl.1");
+          }
+        } catch (e) {
+          flag = false;
+        }
+        try {
+          oAcro7 = new ActiveXObject('AcroPDF.PDF.1');
+          if (oAcro7) {
+			alert("AcroPDF.PDF.1");
+            flag = true;
+          }
+        } catch (e) {
+          flag = false;
+        }
+        if (flag) {
+        	alert("this");
+          //$('#pdf1').hide();
+          //location = "PDFView.aspx";
+        }
+        else {
+          alert("对不起,您还没有安装PDF阅读器软件呢,为了方便预览PDF文档,请选择安装！");
+          //location = "http://ardownload.adobe.com/pub/adobe/reader/win/9.x/9.3/chs/AdbeRdr930_zh_CN.exe";
+        }
+      }
+      else {
+        //alert($.trim(urls));
+//      var success = new PDFObject({ url: 'PDF/19-P1012728-064_ZHCN-Draft.pdf', pdfOpenParams: { scrollbars: '0', toolbar: '0', statusbar: '0'} }).embed("pdf1");
+//      if (!success) {
+//        var opts = {
+//          width:$(document).width(),
+//          height: $(document).height(),
+//          autoplay: true
+//        };
+//      }
+      }
+		</script>
+	</body>
+</html>

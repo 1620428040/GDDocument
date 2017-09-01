@@ -1,0 +1,249 @@
+php中stream(流)的用法
+
+Stream是PHP开发里最容易被忽视的函数系列（SPL系列，Stream系列，pack函数，封装协议）之一，但其是个很有用也很重要的函数。Stream可以翻译为“流”，下面是使用方法
+在Java里，流是一个很重要的概念。
+流(stream)的概念源于UNIX中管道(pipe)的概念。在UNIX中，管道是一条不间断的字节流，用来实现程序或进程间的通信，或读写外围设备、外部文件等。根据流的方向又可以分为输入流和输出流，同时可以在其外围再套上其它流，比如缓冲流，这样就可以得到更多流处理方法。
+PHP里的流和Java里的流实际上是同一个概念，只是简单了一点。由于PHP主要用于Web开发，所以“流”这块的概念被提到的较少。如果有Java基础，对于PHP里的流就更容易理解了。其实PHP里的许多高级特性，比如SPL，异常，过滤器等都参考了Java的实现，在理念和原理上同出一辙。
+比如下面是一段PHP SPL标准库的用法（遍历目录，查找固定条件的文件）：
+
+
+复制代码 代码如下:
+class RecursiveFileFilterIterator extends FilterIterator
+{
+    // 满足条件的扩展名
+    protected $ext = array('jpg','gif');
+
+    /**
+     * 提供 $path 并生成对应的目录迭代器
+     */
+    public function __construct($path)
+    {
+        parent::__construct(new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path)));
+    }
+
+    /**
+     * 检查文件扩展名是否满足条件
+     */
+    public function accept()
+    {
+        $item = $this->getInnerIterator();
+        if ($item->isFile() && in_array(pathinfo($item->getFilename(), PATHINFO_EXTENSION), $this->ext))
+        {
+            return TRUE;
+        }
+    }
+}
+
+// 实例化
+foreach (new RecursiveFileFilterIterator('D:/history') as $item)
+{
+    echo $item . PHP_EOL;
+}
+
+
+
+Java里也有和其同出一辙的代码：
+复制代码 代码如下:
+public class DirectoryContents
+{
+    public static void main(String[] args) throws IOException
+    {
+        File f = new File("."); // current directory
+
+        FilenameFilter textFilter = new FilenameFilter()
+        {
+            public boolean accept(File dir, String name)
+            {
+                String lowercaseName = name.toLowerCase();
+                if (lowercaseName.endsWith(".txt"))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        };
+
+        File[] files = f.listFiles(textFilter);
+
+        for (File file : files)
+        {
+            if (file.isDirectory())
+            {
+                System.out.print("directory:");
+            }
+            else
+            {
+                System.out.print("     file:");
+            }
+
+            System.out.println(file.getCanonicalPath());
+        }
+    }
+}
+
+
+
+举这个例子，一方面是说明PHP和Java在很多方面的概念是一样的，掌握一种语言对理解另外一门语言会有很大的帮助；另一方面，这个例子也有助于我们下面要提到的过滤器流-filter。其实也是一种设计模式的体现。
+
+我们可以通过几个例子先来了解stream系列函数的使用。
+
+下面是一个使用socket来抓取数据的例子：
+
+
+复制代码 代码如下:
+
+
+$post_ =array (
+ 'author' => 'Gonn',
+ 'mail'=>'gonn@nowamagic.net',
+ 'url'=>'http://www.nowamagic.net/',
+ 'text'=>'欢迎访问简明现代魔法');
+
+$data=http_build_query($post_);
+$fp = fsockopen("nowamagic.net", 80, $errno, $errstr, 5);
+
+$out="POST http://nowamagic.net/news/1/comment HTTP/1.1\r\n";
+$out.="Host: typecho.org\r\n";
+$out.="User-Agent: Mozilla/5.0 (Windows; U; Windows NT 6.1; zh-CN; rv:1.9.2.13) Gecko/20101203 Firefox/3.6.13"."\r\n";
+$out.="Content-type: application/x-www-form-urlencoded\r\n";
+$out.="PHPSESSID=082b0cc33cc7e6df1f87502c456c3eb0\r\n";
+$out.="Content-Length: " . strlen($data) . "\r\n";
+$out.="Connection: close\r\n\r\n";
+$out.=$data."\r\n\r\n";
+
+fwrite($fp, $out);
+while (!feof($fp))
+{
+    echo fgets($fp, 1280);
+}
+
+fclose($fp);
+
+
+
+我们也可以用stream_socket 实现，这很简单，只需要打开socket的代码换成下面的即可：
+复制代码 代码如下:
+$fp = stream_socket_client("tcp://nowamagic.net:80", $errno, $errstr, 3);
+再来看一个stream的例子：
+file_get_contents函数一般常用来读取文件内容，但这个函数也可以用来抓取远程url，起到和curl类似的作用。
+复制代码 代码如下:
+$opts = array (
+ 'http'=>array(
+    'method' => 'POST',
+    'header'=> "Content-type: application/x-www-form-urlencoded\r\n" .
+      "Content-Length: " . strlen($data) . "\r\n",
+    'content' => $data)
+);
+$context = stream_context_create($opts);
+file_get_contents('http://www.jb51.net/news', false, $context);
+注意第三个参数，$context，即HTTP流上下文，可以理解为套在file_get_contents函数上的一根管道。同理，我们还可以创建FTP流，socket流，并把其套在对应的函数在。
+更多关于 stream_context_create，可以参考：PHP函数补完：stream_context_create()模拟POST/GET。
+上面提到的两个stream系列的函数都是类似包装器的流，作用在某种协议的输入输出流上。这样的使用方式和概念，其实和Java中的流并没有大的区别，比如Java中经常有这样的写法：
+复制代码 代码如下:
+
+
+new DataOutputStream(new BufferedOutputStream(new FileOutputStream(new File(fileName))));
+
+
+
+一层流嵌套着另外一层流，和PHP里有异曲同工之妙。
+
+我们再来看个过滤器流的作用：
+
+
+复制代码 代码如下:
+
+
+$fp = fopen('c:/test.txt', 'w+');
+
+/* 把rot13过滤器作用在写入流上 */
+stream_filter_append($fp, "string.rot13", STREAM_FILTER_WRITE);
+
+/* 写入的数据经过rot13过滤器的处理*/
+fwrite($fp, "This is a test\n");
+rewind($fp);
+
+/* 读取写入的数据，独到的自然是被处理过的字符了 */
+fpassthru($fp);
+fclose($fp);
+
+// output：Guvf vf n grfg
+
+
+
+在上面的例子中，如果我们把过滤器的类型设置为STREAM_FILTER_ALL，即同时作用在读写流上，那么读写的数据都将被rot13过滤器处理，我们读出的数据就和写入的原始数据是一致的。
+
+你可能会奇怪stream_filter_append中的 "string.rot13"这个变量来的莫名其妙，这实际上是PHP内置的一个过滤器。
+
+使用下面的方法即可打印出PHP内置的流：
+复制代码 代码如下:
+streamlist = stream_get_filters();
+print_r($streamlist);
+输出：
+复制代码 代码如下:
+Array
+(
+    [0] => convert.iconv.*
+    [1] => mcrypt.*
+    [2] => mdecrypt.*
+    [3] => string.rot13
+    [4] => string.toupper
+    [5] => string.tolower
+    [6] => string.strip_tags
+    [7] => convert.*
+    [8] => consumed
+    [9] => dechunk
+    [10] => zlib.*
+    [11] => bzip2.*
+)
+自然而然，我们会想到定义自己的过滤器，这个也不难：
+复制代码 代码如下:
+class md5_filter extends php_user_filter
+{
+    function filter($in, $out, &$consumed, $closing)
+    {
+        while ($bucket = stream_bucket_make_writeable($in))
+        {
+            $bucket->data = md5($bucket->data);
+            $consumed += $bucket->datalen;
+            stream_bucket_append($out, $bucket);
+        }
+
+        //数据处理成功，可供其它管道读取
+        return PSFS_PASS_ON;
+    }
+}
+stream_filter_register("string.md5", "md5_filter");
+注意：过滤器名可以随意取。
+之后就可以使用"string.md5"这个我们自定义的过滤器了。
+这个过滤器的写法看起来很是有点摸不着头脑，事实上我们只需要看一下php_user_filter这个类的结构和内置方法即了解了。
+过滤器流最适合做的就是文件格式转换了，包括压缩，编解码等，除了这些“偏门”的用法外，filter流更有用的一个地方在于调试和日志功能，比如说在socket开发中，注册一个过滤器流进行log记录。比如下面的例子：
+复制代码 代码如下:
+class md5_filter extends php_user_filter
+{
+    public function filter($in, $out, &$consumed, $closing)
+    {
+        $data="";
+        while ($bucket = stream_bucket_make_writeable($in))
+        {
+            $bucket->data = md5($bucket->data);
+            $consumed += $bucket->datalen;
+            stream_bucket_append($out, $bucket);
+        }
+
+        call_user_func($this->params, $data);
+        return PSFS_PASS_ON;
+    }
+}
+$callback = function($data)
+{
+    file_put_contents("c:\log.txt",date("Y-m-d H:i")."\r\n");
+};
+这个过滤器不仅可以对输入流进行处理，还能回调一个函数来进行日志记录。
+可以这么使用：
+复制代码 代码如下:
+stream_filter_prepend($fp, "string.md5", STREAM_FILTER_WRITE,$callback);
+PHP中的stream流系列函数中还有一个很重要的流，就是包装类流 streamWrapper。使用包装流可以使得不同类型的协议使用相同的接口操纵数据。

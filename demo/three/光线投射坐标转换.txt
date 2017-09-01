@@ -1,0 +1,29 @@
+当鼠标点击页面时，需要把二维坐标转换为三维坐标
+var mouse = new THREE.Vector2();
+function mousemove(event){
+	event.preventDefault();
+	
+    //鼠标当前所在的平面坐标系转换为以屏幕中心为原点，x轴向右,y轴向上,z轴向屏幕内侧的坐标系。该坐标系各分量应该介于 -1 和 1 之间。
+    //转换后的坐标为于z=1的面上，也就是最内侧
+    
+    //文档中是这样写的，但只适合全屏的情况
+//  mouse.x = ( event.clientX / window.innerWidth ) * 2 - 1;
+//	mouse.y = - ( event.clientY / window.innerHeight ) * 2 + 1;
+	//如果不是全屏，可以这样写
+	mouse.x = ( event.offsetX / renderer.domElement.width ) * 2 - 1;
+	mouse.y = - ( event.offsetY / renderer.domElement.height ) * 2 + 1;
+	//unproject可以用相机反投影该向量(点)
+	//此时转换后的点是在整个三维空间的最远的那个面上
+	var vector = new THREE.Vector3( mouse.x, mouse.y, 1 ).unproject( camera );
+
+	p2.x=vector.x;
+	p2.y=vector.y;
+	p2.z=vector.z;
+	//当下次刷新的时候更新线的顶点位置(如果线的两端分别是摄像机的位置和鼠标点击的点的反映射，实际上是看不到线的，因为在视野中变成一个点了)
+	line.geometry.verticesNeedUpdate=true;
+	
+	//使用光线投射器时可以不用反投影，直接用转换后的三维坐标及可以
+	//raycaster.setFromCamera( mouse, camera );
+	//或者
+	//raycaster.set(camera.position,vector.sub(camera.position).normalize());
+}

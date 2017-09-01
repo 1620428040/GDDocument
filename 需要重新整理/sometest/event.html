@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body onunload="unloadHandler()" onbeforeunload="beforeUnloadHandler()">
+	</body>
+	<script type="text/javascript">
+		function unloadHandler(){
+			alert("离开");
+		}
+		function beforeUnloadHandler(){
+			alert("将要离开");
+		}
+	</script>
+</html>

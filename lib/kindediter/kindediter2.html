@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link href="ui-dialog.css" rel="stylesheet" type="text/css" />
+		<link href="style.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<textarea id="txtContent" class="editor"></textarea>
+		<script src="kindediter2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			try{
+				KindEditor.create('.editor', {
+		            width: '100%',
+		            height: '350px',
+		            resizeType: 1,
+		            uploadJson: '../../tools/upload_ajax.ashx?action=EditorFile&IsWater=1',
+		            fileManagerJson: '../../tools/upload_ajax.ashx?action=ManagerFile',
+		            allowFileManager: true
+		       });
+			    var self = KindEditor.instances[0],K=KindEditor;
+			    self.loadPlugin('filemanager', function() {
+					self.plugin.filemanagerDialog({
+						viewType : 'VIEW',
+						dirName : 'image',
+						clickFn : function(url, title) {
+							if (self.dialogs.length > 1) {
+								K('[name="url"]', div).val(url);
+								if (self.afterSelectFile) {
+									self.afterSelectFile.call(self, url);
+								}
+								self.hideDialog();
+							}
+						}
+					});
+				});
+			}
+			catch(e){
+				alert(e);
+			}
+		</script>
+	</body>
+</html>

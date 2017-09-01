@@ -1,0 +1,27 @@
+查询用的URL		http://127.0.0.1:8983/solr/collection1/select?q=*%3A*&wt=json&indent=true
+collection1		操作的实例
+select			操作
+*%3A*			*:*编码后的结果
+
+查询参数
+q			查询条件						格式为q=value,搜索所有字段/格式为q=name:value，在字段名与name相同的字段中，包含value     *:* 表示任意...
+fq			提供一个可选的筛选器查询
+sort		排序规则						sort=price desc/sort=price asc/sort=inStock asc, price desc
+start,row	开始的行数，返回多少行
+fl			返回的字段					http://localhost:8983/solr/collection1/select?q=solr&fl=name&wt=json&indent=true只返回name字段
+df
+wt			返回格式：json/xml/php......
+
+插入其他条件
+可以在URL后插入&name=wi表示某个字段的值必须与条件相同
+对应控制台中的Raw Query Parameters字段
+
+布尔值
+indent		返回数据是否缩进
+debugQuery
+dismax
+edismax
+hl			命中高亮		hl=true #开启高亮功能	hl.fl=name #指定需要高亮的字段
+facet
+spatial
+spellcheck	拼写检查？

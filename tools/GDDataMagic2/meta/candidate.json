@@ -1,0 +1,504 @@
+{
+	"describe": "候选人",
+	"bindTable": "oa_hr_candidate",
+	"primaryFields": "id",
+	"tools": [
+		"browse",
+		"delete",
+		"search",
+		"refresh"
+	],
+	"alias":{
+		"title":"candidate_position",
+		"people":"candidate_name",
+		"date":"recruit_date"
+	},
+	"fieldList": {
+		"id": {
+			"title": "编号",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"candidate_id": {
+			"title": "应聘职位ID",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"candidate_departmentid": {
+			"title": "应聘部门编号",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"candidate_department": {
+			"title": "应聘部门",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"candidate_position": {
+			"title": "应聘岗位",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"candidate_name": {
+			"title": "应聘者姓名",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"candidate_sex": {
+			"title": "应聘者性别",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"candidate_birth": {
+			"title": "应聘者出生年月",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"candidate_origin": {
+			"title": "籍贯",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 40
+		},
+		"residence": {
+			"title": "现住地",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200
+		},
+		"telephone": {
+			"title": "电话（座机）",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 40
+		},
+		"mobilephone": {
+			"title": "电话（手机）",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 40
+		},
+		"marriage_status": {
+			"title": "婚姻状况",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"get_child": {
+			"title": "是否有小孩",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"last_education": {
+			"title": "应聘者最终学历",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"last_degree": {
+			"title": "应聘者最终学位",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"idcard": {
+			"title": "身份证号",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"schootag": {
+			"title": "毕业学校",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 100
+		},
+		"technical_title": {
+			"title": "职称",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"post": {
+			"title": "职务",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"email": {
+			"title": "邮箱",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"domicile": {
+			"title": "户口所在址",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200
+		},
+		"edu1_startdate": {
+			"title": "学历1开始时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"edu1_enddate": {
+			"title": "学历1结束时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"edu1": {
+			"title": "学历1",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30
+		},
+		"edu2_startdate": {
+			"title": "学历2开始时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"edu2_enddate": {
+			"title": "学历2结束时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"edu2": {
+			"title": "学历2",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30
+		},
+		"edu3_startdate": {
+			"title": "学历3开始时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"edu3_enddate": {
+			"title": "学历3结束时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"edu3": {
+			"title": "学历3",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30
+		},
+		"workexp1_startdate": {
+			"title": "工作经历1开始时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"workexp1_enddate": {
+			"title": "工作经历1结束时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"workexp1_corp": {
+			"title": "工作经历1公司",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 80
+		},
+		"workexp1_position": {
+			"title": "工作经历1职位",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30
+		},
+		"workexp1_salary": {
+			"title": "工作经历1收入",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"workexp1_leavereason": {
+			"title": "工作经历1辞职理由",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 80
+		},
+		"hopeincome_month": {
+			"title": "希望收入（月薪）",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"hopeincome_year": {
+			"title": "希望收入（年薪）",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"certificate": {
+			"title": "证书状况",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30
+		},
+		"english_read": {
+			"title": "外语能力（英语）读",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"english_write": {
+			"title": "外语能力（英语）写",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"english_speak": {
+			"title": "外语能力（英语）说 ",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"tofel": {
+			"title": "TOFEL",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"toeic": {
+			"title": "TOEIC",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"other_foreign": {
+			"title": "其他外语",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"foreign_read": {
+			"title": "其他外语 读",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"foreign_write": {
+			"title": "其他外语 写",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"foreign_speak": {
+			"title": "其他外语 说",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"foreign_certificate": {
+			"title": "外语证书",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 80
+		},
+		"home1_relationship": {
+			"title": "家庭成员1 关系",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"home1_name": {
+			"title": "家庭成员1 姓名",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"home1_age": {
+			"title": "家庭成员1 年龄",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"home1_company": {
+			"title": "家庭成员1 单位",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 80
+		},
+		"home1_profession": {
+			"title": "家庭成员1 职业",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30
+		},
+		"home2_relationship": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"home2_name": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"home2_age": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"home2_company": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 80
+		},
+		"home2_profession": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"home3_relationship": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"home3_name": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"home3_age": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"home3_company": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 80
+		},
+		"home3_profession": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"way_recruitment": {
+			"title": "得知招聘的方式",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 80
+		},
+		"introducer": {
+			"title": "介绍人",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"recruit_reason": {
+			"title": "应聘理由",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 100
+		},
+		"comment": {
+			"title": "其他",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200
+		},
+		"recruit_date": {
+			"title": "应聘时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"skill": {
+			"title": "应聘者擅长技术",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30
+		},
+		"skill_level": {
+			"title": "应聘者技术水平",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30
+		},
+		"work_example": {
+			"title": "实践经验（例）",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 500
+		},
+		"hobby": {
+			"title": "兴趣爱好",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30
+		},
+		"written_result": {
+			"title": "应聘笔试成绩",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"firstinter_result": {
+			"title": "应聘一面意见",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200
+		},
+		"second_result": {
+			"title": "应聘二面意见",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200
+		},
+		"recruit_result": {
+			"title": "应聘结果",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"admission_reason": {
+			"title": "录用/不录用理由",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200
+		}
+	}
+}

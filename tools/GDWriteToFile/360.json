@@ -1,0 +1,920 @@
+{
+	"0": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/pdf",
+			"suffixes": "pdf",
+			"description": ""
+		},
+		"ClassName": "Plugin",
+		"name": "Chromium PDF Viewer",
+		"filename": "mhjfbmdgcfjbbpaeojofohoefgiehjai",
+		"description": "",
+		"length": 1,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"1": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/vnd.chromium.remoting-viewer",
+			"suffixes": "",
+			"description": ""
+		},
+		"ClassName": "Plugin",
+		"name": "Chrome Remote Desktop Viewer",
+		"filename": "internal-remoting-viewer",
+		"description": "This plugin allows you to securely access other computers that have been shared with you. To use this plugin you must first install the Chrome Remote Desktop webapp.",
+		"length": 1,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"2": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/x-shockwave-flash",
+			"suffixes": "swf",
+			"description": "Shockwave Flash"
+		},
+		"1": {
+			"ClassName": "MimeType",
+			"type": "application/futuresplash",
+			"suffixes": "spl",
+			"description": "FutureSplash Player"
+		},
+		"ClassName": "Plugin",
+		"name": "Shockwave Flash",
+		"filename": "pepflashplayer32_21_0_0_182.dll",
+		"description": "Shockwave Flash 21.0 r0",
+		"length": 2,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"3": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/x-google-chrome-pdf",
+			"suffixes": "pdf",
+			"description": "Portable Document Format"
+		},
+		"ClassName": "Plugin",
+		"name": "Chromium PDF Viewer",
+		"filename": "internal-pdf-viewer",
+		"description": "Portable Document Format",
+		"length": 1,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"4": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/x-ms-wmp",
+			"suffixes": "*",
+			"description": "np-mswmp"
+		},
+		"1": {
+			"ClassName": "MimeType",
+			"type": "application/asx",
+			"suffixes": "*",
+			"description": ""
+		},
+		"2": {
+			"ClassName": "MimeType",
+			"type": "video/x-ms-asf-plugin",
+			"suffixes": "*",
+			"description": ""
+		},
+		"3": {
+			"ClassName": "MimeType",
+			"type": "application/x-mplayer2",
+			"suffixes": "*",
+			"description": ""
+		},
+		"4": {
+			"ClassName": "MimeType",
+			"type": "video/x-ms-asf",
+			"suffixes": "asf,asx,*",
+			"description": ""
+		},
+		"5": {
+			"ClassName": "MimeType",
+			"type": "video/x-ms-wm",
+			"suffixes": "wm,*",
+			"description": ""
+		},
+		"6": {
+			"ClassName": "MimeType",
+			"type": "audio/x-ms-wma",
+			"suffixes": "wma,*",
+			"description": ""
+		},
+		"7": {
+			"ClassName": "MimeType",
+			"type": "audio/x-ms-wax",
+			"suffixes": "wax,*",
+			"description": ""
+		},
+		"8": {
+			"ClassName": "MimeType",
+			"type": "video/x-ms-wmv",
+			"suffixes": "wmv,*",
+			"description": ""
+		},
+		"9": {
+			"ClassName": "MimeType",
+			"type": "video/x-ms-wvx",
+			"suffixes": "wvx,*",
+			"description": ""
+		},
+		"ClassName": "Plugin",
+		"name": "Microsoft® Windows Media Player Firefox Plugin",
+		"filename": "np-mswmp.dll",
+		"description": "np-mswmp",
+		"length": 10,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"5": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/aliedit",
+			"suffixes": "",
+			"description": "npaliedit"
+		},
+		"ClassName": "Plugin",
+		"name": "Alipay security control",
+		"filename": "npaliedit.dll",
+		"description": "npaliedit",
+		"length": 1,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"6": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/npalissologin",
+			"suffixes": "AliSSOLogin",
+			"description": "AliSSOLogin"
+		},
+		"ClassName": "Plugin",
+		"name": "AliSSOLogin plugin",
+		"filename": "npalissologin.dll",
+		"description": "npAliSSOLogin Plugin",
+		"length": 1,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"7": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/pta.itruspta.version.1",
+			"suffixes": "*",
+			"description": "PTA"
+		},
+		"1": {
+			"ClassName": "MimeType",
+			"type": "application/cenroll.cenroll.version.1",
+			"suffixes": "",
+			"description": "CEnroll"
+		},
+		"2": {
+			"ClassName": "MimeType",
+			"type": "application/itrusenroll.certenroll.version.1",
+			"suffixes": "",
+			"description": "IEnroll"
+		},
+		"3": {
+			"ClassName": "MimeType",
+			"type": "application/hwpta.itrushwpta",
+			"suffixes": "",
+			"description": "hwPTA"
+		},
+		"4": {
+			"ClassName": "MimeType",
+			"type": "application/hwwdkey.installwdkey",
+			"suffixes": "",
+			"description": "hwWDkey"
+		},
+		"5": {
+			"ClassName": "MimeType",
+			"type": "application/hwepass2001.installepass2001",
+			"suffixes": "",
+			"description": "HwEpass2001"
+		},
+		"ClassName": "Plugin",
+		"name": "iTrusChina iTrusPTA,XEnroll,iEnroll,hwPTA,UKeyInstalls Firefox Plugin",
+		"filename": "npcombrg.dll",
+		"description": "iTrusPTA&XEnroll hwPTA,IEnroll,UKeyInstalls for FireFox,version=1.0.0.2",
+		"length": 6,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"8": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/qscall-plugin",
+			"suffixes": "dll",
+			"description": "DLL"
+		},
+		"ClassName": "Plugin",
+		"name": "QQ2013 Chrome Plugin",
+		"filename": "npactivex.dll",
+		"description": "QQ2013 Chrome Plugin",
+		"length": 1,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"9": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/x-shockwave-flash",
+			"suffixes": "swf",
+			"description": "Adobe Flash movie"
+		},
+		"1": {
+			"ClassName": "MimeType",
+			"type": "application/futuresplash",
+			"suffixes": "spl",
+			"description": "FutureSplash movie"
+		},
+		"ClassName": "Plugin",
+		"name": "Shockwave Flash",
+		"filename": "NPSWF32_21_0_0_182.dll",
+		"description": "Shockwave Flash 21.0 r0",
+		"length": 2,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"10": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/x-vnd.google.update3webcontrol.3",
+			"suffixes": "",
+			"description": ""
+		},
+		"1": {
+			"ClassName": "MimeType",
+			"type": "application/x-vnd.google.oneclickctrl.9",
+			"suffixes": "",
+			"description": ""
+		},
+		"ClassName": "Plugin",
+		"name": "Google Update",
+		"filename": "npGoogleUpdate3.dll",
+		"description": "Google Update",
+		"length": 2,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"11": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/java-deployment-toolkit",
+			"suffixes": "",
+			"description": ""
+		},
+		"ClassName": "Plugin",
+		"name": "Java Deployment Toolkit 8.0.910.14",
+		"filename": "npDeployJava1.dll",
+		"description": "NPRuntime Script Plug-in Library for Java(TM) Deploy",
+		"length": 1,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"12": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet",
+			"suffixes": "",
+			"description": "Java Applet"
+		},
+		"1": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean",
+			"suffixes": "",
+			"description": "JavaBeans"
+		},
+		"2": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-vm",
+			"suffixes": "",
+			"description": ""
+		},
+		"3": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.1.1",
+			"suffixes": "",
+			"description": ""
+		},
+		"4": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.1.1",
+			"suffixes": "",
+			"description": ""
+		},
+		"5": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.1",
+			"suffixes": "",
+			"description": ""
+		},
+		"6": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.1",
+			"suffixes": "",
+			"description": ""
+		},
+		"7": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.2",
+			"suffixes": "",
+			"description": ""
+		},
+		"8": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.2",
+			"suffixes": "",
+			"description": ""
+		},
+		"9": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.1.3",
+			"suffixes": "",
+			"description": ""
+		},
+		"10": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.1.3",
+			"suffixes": "",
+			"description": ""
+		},
+		"11": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.1.2",
+			"suffixes": "",
+			"description": ""
+		},
+		"12": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.1.2",
+			"suffixes": "",
+			"description": ""
+		},
+		"13": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.3",
+			"suffixes": "",
+			"description": ""
+		},
+		"14": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.3",
+			"suffixes": "",
+			"description": ""
+		},
+		"15": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.2.2",
+			"suffixes": "",
+			"description": ""
+		},
+		"16": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.2.2",
+			"suffixes": "",
+			"description": ""
+		},
+		"17": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.2.1",
+			"suffixes": "",
+			"description": ""
+		},
+		"18": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.2.1",
+			"suffixes": "",
+			"description": ""
+		},
+		"19": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.3.1",
+			"suffixes": "",
+			"description": ""
+		},
+		"20": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.3.1",
+			"suffixes": "",
+			"description": ""
+		},
+		"21": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.4",
+			"suffixes": "",
+			"description": ""
+		},
+		"22": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.4",
+			"suffixes": "",
+			"description": ""
+		},
+		"23": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.4.1",
+			"suffixes": "",
+			"description": ""
+		},
+		"24": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.4.1",
+			"suffixes": "",
+			"description": ""
+		},
+		"25": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.4.2",
+			"suffixes": "",
+			"description": ""
+		},
+		"26": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.4.2",
+			"suffixes": "",
+			"description": ""
+		},
+		"27": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.5",
+			"suffixes": "",
+			"description": ""
+		},
+		"28": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.5",
+			"suffixes": "",
+			"description": ""
+		},
+		"29": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.6",
+			"suffixes": "",
+			"description": ""
+		},
+		"30": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.6",
+			"suffixes": "",
+			"description": ""
+		},
+		"31": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.7",
+			"suffixes": "",
+			"description": ""
+		},
+		"32": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.7",
+			"suffixes": "",
+			"description": ""
+		},
+		"33": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;version=1.8",
+			"suffixes": "",
+			"description": ""
+		},
+		"34": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;version=1.8",
+			"suffixes": "",
+			"description": ""
+		},
+		"35": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;jpi-version=1.8.0_91",
+			"suffixes": "",
+			"description": ""
+		},
+		"36": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-bean;jpi-version=1.8.0_91",
+			"suffixes": "",
+			"description": ""
+		},
+		"37": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-vm-npruntime",
+			"suffixes": "",
+			"description": ""
+		},
+		"38": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;deploy=11.91.2",
+			"suffixes": "",
+			"description": ""
+		},
+		"39": {
+			"ClassName": "MimeType",
+			"type": "application/x-java-applet;javafx=8.0.91",
+			"suffixes": "",
+			"description": ""
+		},
+		"ClassName": "Plugin",
+		"name": "Java(TM) Platform SE 8 U91",
+		"filename": "npjp2.dll",
+		"description": "Next Generation Java Plug-in 11.91.2 for Mozilla browsers",
+		"length": 40,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"13": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/x-silverlight",
+			"suffixes": "scr",
+			"description": "npctrl"
+		},
+		"1": {
+			"ClassName": "MimeType",
+			"type": "application/x-silverlight-2",
+			"suffixes": "",
+			"description": ""
+		},
+		"ClassName": "Plugin",
+		"name": "Silverlight Plug-In",
+		"filename": "npctrl.dll",
+		"description": "5.1.20513.0",
+		"length": 2,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"14": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/x-tencent-qmail-webkit",
+			"suffixes": "",
+			"description": "QQMailPlugin for webkit"
+		},
+		"1": {
+			"ClassName": "MimeType",
+			"type": "application/x-tencent-qmail",
+			"suffixes": "",
+			"description": "QQMailPlugin for webkit"
+		},
+		"ClassName": "Plugin",
+		"name": "QQMail Plugin",
+		"filename": "npQQMailWebKit.dll",
+		"description": "QQMail plugin for WebKit #1.0.0.22",
+		"length": 2,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"15": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/txftn-webkit",
+			"suffixes": "",
+			"description": "nptxftn"
+		},
+		"ClassName": "Plugin",
+		"name": "Tencent FTN plug-in",
+		"filename": "nptxftnWebKit.dll",
+		"description": "Tencent FTN plug-in",
+		"length": 1,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"16": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/tecent-qzonemusic-plugin",
+			"suffixes": "rts",
+			"description": "This plug-in is transfers of QzoneMusic when opening Qzone in a web page with Firefox."
+		},
+		"ClassName": "Plugin",
+		"name": "QQMusic",
+		"filename": "npQzoneMusic.dll",
+		"description": "QQMusic",
+		"length": 1,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"17": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/tencent-qqphotodrawex2-plugin",
+			"suffixes": "rts",
+			"description": ""
+		},
+		"ClassName": "Plugin",
+		"name": "npQQPhotoDrawEx",
+		"filename": "npQQPhotoDrawEx.dll",
+		"description": "npQQPhotoDrawEx Module",
+		"length": 1,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"18": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/x-shockwave-flash",
+			"suffixes": "swf",
+			"description": "Adobe Flash movie"
+		},
+		"1": {
+			"ClassName": "MimeType",
+			"type": "application/futuresplash",
+			"suffixes": "spl",
+			"description": "FutureSplash movie"
+		},
+		"ClassName": "Plugin",
+		"name": "Shockwave Flash",
+		"filename": "NPSWF32_11_8_800_168.dll",
+		"description": "Shockwave Flash 11.8 r800",
+		"length": 2,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"19": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/pta.itruspta.version.1",
+			"suffixes": "*",
+			"description": "PTA"
+		},
+		"1": {
+			"ClassName": "MimeType",
+			"type": "application/cenroll.cenroll.version.1",
+			"suffixes": "",
+			"description": "CEnroll"
+		},
+		"2": {
+			"ClassName": "MimeType",
+			"type": "application/itrusenroll.certenroll.version.1",
+			"suffixes": "",
+			"description": "IEnroll"
+		},
+		"3": {
+			"ClassName": "MimeType",
+			"type": "application/hwpta.itrushwpta",
+			"suffixes": "",
+			"description": "hwPTA"
+		},
+		"4": {
+			"ClassName": "MimeType",
+			"type": "application/hwwdkey.installwdkey",
+			"suffixes": "",
+			"description": "hwWDkey"
+		},
+		"5": {
+			"ClassName": "MimeType",
+			"type": "application/hwepass2001.installepass2001",
+			"suffixes": "",
+			"description": "HwEpass2001"
+		},
+		"ClassName": "Plugin",
+		"name": "iTrusChina iTrusPTA,XEnroll,iEnroll,hwPTA,UKeyInstalls Firefox Plugin",
+		"filename": "NPComBrg701.dll",
+		"description": "iTrusPTA&XEnroll hwPTA,IEnroll,UKeyInstalls for FireFox,version=1.0.0.2",
+		"length": 6,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"20": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/x-pageoffice-plugin",
+			"suffixes": "ocx",
+			"description": "ActiveX"
+		},
+		"ClassName": "Plugin",
+		"name": "PageOffice",
+		"filename": "nppageoffice.dll",
+		"description": "PageOffice plugin for Chrome and Firefox",
+		"length": 1,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"21": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/pdf",
+			"suffixes": "pdf",
+			"description": "Acrobat Portable Document Format"
+		},
+		"1": {
+			"ClassName": "MimeType",
+			"type": "application/vnd.adobe.pdfxml",
+			"suffixes": "pdfxml",
+			"description": "Adobe PDF in XML Format"
+		},
+		"2": {
+			"ClassName": "MimeType",
+			"type": "application/vnd.adobe.x-mars",
+			"suffixes": "mars",
+			"description": "Adobe PDF in XML Format"
+		},
+		"3": {
+			"ClassName": "MimeType",
+			"type": "application/vnd.fdf",
+			"suffixes": "fdf",
+			"description": "Acrobat Forms Data Format"
+		},
+		"4": {
+			"ClassName": "MimeType",
+			"type": "application/vnd.adobe.xfdf",
+			"suffixes": "xfdf",
+			"description": "XML Version of Acrobat Forms Data Format"
+		},
+		"5": {
+			"ClassName": "MimeType",
+			"type": "application/vnd.adobe.xdp+xml",
+			"suffixes": "xdp",
+			"description": "Acrobat XML Data Package"
+		},
+		"6": {
+			"ClassName": "MimeType",
+			"type": "application/vnd.adobe.xfd+xml",
+			"suffixes": "xfd",
+			"description": "Adobe FormFlow99 Data File"
+		},
+		"ClassName": "Plugin",
+		"name": "Adobe Acrobat",
+		"filename": "nppdf32.dll",
+		"description": "Adobe PDF Plug-In For Firefox and Netscape 11.0.14",
+		"length": 7,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"22": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/pdf",
+			"suffixes": "pdf",
+			"description": "Acrobat Portable Document Format"
+		},
+		"1": {
+			"ClassName": "MimeType",
+			"type": "application/vnd.fdf",
+			"suffixes": "fdf",
+			"description": ""
+		},
+		"2": {
+			"ClassName": "MimeType",
+			"type": "application/vnd.ppdf",
+			"suffixes": "ppdf",
+			"description": ""
+		},
+		"ClassName": "Plugin",
+		"name": "Foxit Reader Plugin for Mozilla",
+		"filename": "npFoxitReaderPlugin.dll",
+		"description": "Foxit Reader Plug-In For Firefox and Netscape",
+		"length": 3,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"23": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/x-msoffice14",
+			"suffixes": "*",
+			"description": "14.0.4730.1010"
+		},
+		"ClassName": "Plugin",
+		"name": "Microsoft Office 2010",
+		"filename": "NPAUTHZ.DLL",
+		"description": "Office Authorization plug-in for NPAPI browsers",
+		"length": 1,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"24": {
+		"0": {
+			"ClassName": "MimeType",
+			"type": "application/x-sharepoint",
+			"suffixes": "",
+			"description": "SharePoint Plug-in for Firefox"
+		},
+		"ClassName": "Plugin",
+		"name": "Microsoft Office 2010",
+		"filename": "NPSPWRAP.DLL",
+		"description": "The plug-in allows you to open and edit files using Microsoft Office applications",
+		"length": 1,
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"ClassName": "PluginArray",
+	"length": 25,
+	"item": {
+		"ClassName": "Function"
+	},
+	"namedItem": {
+		"ClassName": "Function"
+	},
+	"refresh": {
+		"ClassName": "Function"
+	}
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--声明使用w3c标准-->
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<!--声明网页的编码方式-->
+		
+		<meta name="renderer" content="webkit|ie-comp|ie-stand">
+		<!--
+			360提供的，更换内核的方式（有时候不起作用）
+				content，区分大小写，取值为
+					webkit,webkit内核
+					ie-comp,IE兼容内核
+					ie-stand之一，IE标准内核。 
+		-->
+		
+		<meta http-equiv="X-UA-Compatible" content="IE=9">
+		<!--
+			规定以指定的方式解析网页，edge指微软新版的浏览器edge
+			在nccos系统中修改的地方在nccos\system\kernel\services\MMap\implementations\MMapScreen.php输出内容的地方
+		-->
+		
+		<!--[if IE]>
+		这样使用IE浏览器（全部版本）的人都看得到。
+		<![endif]-->
+		<!--[if IE 6]>
+		这样IE 6.0版本会看得到，只限IE 6.0版本。
+		<![endif]-->
+		<!--[if lt IE 6]>
+		这样IE 6.0以下版本会看得到，不包含6.0。
+		<![endif]-->
+		<!--[if lte IE 6]>
+		这样IE 6.0以下版本会看得到，包含6.0。
+		<![endif]-->
+		<!--[if lte IE 8]>
+		这样IE 8.0以下版本会看得到，包含8.0。
+		<![endif]-->
+		<!--[if gt IE 5]>
+		这样IE 5.0以上版本会看得到，不包含5.0
+		<![endif]-->
+		<!--[if gte IE 5]>
+		这样IE 5.0以上版本会看得到，包含5.0
+		<![endif]-->
+		<!--
+			HTML中使用判断,似乎仅对IE10（不包括10）以下版本有效
+			说明：
+			* gt：greater than （版本号大于）
+			* lt：less than （版本号小于）
+			* gte：greater than or equal to （版本号大于等于）
+			* lte：less than or equal to （版本号小于等于）
+		-->
+		
+		<title></title>
+	</head>
+	<body>
+	</body>
+</html>

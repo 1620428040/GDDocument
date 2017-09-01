@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="jquery/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		参考链接：http://www.w3school.com.cn/jquery/jquery_ref_manipulation.asp
+		<div class="test">
+			用来测试的节点
+		</div>
+		<script type="text/javascript">
+			$(".test").remove();//移除当前节点，相应的信息和关联的事件，如果被重新添加到文档上，也不会触发原来的事件
+			$(".test").detach();//移除当前节点，但是保留相应的信息和关联的事件，可以被重新添加到文档上
+			$(".test").clone();//复制当前结点，包括事件处理器
+		</script>
+	</body>
+</html>

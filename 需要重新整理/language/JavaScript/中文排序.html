@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			resultValue = ['武汉', '北京', '上海', '天津'];
+			resultValue = resultValue.sort(
+				function compareFunction(param1, param2){
+					return param1.localeCompare(param2);
+				}
+			);
+			console.log(resultValue);
+			//[ '北京' , '上海' , '天津' ,'武汉' ] ;
+		</script>
+	</body>
+</html>

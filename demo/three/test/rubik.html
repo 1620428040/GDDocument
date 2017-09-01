@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../chapter2/js/three.js" type="text/javascript" charset="utf-8"></script>
+		<script src="TrackballControls.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			html,body{
+				margin: 0px;
+				padding: 0px;
+			}
+			div#canvas {
+				border: none;
+				cursor: pointer;
+				width: 100%;
+				height: 100%;
+				background-color: #EEEEEE;
+			}
+		</style>
+		<script type="text/javascript">
+			var renderer,camera,scene,light,grid;//渲染器、摄像机、场景、光源、网格
+            function initRenderer() {
+            	width=window.innerWidth;
+            	height=window.innerHeight;
+            	
+//              width = document.getElementById('canvas').clientWidth;
+//              height = document.getElementById('canvas').clientHeight;
+                renderer = new THREE.WebGLRenderer({
+                    antialias : true//抗锯齿
+                });
+                renderer.setSize(width, height);
+                document.getElementById('canvas').appendChild(renderer.domElement);
+                renderer.setClearColor(0xFFFFFF, 1.0);
+            }
+            function initCamera() {
+                camera = new THREE.PerspectiveCamera(45, width / height, 1, 10000);//视角大小，长宽比，最近，最远
+                camera.position.x = 600;//camera.position用来设定摄像机的位置
+                camera.position.y = 600;
+                camera.position.z = 600;
+                camera.up.x = 0;//camera.up用来设定哪个方向是摄像机的上方
+                camera.up.y = 0;
+                camera.up.z = 1;
+                camera.lookAt({//camera.lookAt用来设定摄像机的朝向的位置
+                    x : 300,
+                    y : 0,
+                    z : 0
+                });
+            }
+            function initScene() {
+                scene = new THREE.Scene();
+            }
+            function initLight() {
+                light = new THREE.DirectionalLight(0xFF0000, 1.0, 0);//方向光
+                light.position.set(100, 100, 200);
+                scene.add(light);
+            }
+            function initGrid(){//创建网格
+			    // 网格的边长是1000，每个小网格的边长是50
+			    grid = new THREE.GridHelper( 1000, 50 );
+			    grid.setColors( 0x0000ff, 0x808080 );
+			    scene.add( grid );
+			}
+            var controls;//控制屏幕旋转的控制器
+            function initControls(){
+            	controls= new THREE.TrackballControls(camera,renderer.domElement);
+				controls.rotateSpeed = 5.0;
+				controls.zoomSpeed = 5;
+				controls.panSpeed = 2;
+				controls.noZoom = false;
+				controls.noPan = false;
+				controls.staticMoving = false;
+				controls.dynamicDampingFactor = 0.3;
+            }
+            /*生成和控制魔方的控制器*/
+           	//编号方案:用三位数分别表示以x,y,z轴为法向的面，数字表示第几个面；
+           	//
+           	
+           	//枚举值
+			var directionList=["x","y","z"];
+			var cubeFaceList=[
+				{"direction":"x","forward":true},
+				{"direction":"x","forward":true},
+				{"direction":"x","forward":false},
+				{"direction":"x","forward":false},
+				{"direction":"y","forward":true},
+				{"direction":"y","forward":true},
+				{"direction":"y","forward":false},
+				{"direction":"y","forward":false},
+				{"direction":"z","forward":true},
+				{"direction":"z","forward":true},
+				{"direction":"z","forward":false},
+				{"direction":"z","forward":false}
+			];
+			var state=0;
+			var stateList=[
+				"static",//静止
+				"prepare",//选中魔方上的一个点
+				"start",//开始旋转
+				"sustain",//正在朝一个方向旋转
+				"end",//旋转结束
+				"remove",//需要移除rotator
+				"random"//正在随机旋转魔方
+			];
+			var step;
+            
+            //旋转参数。因为事件处理器只能将参数记录下来，等待下一帧的时候再刷新
+            var rotation={
+            	target:null,//当前选中的方块
+            	face:null,//face指面向用户的方向
+            	direct:null,//direct旋转的正方向
+            	axis:null,//axis指旋转轴
+            	sign:1,//正负号
+            	radian:null//旋转的弧度
+            };
+            
+           	var rubik={};
+           	rubik.colors=[0xADFF2F,0x96CDCD,0x7FFF00,0x9B30FF,0x008B00,0xEE7621];
+           	rubik.clearColor=0xc0c0c0;
+           	rubik.speed=0.1;//TODO:转动速度，魔方的转动速度
+           	rubik.factor=2;//TODO:操作因数，用户的操作会被放大的倍数
+           	rubik.needStep=6;//进行随机时，多少帧完成一次旋转
+           	rubik.cubes=[];//以一个三维数组cubes存放方块
+           	rubik.init=function(){
+           		//初始化
+           		eventListener.init(renderer.domElement);
+           		eventHandler.init();
+           		
+            	//创建方块
+            	function tintage(geometry,faces,judge){//给立方体某一面上涂色,judge=false表示涂成基本色
+            		if(judge){
+            			geometry.faces[2*faces].color.setHex(rubik.colors[faces]);
+			        	geometry.faces[2*faces+1].color.setHex(rubik.colors[faces]);
+            		}
+					else{
+						geometry.faces[2*faces].color.setHex(rubik.clearColor);
+			        	geometry.faces[2*faces+1].color.setHex(rubik.clearColor);
+					}
+            	}
+            	for (var x=0;x<3;x++) {
+            		for (var y=0;y<3;y++) {
+            			for (var z=0;z<3;z++) {
+            				var geometry = new THREE.CubeGeometry(100,100,100);
+            				tintage(geometry,0,x===2);
+            				tintage(geometry,1,x===0);
+            				tintage(geometry,2,y===2);
+            				tintage(geometry,3,y===0);
+            				tintage(geometry,4,z===2);
+            				tintage(geometry,5,z===0);
+						    var material = new THREE.MeshBasicMaterial( { vertexColors: THREE.FaceColors} );
+						    mesh = new THREE.Mesh( geometry,material);//mesh指网格、多个三角形和四边形组合成的图形
+						    mesh.position.x=110*(x-1);
+						    mesh.position.y=110*(y-1);
+						    mesh.position.z=110*(z-1);
+						    scene.add(mesh);
+						    mesh.number=new THREE.Vector3(x,y,z);
+						    mesh.location=new THREE.Vector3(x,y,z);
+						    rubik.cubes.push(mesh);
+            			}
+            		}
+            	}
+            }
+           	rubik.findCubes=function(axis,number){//寻找当前状态下魔方某一个面上的方块
+           		var cubes=[];
+           		for(var i=0;i<this.cubes.length;i++){
+           			var mesh=this.cubes[i];
+           			if(mesh.location[axis]==number){
+           				cubes.push(mesh);
+           			}
+           		}
+           		return cubes;
+            }
+           	//打乱魔方的顺序
+           	rubik.random=false;
+           	rubik.renumbering=function(){
+           		for (var i=0;i<this.cubes.length;i++) {
+           			var mesh=this.cubes[i];
+           			mesh.location.x=Math.round(mesh.position.x/110)+1;
+           			mesh.location.y=Math.round(mesh.position.y/110)+1;
+           			mesh.location.z=Math.round(mesh.position.z/110)+1;
+           		}
+           	}
+           	rubik.examine=function(){
+           		var flag2=0;
+           		function examine(cubes){
+           			var flag=3;
+           			var number=cubes[0].number;
+           			for(var j=0;j<3;j++){
+           				var dir=directionList[j];
+           				for(var i=1;i<cubes.length;i++){
+           					var mesh=cubes[i];
+           					if(number[dir]!==mesh.number[dir]){
+           						flag--;
+           						break;
+           					}
+           				}
+           			}
+           			return flag!==0;
+           		}
+           		flag2+=examine(this.findCubes("x",0));
+           		flag2+=examine(this.findCubes("x",1));
+           		flag2+=examine(this.findCubes("x",2));
+           		flag2+=examine(this.findCubes("y",0));
+           		flag2+=examine(this.findCubes("y",1));
+           		flag2+=examine(this.findCubes("y",2));
+           		flag2+=examine(this.findCubes("z",0));
+           		flag2+=examine(this.findCubes("z",1));
+           		flag2+=examine(this.findCubes("z",2));
+           		if(flag2===9){
+           			alert("成功");
+           		}
+           	}
+           	rubik.rotateRotator=function(radian){//*rubik.factor
+           		rotator.rotation[rotation.axis]=rotation.sign*radian;//没有计算速度的写法
+           		
+//         		var increment=rotation.sign*rotation.radian-rotator.rotation[axis];
+//         		var sign=increment>0?1:-1;
+//         		rotator.rotation[axis]+=sign*(Math.abs(increment)%rubik.speed);
+//         		if(Math.abs(increment)<rubik.speed){
+//         			console.log("123");
+//         		}
+           	}
+           	rubik.createRotator=function(){
+           		var cubes=rubik.findCubes(rotation.axis,rotation.target.location[rotation.axis]);
+          		rotator=new THREE.Object3D();
+				for(var i=0;i<cubes.length;i++){
+					rotator.add(cubes[i]);
+				}
+				scene.add(rotator);
+           	}
+           	rubik.removeRotator=function(){
+           		for(var i=rotator.children.length-1;i>=0;i--){
+            		var mesh=rotator.children[i];
+            		var _position=mesh.getWorldPosition();
+            		var _rotation=mesh.getWorldRotation();
+            		mesh.position.x=_position.x;
+            		mesh.position.y=_position.y;
+            		mesh.position.z=_position.z;
+            		mesh.rotation.x=_rotation.x;
+            		mesh.rotation.y=_rotation.y;
+            		mesh.rotation.z=_rotation.z;
+            		scene.add(mesh);
+            	}
+            	scene.remove(rotator);
+            	rubik.renumbering();
+            	rubik.examine();
+            	rotator=null;
+           	}
+			rubik.update=function(){
+//				if(state!==0){
+//					console.log(state);
+//				}
+				if((state===3||state===4||state===5)&&rotator==null){
+					//TODO:这个地方有时候会出错，出错后返回到状态2就正常了
+					console.log(state);
+					console.trace();
+					state=0;
+				}
+            	if(state===2){
+            		rubik.createRotator();
+					rubik.rotateRotator(rotation.radian);
+            	}
+            	else if(state===3){
+					rubik.rotateRotator(rotation.radian);
+            	}
+            	else if(state===4){
+            		rubik.rotateRotator(Math.round(rotation.radian/Math.PI*2)*Math.PI/2);
+            		state=5;
+            	}
+            	else if(state===5){
+            		rubik.removeRotator();
+	            	state=0;
+            	}
+            	else if(state===0&&rubik.random){
+        			state=10;
+        			step=0;
+            		rotation.axis=directionList[Math.floor(Math.random()*3)];
+            		rotation.sign=Math.random()>0.5?1:-1;
+	       			var num=Math.floor(Math.random()*3);
+	       			if(rotation.axis===3||num===3){
+	       				return;
+	       			}
+	       			var cubes=rubik.findCubes(rotation.axis,num);
+	          		rotator=new THREE.Object3D();
+					for(var i=0;i<cubes.length;i++){
+						rotator.add(cubes[i]);
+					}
+					scene.add(rotator);
+					rubik.rotateRotator(Math.PI/20);
+				}
+            	else if(state===10){
+            		if(step<=rubik.needStep){
+            			rubik.rotateRotator(Math.PI/2/rubik.needStep*step);
+            			step++;
+            		}
+            		else{
+            			rubik.removeRotator();
+        				state=0;
+            		}
+            	}
+            }
+			
+			//事件监听器，负责接收并分发事件
+           	var eventListener={
+           		init:function(dom){
+           			dom.addEventListener("mousedown",this.mousedown);
+           			dom.addEventListener("mousemove",this.mousemove);
+           			dom.addEventListener("mouseup",this.mouseup);
+           			dom.addEventListener("mouseleave",this.mouseup);
+           			dom.addEventListener("touchstart",this.touchstart);
+           			dom.addEventListener("touchmove",this.touchmove);
+           			dom.addEventListener("touchend",this.touchend);
+           		},
+           		mousedown:function(event){
+           			if(state===0){
+           				event.preventDefault();
+						mouse.x = ( event.offsetX / renderer.domElement.width ) * 2 - 1;
+						mouse.y = - ( event.offsetY / renderer.domElement.height ) * 2 + 1;
+						eventHandler.start(event,cameraEventListener.mousedown);
+           			}
+           			else{
+           				cameraEventListener.mousedown();
+           			}
+           		},
+           		mousemove:function(event){
+           			if(state===1||state===2||state===3){
+           				event.preventDefault();
+						mouse.x = ( event.offsetX / renderer.domElement.width ) * 2 - 1;
+						mouse.y = - ( event.offsetY / renderer.domElement.height ) * 2 + 1;
+	           			eventHandler.sustain(event);
+           			}
+           		},
+           		mouseup:function(event){
+           			if(state===2||state===3||state===4){
+           				event.preventDefault();
+           				eventHandler.end(event);
+           			}
+           		},
+           		touchstart:function(event){
+           			if(state===0&&event.touches.length===1){
+           				event.preventDefault();
+           				mouse.x = ( event.touches[0].pageX / renderer.domElement.width ) * 2 - 1;
+						mouse.y = - ( event.touches[0].pageY / renderer.domElement.height ) * 2 + 1;
+						eventHandler.start(event,cameraEventListener.touchstart);
+           			}
+           			else{
+           				cameraEventListener.touchstart(event);
+           			}
+           		},
+           		touchmove:function(event){
+           			if(event.touches.length===1&&(state===1||state===2||state===3)){
+           				event.preventDefault();
+						mouse.x = ( event.touches[0].pageX / renderer.domElement.width ) * 2 - 1;
+						mouse.y = - ( event.touches[0].pageY / renderer.domElement.height ) * 2 + 1;
+	           			eventHandler.sustain(event);
+           			}
+           			else{
+           				cameraEventListener.touchmove(event);
+           			}
+           		},
+           		touchend:function(event){
+           			if(event.changedTouches.length===1&&(state===2||state===3||state===4)){
+           				eventHandler.end(event);
+           			}
+           			else{
+           				cameraEventListener.touchend(event);
+           			}
+           		}
+           	}
+           	
+           	//事件处理器，负责处理相应的事件并且改变全局参数，等下一帧刷新时处理
+           	var mouse,raycaster,rotator,measure={};//measure意为刻度，在这里指一个用来计算需要移动多少弧度的参考面
+            var pointA,pointB,diff=new THREE.Vector3();//第一次的交点，移动后的交点，以及增量
+           	var eventHandler={
+           		init:function(){
+	            	mouse=new THREE.Vector2();
+	            	raycaster=new THREE.Raycaster();
+				    initControls();
+	            },
+	            start:function(event,overstep){
+	            	this.resetRaycaster();
+					//射线和模型求交，选中一系列直线
+					var intersects = raycaster.intersectObjects(rubik.cubes);
+					if(intersects.length>0){
+						state=1;
+						rotation.target=intersects[0].object;
+						
+						var point=intersects[0].point;
+						if(Math.abs(point.x)>Math.abs(point.y)){
+							rotation.face="x";
+						}
+						else{
+							rotation.face="y";
+						}
+						if(Math.abs(point.z)>Math.abs(point[rotation.face])){
+							rotation.face="z";
+						}
+						
+						if(point[rotation.face]>0){
+							rotation.sign=1;
+						}
+						else{
+							rotation.sign=-1;
+						}
+						var layer=rotation.target.location[rotation.face];
+	            		
+		           		measure.vector=new THREE.Vector3();
+		           		measure.point=new THREE.Vector3();
+						measure.vector[rotation.face]=1;
+						measure.point[rotation.face]=160;
+						pointA=this.intersect(measure.vector,measure.point,raycaster.ray.direction,camera.position);
+					}
+					else{
+						overstep(event);//如果选中的点不在魔方上，则调用控制摄像机的函数
+					}
+	            },
+	            sustain:function(event){
+	            	this.resetRaycaster();
+	            	pointB=this.intersect(measure.vector,measure.point,raycaster.ray.direction,camera.position);
+	            	diff=new THREE.Vector3().subVectors(pointB,pointA);
+	            	if(state===1){
+	            		var number=directionList.indexOf(rotation.face);
+	            		var dir1=directionList[(number+1)%3];
+	            		var dir2=directionList[(number+2)%3];
+	            		if(Math.abs(diff[dir1])>Math.abs(diff[dir2])){
+		            		rotation.direct=dir1;
+		            		rotation.axis=dir2;
+		            		rotation.sign*=1;
+		            	}
+		            	else{
+		            		rotation.direct=dir2;
+		            		rotation.axis=dir1;
+		            		rotation.sign*=-1;
+		            	}
+		            	if(Math.abs(diff[rotation.direct])>1){
+		            		state=2;//当第一次拖动结束时，才开始旋转
+		            	}
+	            	}
+	            	else{
+	            		state=3;
+	            	}
+	            	rotation.radian=diff[rotation.direct]/160;
+	            },
+	            end:function(event){
+	            	state=4;//旋转结束，等刷新时计算旋转的结果
+	            },
+	            //重新计算射线投射器的参数，参数是根据鼠标的坐标
+           		resetRaycasterWithMouse:function(){
+           			event.preventDefault();
+					mouse.x = ( event.offsetX / renderer.domElement.width ) * 2 - 1;
+					mouse.y = - ( event.offsetY / renderer.domElement.height ) * 2 + 1;
+					//计算射线的终点
+					raycaster.endPoint = new THREE.Vector3( mouse.x, mouse.y, 1 ).unproject( camera );
+					//重置射线的起点和方向
+					raycaster.set( camera.position,raycaster.endPoint.sub( camera.position ).normalize() );
+	            },
+	            resetRaycaster:function(){
+					//计算射线的终点
+					raycaster.endPoint = new THREE.Vector3( mouse.x, mouse.y, 1 ).unproject( camera );
+					//重置射线的起点和方向
+					raycaster.set( camera.position,raycaster.endPoint.sub( camera.position ).normalize() );
+	            },
+	            //计算点和直线的交点，参数是面和直线的向量，经过的点
+	            intersect:function(planeVector,planePoint,lineVector,linePoint){
+					var returnResult = new THREE.Vector3();  
+					var vp1, vp2, vp3, n1, n2, n3, v1, v2, v3, m1, m2, m3, t,vpt;  
+					vp1 = planeVector["x"];
+					vp2 = planeVector["y"];  
+					vp3 = planeVector["z"];
+					n1 = planePoint["x"];  
+					n2 = planePoint["y"];  
+					n3 = planePoint["z"];
+					v1 = lineVector["x"];  
+					v2 = lineVector["y"];  
+					v3 = lineVector["z"];  
+					m1 = linePoint["x"];  
+					m2 = linePoint["y"];  
+					m3 = linePoint["z"];
+					vpt = v1 * vp1 + v2 * vp2 + v3 * vp3;  
+					//首先判断直线是否与平面平行  
+					if (vpt == 0){  
+						returnResult = null;  
+					}  
+					else{  
+						t = ((n1 - m1) * vp1 + (n2 - m2) * vp2 + (n3 - m3) * vp3) / vpt;  
+						returnResult.x = m1 + v1 * t;  
+						returnResult.y = m2 + v2 * t;  
+						returnResult.z = m3 + v3 * t;  
+					}  
+					return returnResult;
+				}
+           	}
+            function animation(){//动画，旋转
+				controls.update();
+				rubik.update();
+			    renderer.render(scene, camera);
+			    requestAnimationFrame(animation);
+			}
+			function initAll(){
+				initRenderer();
+				initCamera();
+				initScene();
+				initLight();
+				rubik.init();
+//				initGrid();
+				renderer.clear();
+//				rubik.disorganize();
+//				renderer.render(scene, camera);
+                animation();
+			}
+			
+		</script>
+	</head>
+	<body onload="initAll();">
+		<div style="position: fixed;top: 30px;left: 30px;width: 120px;height: 30px;text-align: center;font-size: 30px;" onclick="rubik.random=!rubik.random;">
+			开始随机
+		</div>
+		<div id="canvas"></div>
+	</body>
+</html>

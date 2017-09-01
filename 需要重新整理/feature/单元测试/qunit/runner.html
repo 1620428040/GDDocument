@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>QUnit Test Suite</title>
+        <link rel="stylesheet" href="http://cdn.bootcss.com/qunit/2.1.1/qunit.css" type="text/css" media="screen">
+        <script type="text/javascript" src="http://cdn.bootcss.com/qunit/2.1.1/qunit.js"></script>
+        
+        <script type="text/javascript" src="js/script.js"></script>
+		<script type="text/javascript">
+			QUnit.module("Temperature conversion");
+			QUnit.test("conversion to F", function(assert){
+			    var actual1 = convertFromCelsiusToFahrenheit(20);
+			    assert.equal(actual1, 68);
+				
+			    var actual2 = convertFromCelsiusToFahrenheit(30);
+			    assert.equal(actual2, 86);
+			});
+			
+			QUnit.test("conversion to C", function(assert){
+			    var actual1 = convertFromFahrenheitToCelsius(68);
+			    assert.equal(actual1, 20);
+			
+			    var actual2 = convertFromFahrenheitToCelsius(86);
+			    assert.equal(actual2, 30);
+			});
+			
+			//QUnit 中的测试用例由 test() 方法定义。
+			//可以通过 module() 函数将测试组织到模块中。module() 函数接受{setup:function,teardown:function}作为第二个参数
+			
+			//断言:
+			//ok() 函数检查第一个参数为 true
+			//equal()验证第一个参数等于第二个参数
+			//strictEqual() 验证第一个参数严格等于第二个参数。在这些代码背后，strictEqual() 使用了 === 运算符，equal() 使用了 == 运算符。
+			//propEqual()比较对象的属性是否相同
+			//deepEqual()比较键值对是否相同
+			
+			
+			//asyncTest() 函数提供对异步测试的支持。当测试异步的操作时，用asyncTest代替test函数(http://blog.csdn.net/boycycyzero/article/details/43916727)
+			//expect() 函数可以让你轻松地验证测试中运行的断言数量。即预计要跑多少个断言，当数量达到后测试结束。
+			//var done=assert.expect();done();用来处理异步回调，当异步回调结束后调用done函数
+			
+			//相关链接：http://www.ibm.com/developerworks/cn/web/wa-tools/
+			//		http://www.cnblogs.com/tanght/p/5161767.html
+			//		http://blog.csdn.net/boycycyzero/article/details/43916727
+		</script>
+    </head>
+    <body>
+        <h1 id="qunit-header">QUnit Test Suite</h1>
+        <h2 id="qunit-banner"></h2>
+        <div id="qunit-testrunner-toolbar"></div>
+        <h2 id="qunit-userAgent"></h2>
+        <ol id="qunit-tests"></ol>
+        <div id="qunit-fixture">test markup</div>
+    </body>
+</html>

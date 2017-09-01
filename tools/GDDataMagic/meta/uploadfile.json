@@ -1,0 +1,137 @@
+{
+	"describe": "文件管理",
+	"bindTable": "oa_uploadfile",
+	"primaryFields": "id",
+	"feature": [
+		"browse",
+		"delete",
+		"search",
+		"refresh"
+	],
+	"alias": {
+		"people": "",
+		"title": "",
+		"date": ""
+	},
+	"fieldList": {
+		"id": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number",
+			"hidden":true
+		},
+		"name": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 256,
+			"type": "LongText"
+		},
+		"creatorid": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 128,
+			"type": "LongText"
+		},
+		"filetime": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Date"
+		},
+		"createtime": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Date"
+		},
+		"updatetime": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Date"
+		},
+		"assign": {
+			"title": "交办",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"handle": {
+			"title": "办理",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"repair": {
+			"title": "审修",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"report": {
+			"title": "呈报",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"instructions": {
+			"title": "批示",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"conversion": {
+			"title": "转化",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"size": {
+			"title": "",
+			"notNull": false,
+			"dataType": "bigint",
+			"maxlength": 20
+		},
+		"path": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 1280,
+			"type": "LongText"
+		},
+		"parentpath": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 1280,
+			"type": "LongText"
+		},
+		"realpath": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 1280,
+			"type": "LongText"
+		},
+		"extension": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		}
+	}
+}

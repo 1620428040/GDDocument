@@ -1,0 +1,2 @@
+asp.net程序控制台输出
+System.Diagnostics.Debug.Write(SQLString);

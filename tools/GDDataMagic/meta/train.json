@@ -1,0 +1,91 @@
+{
+	"describe": "员工培训",
+	"bindTable": "oa_hr_train",
+	"primaryFields": "id",
+	"feature": [
+		"browse",
+		"insert",
+		"delete",
+		"update",
+		"search",
+		"refresh"
+	],
+	"alias":{
+		"people":"empname",
+		"title":"content",
+		"date":"begintime"
+	},
+	"fieldList": {
+		"id": {
+			"title": "编号",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"empid": {
+			"title": "",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"empname": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"depid": {
+			"title": "",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"depname": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"begintime": {
+			"title": "",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"endtime": {
+			"title": "",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"way": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"cost": {
+			"title": "",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50
+		},
+		"content": {
+			"title": "",
+			"notNull": false,
+			"dataType": "text",
+			"maxlength": 0
+		},
+		"remark": {
+			"title": "",
+			"notNull": false,
+			"dataType": "text",
+			"maxlength": 0
+		}
+	}
+}

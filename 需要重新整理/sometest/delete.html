@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var str="字符串";
+			var obj={
+				title:"引用"
+			}
+			
+			var a={
+				str:str,
+				obj:obj
+			}
+			var b={
+				str:str,
+				obj:obj
+			}
+			console.log(a,b);
+			delete a.str;
+			delete a.obj;
+			console.log(a,b);
+		</script>
+	</body>
+</html>

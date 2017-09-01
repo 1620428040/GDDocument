@@ -1,0 +1,17 @@
+关于在线打开PDF、word、flash以及浏览器插件管理的内容
+参考链接：https://helpx.adobe.com/cn/acrobat/using/display-pdf-in-browser.html
+		Acrobat 帮助 / 在浏览器中显示 PDF | Acrobat DC，Acrobat Reader DC
+
+插件管理
+在IE中称为管理加载项				Internet选项-程序-管理加载项
+在火狐中称为附加组件管理			左上角下拉菜单-附加组件-插件
+在360安全浏览器中容易和扩展混淆	地址栏中打开se://plugins/
+在chrome也容易和扩展程序混淆		chrome://plugins/打开插件管理	chrome://extensions/打开扩展程序管理
+
+js脚本判断有没有安装插件
+在IE浏览器中只能用new ActiveXObject(name);能不能创建对象来判断有没有安装插件。需要写特定的脚本判断有没有某个插件
+在非IE浏览器中可以使用navigator.plugins获取所有启用的插件列表
+
+PDF阅读器设置在浏览器中打开、设置为默认程序
+Adobe Reader
+设置-首选项-因特网

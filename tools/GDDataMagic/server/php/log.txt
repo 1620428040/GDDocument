@@ -1,0 +1,7645 @@
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select ,,,, from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:update person set name='张三',age='12',birthDay='1481817600',nation='汉族',sex='man'  where id=324548
+类型：字符串
+"query"
+
+
+名称:select * from person where ( name'h' and age'fggbf' and birthDay'1481299200' and nation'fgh' and sex'fgh' )
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where name=hj and age=jg and undefined>1480521600 and undefined<1481817600 and nation=ghjh and sex=ghjh
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%frf%' and age like '%23%' and undefined>1481212800 and undefined<1482422400 and nation like '%vfd%' and sex like '%vdf%'
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%gg%' and age=43 and birthDay>1480521600 and birthDay<1481731200 and nation like '%fgf%' and sex like '%gd%'
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%jhgj%' and age=56 and birthDay>1480521600 and birthDay<1481817600 and nation like '%gjhj%' and sex like '%tj%'
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where  and  and birthDay>1480521600 and birthDay<1483027200 and  and 
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%nghnhg%' and  and birthDay>NaN and birthDay<NaN and  and 
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%bngf%'
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%张三%'
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%张%'
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%张%'
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%地方%'
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:update person set name='张三34',age='12',birthDay='1481817600',nation='汉族',sex='man'  where id=324548
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where age>=1 and age<=23
+类型：字符串
+"query"
+
+
+名称:select * from person where age>=1 and age<=11
+类型：字符串
+"query"
+
+
+名称:select * from person where age>=1 and age<=12
+类型：字符串
+"query"
+
+
+名称:select * from person where age>=1 and age<=12
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:update person set name='张三34',age='1970',birthDay='NaN',nation='汉族',sex='man'  where id=324548
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('','546','NaN','','man') 
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('grtgtr','544','1480521600','tgtr','man') 
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:update person set name='grtgtr',age='54',birthDay='1480521600',nation='tgtr',sex='man'  where id=324551
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:delete from person where id in (324548,324551)
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('hjjh','23','1480521600','gfh','man') 
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('张三','34','1481904000','han','man') 
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('张思','233','1481299200','dsfsd','man') 
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%张%' and age>=10 and age<=40
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%张%' and age>=10 and age<=40
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:update person set name='张三',age='34',birthDay='1481904000',nation='han',sex='man'  where id=324553
+类型：字符串
+"query"
+
+
+名称:update person set name='张四',age='233',birthDay='1481299200',nation='dsfsd',sex='man'  where id=324554
+类型：字符串
+"query"
+
+
+名称:select * from person where id>=324554 and name like '%张%' and age>=233 and birthDay>=1481299200
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%张%'
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('李四','23','1481299200','汉族','man') 
+类型：字符串
+"query"
+
+
+名称:update person set name='李四',age='NaN',birthDay='1481299200',nation='汉族',sex='man'  where id=324555
+类型：字符串
+"query"
+
+
+名称:update person set name='李四',age='432',birthDay='1481299200',nation='汉族',sex='man'  where id=324555
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('','NaN','NaN','','man') 
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('','NaN','NaN','','man') 
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('fgbgf','NaN','NaN','','man') 
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('ghythyt','45','1481212800','rtht','man') 
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('gntgn','NaN','NaN','','man') 
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%gfhtrh%'
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%trhth%'
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('tyjyjty','NaN','NaN','','man') 
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('hthyt','NaN','NaN','','man') 
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:update person set name='张三',age='34',birthDay='1481904000',nation='han',sex='man'  where id=324553
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:update person set name='张三',age='34',birthDay='1481904000',nation='han',sex='man'  where id=324553
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:update person set name='张四',age='233',birthDay='1481299200',nation='dsfsd',sex='man'  where id=324554
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:update person set name='李四',age='432',birthDay='1481299200',nation='汉族',sex='man'  where id=324555
+类型：字符串
+"query"
+
+
+名称:update person set name='李四',age='432',birthDay='1481299200',nation='汉族',sex='man'  where id=324555
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('','NaN','NaN','','man') 
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('erfr33','23','1481904000','efre','man') 
+类型：字符串
+"query"
+
+
+名称:update person set name='erfr3332',age='23',birthDay='1481904000',nation='efre',sex='man'  where id=324557
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('王二麻子','12','1480521600','汉族','男') 
+类型：字符串
+"query"
+
+
+名称:select * from person where id>=324558 and name like '%王%'
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:update person set name='erfr3332',age='23',birthDay='1480521600',nation='efre',sex='man'  where id=324557
+类型：字符串
+"query"
+
+
+名称:update person set name='王二',age='12',birthDay='1480521600',nation='汉族',sex='男'  where id=324558
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:update person set name='张四',age='233',birthDay='1481299200',nation='dsfsd',sex='man'  where id=324554
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:delete from person where id in (324553)
+类型：字符串
+"query"
+
+
+名称:delete from person where id in (324555)
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:update person set name='hjjh3',age='23',birthDay='1480521600',nation='gfh',sex='man'  where id=324552
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:update person set name='张3',age='233',birthDay='1481299200',nation='dsfsd',sex='man'  where id=324554
+类型：字符串
+"query"
+
+
+名称:insert into person(name,age,birthDay,nation,sex) value('教育局','34','1481212800','个百分比','man') 
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:delete from person where id in (324552)
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:update person set name='erfr3332',age='233',birthDay='1480521600',nation='efre',sex='man'  where id=324557
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:delete from person where id in (324557)
+类型：字符串
+"query"
+
+
+名称:update person set name='hire',age='45',birthDay='1481212800',nation='rtht',sex='man'  where id=324556
+类型：字符串
+"query"
+
+
+名称:select * from person where id>=324556 and name like '%张%' and age>=45
+类型：字符串
+"query"
+
+
+名称:select * from person where id>=324556 and name like '%张%'
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%张%'
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from person where name like '%ukuk%'
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+
+
+名称:select * from tables where name='person' or id='person'
+类型：字符串
+"query"
+
+
+名称:select * from fields where id in (1,2,6,3,4,5)
+类型：字符串
+"query"
+
+
+名称:select * from person
+类型：字符串
+"query"
+

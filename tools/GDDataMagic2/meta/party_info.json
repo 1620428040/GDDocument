@@ -1,0 +1,101 @@
+{
+	"describe": "党员信息",
+	"bindTable": "oa_hr_partyinfo",
+	"primaryFields": "id",
+	"tools": [
+		"browse",
+		"delete",
+		"search",
+		"refresh"
+	],
+	"alias": {
+		"people": "empname",
+		"title": "partyBranchName",
+		"date": "inpartyTime"
+	},
+	"fieldList": {
+		"id": {
+			"title": "编号",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"empid": {
+			"title": "员工编号",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"empname": {
+			"title": "员工姓名",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"inpartyTime": {
+			"title": "入党时间",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Date"
+		},
+		"becomesTime": {
+			"title": "转正时间",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Date"
+		},
+		"partyBranchName": {
+			"title": "所在党支部",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 100,
+			"type": "LongText"
+		},
+		"inBrachTime": {
+			"title": "加入支部时间",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Date"
+		},
+		"membership": {
+			"title": "组织关系所在单位",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"dues": {
+			"title": "党费金额",
+			"notNull": true,
+			"dataType": "decimal",
+			"maxlength": 10
+		},
+		"lastDuesTime": {
+			"title": "最后交党费时间",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Date"
+		},
+		"introducerInfo": {
+			"title": "介绍人情况",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 500,
+			"type": "LongText"
+		},
+		"rewards": {
+			"title": "奖惩情况",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 500,
+			"type": "LongText"
+		}
+	}
+}

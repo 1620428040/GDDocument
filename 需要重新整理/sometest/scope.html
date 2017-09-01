@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+//			function func1(){
+//				var a=1022123;
+//				function func2(){
+//					console.log(a);
+//				}
+//				a=43535;
+//				return func2;
+//			}
+//			func1()();
+			
+			funcList=(function (){
+				var funcList=[];
+				for(var i=0;i<10;i++){
+					var num=i;
+					var obj={num:i};
+					funcList.push(function(){
+						console.log("i="+i);
+						console.log("num="+num);
+						console.log("obj.num="+obj.num);
+					});
+				}
+				return funcList;
+			})()
+			
+			for(var j=0;j<funcList.length;j++){
+				funcList[j]();
+			}
+		</script>
+	</body>
+</html>

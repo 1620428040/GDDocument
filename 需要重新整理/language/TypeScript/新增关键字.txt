@@ -1,0 +1,45 @@
+let
+const
+enum
+
+
+变量类型
+(let isDone: boolean = false;)
+any		任何类型都可以，不进行类型检查。不是默认的类型，如果不定义类型的话，类型检查器会以第一次赋值的数据的类型为准
+void
+null
+undefined
+never
+boolean
+number
+string
+枚举类型或类
+数组T[]	等同于Array<T>，声明的变量类型是某一类型的数据构成的数组
+泛型，例如Array<T>
+元组(Tuple)，例如[string, number]
+
+
+类和接口
+interface	接口
+class		类
+abstract	抽象类、抽象方法
+extends		继承
+static		静态属性
+implements	接口
+(在接口中可以定义可以不存在的属性，例如"param?:string"，定义了一个字符串类型的属性param，这个属性可以不再类中实现)
+(ts中的类型检查是检查对象中的键名是否相同，如果相同就认为是同类。所以有时候很不严格
+实现接口时可以忽略implements关键字
+方法只是通过方法名来区分，而不是方法签名)
+
+
+修饰符，用来修饰对象的属性
+public		公有的
+protected	受保护的，只能在当前类及其子类中访问
+private		私有的，只能在当前类中访问
+readonly	只读的
+
+
+declare			用来声明外部引用的变量？无视类型检查？
+as				用来暂时转变变量的类型
+`${ expr }`		模板字符串
+for..of			迭代器，类似于for..in，但迭代对象的键对应的值

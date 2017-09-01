@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//cookie的逻辑非常诡异，既不是正常的数组，也不是一个字符串
+			document.cookie="name=zhangsan";//添加一条新的cookie
+			document.cookie="age=53";//继续添加新的cookie
+			document.cookie="name=lisi";//修改一条的cookie
+			console.log(document.cookie);//cookie中实际的内容name=zhangsan; age=53
+			
+			//设置cookie过期时间
+			//将cookie的过期时间设置为当前时间的前一毫秒，从而删除cookie
+			var exp = new Date();
+		    exp.setTime(exp.getTime() - 1);
+		    document.cookie= "name=null;expires="+exp.toGMTString();
+		</script>
+	</body>
+</html>

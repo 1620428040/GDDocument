@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+		<script type="text/javascript" src="easyui/jquery.min.js"></script>
+		<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function create(){
+				$('#dlg').dialog('open').dialog('setTitle','添加权限');
+				$('#fm').form('clear');
+				url = 'server.php?table=filePermission&action=create&rand='+Math.random();
+			}
+			function edit(){
+				var row = $('#dg').datagrid('getSelected');
+				if (row){
+					$('#dlg').dialog('open').dialog('setTitle','编辑权限');
+					$('#fm').form('load',row);
+					url = 'server.php?table=filePermission&action=update?id='+row.id+'&rand='+Math.random();
+				}
+			}
+			function destroy(){
+				var row = $('#dg').datagrid('getSelected');
+				if (row){
+					$.messager.confirm('Confirm','确认删除这条权限？',function(r){
+						if (r){
+							$.post('server.php?table=filePermission&action=delete&rand='+Math.random(),{id:row.id},function(result){
+								if (result.success){
+									$('#dg').datagrid('reload');	// reload the user data
+								} else {
+									$.messager.show({	// show error message
+										title: 'Error',
+										msg: result.errorMsg
+									});
+								}
+							},'json');
+						}
+					});
+				}
+			}
+			function save(){
+				$('#fm').form('submit',{
+					url: url,
+					onSubmit: function(){
+						return $(this).form('validate');
+					},
+					success: function(result){
+						alert(result);
+						var result = eval('('+result+')');
+						if (result.errorMsg){
+							alert("error");
+							$.messager.show({
+								title: 'Error',
+								msg: result.errorMsg
+							});
+						}
+						else {
+							$('#dlg').dialog('close');		// close the dialog
+							$('#dg').datagrid('reload');	// reload the user data
+						}
+					}
+				});
+			}
+
+		</script>
+		
+		<div class="easyui-tabs" 
+				title="权限设置"
+				style="height: 600px;"
+				showHeader="true">
+			<div title="全部" style="padding:10px;">
+				<table 	id="dg" 
+						title="全部" 
+						class="easyui-datagrid" 
+						fit="true"
+						url="server.php?table=filePermission"
+						toolbar="#toolbar"
+						rownumbers="true" 
+						singleSelect="true">
+					<thead>
+						<tr>
+							<th field="id">id</th>
+							<th field="type" width="100">类型</th>
+							<th field="objectType" width="100">对象类型</th>
+							<th field="objectName" width="100">对象名称</th>
+							<th field="permission" width="100">权限</th>
+							<th field="inheritFrom" width="100">继承于</th>
+							<th field="inherit" width="100">是否继承给下级</th>
+						</tr>
+					</thead>
+				</table>
+				<div id="toolbar">
+					<a href="#" class="easyui-linkbutton" iconCls="icon-add" plain="true" onclick="create()">添加</a>
+					<a href="#" class="easyui-linkbutton" iconCls="icon-edit" plain="true" onclick="edit()">编辑</a>
+					<a href="#" class="easyui-linkbutton" iconCls="icon-remove" plain="true" onclick="destroy()">删除</a>
+				</div>
+			</div>
+			<div title="个人" style="padding:10px;">
+			</div>
+			<div title="部门" style="padding:10px;">
+			</div>
+			<div title="角色" style="padding:10px;">
+			</div>
+		</div>
+		<script>
+//			$(function(){
+//				var grid=$(".easyui-datagrid");
+//				//alert(grid.length);
+//				try{
+//					grid.datagrid('hideColumn', 'id');
+//				}catch(e){
+//					alert(e);
+//				}
+//			})
+		</script>
+		<div id="dlg" class="easyui-dialog" style="width:400px;height:280px;padding:10px 20px"
+				closed="true" buttons="#dlg-buttons">
+			<form id="fm" method="post">
+				<div class="fitem">
+					<label>类型:</label>
+					<select name="type">
+						<option value="允许">允许</option>
+						<option value="拒绝">拒绝</option>
+						<option value="停用">停用</option>
+					</select>
+				</div>
+				<div class="fitem">
+					<label>对象类型:</label>
+					<select name="objectType">
+						<option value="用户">用户</option>
+						<option value="部门">部门</option>
+						<option value="角色">角色</option>
+					</select>
+				</div>
+				<div class="fitem">
+					<label>对象名称:</label>
+					<input name="objectName" class="easyui-validatebox">
+				</div>
+				<div class="fitem">
+					<label>权限:</label>
+					<select name="permission">
+						<option value="浏览目录">浏览目录</option>
+						<option value="只读">只读</option>
+						<option value="读写">读写</option>
+						<option value="完全控制">完全控制</option>
+					</select>
+				</div>
+				<div class="fitem">
+					<label>是否继承给下级:</label>
+					<input type="checkbox" name="inherit"/>
+				</div>
+			</form>
+		</div>
+		<div id="dlg-buttons">
+			<a href="#" class="easyui-linkbutton" iconCls="icon-ok" onclick="save()">确认</a>
+			<a href="#" class="easyui-linkbutton" iconCls="icon-cancel" onclick="javascript:$('#dlg').dialog('close')">取消</a>
+		</div>
+	</body>
+</html>

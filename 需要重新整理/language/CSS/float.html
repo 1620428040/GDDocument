@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			.box{
+				width: 300px;/*如果不加宽度，容器会变得尽可能宽（非内联元素的特性）*/
+				border:1px solid green;
+			}
+			.square{
+				float:left;
+				width:80px;
+				height:80px;
+				border:1px solid blue;
+				background-color: powderblue;
+			}
+			.clear{
+				clear: both;
+			}
+			.table{
+				display: table;
+			}
+			.clearfix:after {/*在元素的结尾插入一些内容*/
+				content: "";
+				display: block;
+				height: 0px;
+				clear: both;
+				visibility: hidden;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="box">
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+		</div>
+		
+		<div class="box" style="position: absolute;top: 300px;">
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="box table" style="position: absolute;top: 600px;">
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+		</div>
+		
+		<div class="box clearfix" style="position: absolute;top: 900px;">
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+			<div class="square"></div>
+		</div>
+	</body>
+
+</html>

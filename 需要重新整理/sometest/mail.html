@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>网易邮箱6.0版</title>
+		<style type="text/css">
+			@font-face {
+				font-family: 'nui';
+				src: url('http://mimg.127.net/p/font/js6/v1/neteasefont-regular.eot');
+				src: url('http://mimg.127.net/p/font/js6/v1/neteasefont-regular.eot#iefix') format('embedded-opentype'), url('http://mimg.127.net/p/font/js6/v1/neteasefont-regular.woff') format('woff'), url('http://mimg.127.net/p/font/js6/v1/neteasefont-regular.ttf') format('truetype'), url('http://mimg.127.net/p/font/js6/v1/neteasefont-regular.svg#neteasefontRegular') format('svg')
+			}
+			
+			@media screen and (-webkit-min-device-pixel-ratio: 1.5) {
+				.frame-isHD {
+					width: 300px
+				}
+			}
+		</style>
+		<script>
+			(function() {
+				var a = ['header', 'footer', 'section', 'aside', 'article', 'nav', 'hgroup', 'figure', 'figcaption', 'time', 'mark', 'output', 'meter'];
+				for (var i = 0, m = a.length; i < m; i++) {
+					document.createElement(a[i]);
+				}
+			})();
+		</script>
+		<script type="text/javascript">
+			window.$G = {};
+			window.$G.domainType = 'free';
+			! function(a) {
+				function b(b, c, i) {
+					try {
+						if (!d.isDebug) {
+							var j = !1;
+							if (f && (f.system || f.msg != b || f.url != c || f.line != i || (j = !0), f.system && (e = !1)), !j) {
+								if (!e) {
+									e = !0;
+									var k = "";
+									if (c || (c = d.appInitStep.init === !1 ? "p0 inner script" : d.appInitStep.start === !1 ? "p1 inner script" : "inner script", i = 0), !d.appInitStep.start && d.p1LoadedError && (c = "http://mimg.127.net/p/js6/6.0b1604201526/js/p1.js", i = 0, b = "邮箱启动失败", g = !0, d.p1LoadedError = !1, d.appInitStep.start = !1), d.appInitStep.init === !1 ? k = "初始化" : d.appInitStep.start === !1 && (k = "启动"), k) {
+										var l;
+										"free" == d.domainType ? d.noStaticRes ? (l = "登录邮箱" + k + "遇到问题，请尝试以下方法:\n·清除浏览器缓存或手动刷新页面\n·国内用户请尝试 http://email3.163.com\n·海外用户请尝试 http://hw.mail.163.com\n\n\n------------\n信息:" + b + "\n路径:" + c + "\n行数:" + i, alert(l)) : (l = "登录邮箱" + k + "遇到问题，建议您重新登录试试。\n\n是否马上重新登录？\n\n\n------------\n信息:" + b + "\n路径:" + c + "\n行数:" + i, d.urlReloaded ? confirm(l) && (h = !0) : h = !0) : ("vip" == d.domainType ? l = "登录邮箱" + k + "遇到问题，请尝试以下方法:\n・检查杀毒软件和防火墙设置\n・清除浏览网页的缓存\n・清除浏览网页的Cookies\n・Ctrl+F5 强制刷新页面\n\n信息:" + b + "\n路径:" + c + "\n行数:" + i : "corp" == d.domainType && (l = "登录邮箱" + k + "遇到问题，请尝试以下方法:\n・检查杀毒软件和防火墙设置\n・清除浏览网页的缓存\n・清除浏览网页的Cookies\n・Ctrl+F5 强制刷新页面\n\n同时，您可以拨打400-6281-163进行咨询，也可以将以下信息以邮件形式发送到kf@qiye.163.com，我们将尽快答复您。\n\n信息:" + b + "\n路径:" + c + "\n行数:" + i), d.urlReloaded ? alert(l) : h = !0)
+									}
+								}
+								var m = "errorIframe",
+									n = parent.document,
+									o = n.getElementById(m);
+								o || (o = n.createElement("IFRAME"), o.id = m, o.style.display = "none", (n.body ? n.body : n.head).appendChild(o));
+								var p = "http://count.mail.163.com/beacon/webmail.gif?product=js6&t=d&sid=" + encodeURIComponent("YAwQDTIkmByiwiaYTokktOGXzlQdZxTU") + "&uid=" + encodeURIComponent("guodong3415@163.com") + "&line=" + encodeURIComponent(i) + "&url=" + encodeURIComponent(c) + "&msg=" + encodeURIComponent(b);
+								k && (p += "&step=" + encodeURIComponent(k)), o.src = p, f = {
+									msg: b,
+									url: c,
+									line: i,
+									system: g
+								}, h && (window.location = d.urlReloaded ? location.protocol + "//" + "email2.163.com" : location.protocol + "//" + location.host + location.pathname + location.search + "&reload=true" + location.hash)
+							}
+							return !0
+						}
+						a.title = "信息:" + b + "\n路径:" + c + "\n行数:" + i
+					} catch (q) {}
+				}
+
+				function c(a) {
+					d.appStarted ? a() : d.cacheClick = a
+				}
+				var d = a.$G;
+				d.appInitStep = {}, a.onerror = b, a.fGoto = c;
+				var e, f, g = !1,
+					h = !1
+			}(window);
+		</script>
+		<script type="text/javascript">
+			(function(window) {
+				var oUser = {
+					style: '7',
+					uid: 'guodong3415@163.com',
+					suid: '',
+					sid: 'YAwQDTIkmByiwiaYTokktOGXzlQdZxTU',
+					cosid: '104',
+					searchid: 'true',
+					limitMessageCount: '48000',
+					archiveMessageCount: '0',
+					archiveMessageSize: '0',
+					topMailCount: '10',
+					isUnlimit: false,
+					color: '064977',
+					css: 'skyblue',
+					skin: '00',
+					ursCookie: 'k3YKqCLAXJM5oeC_ATyzK0u6.EZlLJoFq4eWnggbouPxnO47rnp41.85RFZrOBg_lGL6RPRl4aC19detTt0lwTxAOPSvGWdsvlgV7RnUV6lLkcxf6iKGdrzrLpedHvKbMGCPJPUOBwL7m..WvfVp8cbk_p.AvOoJw',
+					ursAlias: '',
+					sessRelate: '',
+					authenticated2: "false",
+					authenticated3: "false",
+					allowRecallBeforeDays: "15",
+					hasLogo: false,
+					domain: "163.com",
+					orgName: "",
+					isAdmin: ""
+				};
+				var oEnvironment = {
+					promote: {},
+					readUrl: 'read/readhtml.jsp?ssid=U9pnFMBdf2W3njF9tRveZ18DVfeTQaMatQwhKADMtLs%3d',
+					host: location.hostname,
+					domain: '163.com',
+					ver: 'js6',
+					appName: 'js6',
+					build: '6.0b1604201526',
+					now: 1462869682876,
+					rootPath: "http://mimg.127.net/p/js6/",
+					cacheRootPath: "http://mimg.127.net/p/js6/6.0b1604201526/",
+					cacheJsPath: "http://mimg.127.net/p/js6/6.0b1604201526/js/",
+					cacheCssPath: "http://mimg.127.net/p/js6/6.0b1604201526/css/",
+					cacheImgPath: "http://mimg.127.net/p/js6/6.0b1604201526/img/",
+					packageName: "netease.mail.js6",
+					isDebug: false,
+					mimgUrl: "http://mimg.127.net/",
+					mailPattern: 'standard',
+					mailServiceVer: '1604191555',
+					cacheThemePath: false ? "http://mimg.127.net/p/js6/theme/" : "http://mimg.127.net/p/js6/theme/build/",
+					themeMap: {
+						'maidou': '94b83183a673858722470c24a3ddf6c6',
+						'ertongjie': 'eed4b5f3d5736a29ed13b8ec920684f7',
+						'scheme_green': '291dd9a47697e555fc648fd434b8534e',
+						'shiguangshalou1': '1fb095368ca3c4def536f1cdbb82cbc5',
+						'scheme_bluedark': '556d15cfdbd30ec29b72d0317840cfd4',
+						'shiguangshalou3': '5884f5dee06386f28acb9b602d6cfd2b',
+						'shiguangshalou2': '5b312f44134d58c707ad5f5b485ae46f',
+						'scheme_coffee': 'aa9eae2714cf431e210ab1e83fad7897',
+						'shiguangshalou4': 'f12449cb5c0dda60a19786f4c92383ce',
+						'xiazhiguang3': '118c6acaa159780f3c4f8f3feb244861',
+						'freshgreen': 'e067b6d1e0cf2b8c186ddadeee5bec76',
+						'xiazhiguang2': '69732098c467a795faeddb10c7f2cdfd',
+						'xiazhiguang1': '8074c823b41c3b52d3e48a12c05450d8',
+						'padingdunxiong': '16fd07a565bda16468c53893e01c5783',
+						'chunzhilv3': '821791bde5a18d6a832dec261a3dbad0',
+						'qiushi': 'b0b9fdc882c27df5f5ffb0b24a707594',
+						'hetanglueying': 'b45e6ab547ae8581bc156de77858c31b',
+						'chunzhilv2': 'f903acc91105c7d79be4109fc7c1b01c',
+						'chunzhilv1': 'b8fc208b4c973c592ec05af6ae9b8094',
+						'yuzhouchenqu': 'ea39385eb2308418d79f886b20018a58',
+						'vip_126boating': '73aa54f95fcefa2926e5daedb8328ad2',
+						'nvrenrumeng3': '263f926d6ba9dac21b83c9e53c066865',
+						'nvrenrumeng2': 'd72574767efa99ae77a322d30bceeebc',
+						'zhi': '83f83b5275eae81feda4ad417c9b8b13',
+						'vip_163harvest': '0ee7d77670d8a567c148f00fd345e6fd',
+						'nvrenrumeng1': '841c7d9eacfb2a194a094b55f8399d5b',
+						'skyblue': 'b8b427449f7d49bdc5c39c10d727b5f1',
+						'caodi': 'd21c25792b69b398cd57954d8efc2fb1',
+						'nvrenruhua2': 'd465d8d4f8b753158f8dfaef0078801d',
+						'nvrenruhua3': '04d6d79b421db1b808f647a260c4c31c',
+						'shengdankuanghuanqu': '24aa4773b4a239b66308cb50719d9289',
+						'nvrenruhua1': '9a542b2b0ee7f6053033cd6bc1fe5cfd',
+						'zhulin': '63627241fe78b5703817e515cd4dcd1d',
+						'yixinlv': 'ae4a2888311bda1ec07e0ae098b54e44',
+						'zhongguofeng': 'f53192c2927dbcbe8d426df12eea9272',
+						'biz_haier': 'feda0fbb9ecff54bf2e80bd91e71e404',
+						'jiannan': 'b0d58277c85854f0e2be9829a04358d4',
+						'qingningshiguang': '8e305b9ab8fd3bf43afb78b9485503c8',
+						'scheme_pink': '9e4d39c07e74da7a6317da5cb49d75ea',
+						'keainvsheng': '82194e82ad736374aba71bf9d86e58ff',
+						'jianqing': 'bc9b3700f90c047dccab7ba9f8bd98a2',
+						'scheme_red': 'bbf7cb0a3edbec99ea3fedcfc15d1e50',
+						'corp_02': '9ea34e73ab2d1d78b64e0353e94417c1',
+						'yueyechuanshuo': '1d1111e1fd7fd1c154916528580fb8bc',
+						'corp_01': '176a1143c8952d8653c679fdc6709021',
+						'scheme_blue': 'ab2dab6034baef62336f1a8b003aa592',
+						'vip_188fishing': 'aee4347020b2372a667c1096435adaa8',
+						'fensemenghuan': '5a349a36eab53b2bb6c8d003d6d41f7e',
+						'corp_04': 'f9ea8cb1b4c584e41caa33deef13c8c2',
+						'corp_03': 'c5a59e7d850c60f29c676b7b90d8ee6e',
+						'tongnianshiguang': '97da0820d5a987ec8d726612e40f9ba0',
+						'noandyes': '083fab1a99d71b0addb62fafe8909973',
+						'hetangyuese': 'e6b54a10888d72c406d89ef6b2764215',
+						'corp_05': '914e42d7b703c83040c4c73d682a3a5a',
+						'smshu': 'b15d3979e8eafb16b195074c4b0313e2',
+						'shouhujingling': '3009d446c98221f8e5f0edc25c01c53a',
+						'yehexianyun': '0a7bf88d9fcbb9f16692313629c37db8',
+						'fanxingzhiwu': '42cc74bdcae20ec5a8fd0e656dcabae2',
+						'molan': 'f2fbd2981b13b3b2532c152f04218c2d',
+						'shengfangguanghua': '5288a06a4d7c53c1cd6aa9dbb59c6bba',
+						'seablue': '38e7dc31aea2f04b020f289eff8e3422',
+						'scheme_blackblue': '74a8fa51a8106f1a091df41f2698c6dd',
+						'scheme_seablue': '5c6fed887714d52abe393d4b281d7fe5',
+						'yukuaigongzuo': '3d1ffee48707e19bd251641911decca1',
+						'duanwujie': 'fed6e0288621452397d2b596743e41fe',
+						'qiuzhihua2': 'a9588db3dab360c34a8250c543b1f0ba',
+						'qiuzhihua3': '99f29c1e3ca2afbbc48243ae04a384f4',
+						'scheme_white': '6ef663dc89f1b69fad554cc561595782',
+						'qiuzhihua1': '71c01788c39de3a1e4b1af45946dfde4',
+						'muwen': '1444d7f6a0d540d1dfed382c72374fc7',
+						'scheme_black': '5299669d30d4d3a74087b6d64b938f6b',
+						'jianlv': 'bcd60e7064e6845121c45b18469a2977',
+						'maoxingren': '151bc27d0085aa68cd84cccabcd73d48'
+					} || {},
+					themeJsFile: false ? "theme.js" : "43cd2a17854f909c7271292feda5157ffbf1f6ab.js",
+					isHolidayTheme: "",
+					holidayDays: "",
+					svr: ("http://mimg.127.net/".indexOf("mimg.qiye.163.com") > -1 ? "bj" : "hz"),
+					uriFix: ("http://mimg.127.net/".indexOf("mimg.qiye.163.com") > -1 ? "" : "hz")
+				};
+				try {
+					switch (oEnvironment.mimgUrl) {
+						case 'http://mimg.127.net/':
+							break;
+						case 'http://mimg2.127.net/':
+							break;
+						case 'http://mimg3.127.net/':
+							break;
+						case 'http://mimg4.127.net/':
+							break;
+						default:
+							oEnvironment.mimgUrl = 'http://mimg.127.net/';
+					}
+				} catch (e) {}
+				var oAttrs = {
+					user: {
+						'user_creation_date': new Date(2016, 2, 31),
+						'addo': null,
+						'afterdel': null,
+						'aftersend_saveaddr': 1,
+						'app_city': null,
+						'autosavedraft': 1,
+						'birthday': null,
+						'city': null,
+						'clearinterval': 0,
+						'def_sec_folder': null,
+						'displaysender': null,
+						'firstpage': 0,
+						'forwardactive': null,
+						'forwarddes': null,
+						'gender': null,
+						'helptips': null,
+						'huodong_option': '0002010000000000',
+						'junkfilter': null,
+						'junkfriend': 1,
+						'junkpic': 1,
+						'junkrefuse': 1,
+						'keepspamdays': -1,
+						'maxlist': 20,
+						'mms_enabled': 0,
+						'nick_name': null,
+						'ntes_buzz': null,
+						'ntes_compose': '0000000880000000',
+						'ntes_config': null,
+						'ntes_contact': '0001000000200000',
+						'ntes_custom': null,
+						'ntes_defaultsender': null,
+						'ntes_defined': null,
+						'ntes_global': '0000000000000000',
+						'ntes_htmlbar': 0,
+						'ntes_inbox': null,
+						'ntes_labs': null,
+						'ntes_letter': null,
+						'ntes_option': null,
+						'ntes_product': null,
+						'ntes_rd_config': null,
+						'ntes_rd_temp': null,
+						'ntes_read': 'n1ll000000000000',
+						'ntes_service': null,
+						'ntes_skin': '00000000',
+						'op_readreceipt': null,
+						'province': '0',
+						'refuselist': null,
+						'replyf': null,
+						'safelist': null,
+						'save_sent': 1,
+						'showmusicbar': 0,
+						'style': 7,
+						'time_zone': null,
+						'true_name': '国栋'
+					} || {},
+					cos: {
+						'pref_quota': 3072,
+						'perm_func_netfolder': false,
+						'perm_func_address_book': true,
+						'perm_func_schedule_send': true,
+						'perm_func_antivirus': true,
+						'perm_mail_webmail': true,
+						'perm_mail_pop': false,
+						'perm_mail_smtp': false,
+						'perm_mail_imap': false,
+						'perm_mail_filter': true,
+						'perm_webmail_sendmail': true,
+						'perm_webmail_html_editor': true,
+						'perm_webmail_signature': true,
+						'pref_webmail_max_signatures': 10,
+						'perm_webmail_pop_agent': true,
+						'perm_webmail_mail_sorting': true,
+						'perm_webmail_mail_get_rfc': true,
+						'perm_webmail_disp_pref': true,
+						'perm_webmail_mail_search': true,
+						'pref_smtp_max_num_rcpts': 50,
+						'pref_smtp_max_send_mail_size': 72000,
+						'pref_alias_num': 3,
+						'perm_mail_sms_notify': true,
+						'perm_smtp_auth_disabled': false,
+						'perm_mail_autoreply': true,
+						'perm_mail_autoforward': true,
+						'perm_ssl_pop': false,
+						'perm_ssl_smtp': false,
+						'perm_ssl_imap': false,
+						'perm_ssl_http': true,
+						'perm_filter_anti_spam': true,
+						'pref_antivirus_engine': '',
+						'pref_smtp_max_recv_mail_size': 72000,
+						'pref_smtp_max_mail_count': 48000,
+						'pref_webmail_style': '0=1&0=2&0=3&0=5&0=6&0=7&0=8&0=9&0=10&0=11&0=12&0=1',
+						'perm_webmail_voicemail': false,
+						'perm_webmail_videomail': false,
+						'pref_netfolder_quota': 10,
+						'pref_netfolder_max_file_size': 51200,
+						'pref_netfolder_max_file_count': 10000,
+						'perm_func_wap': true,
+						'pref_flow_limit': 'smtp:400,web:5000,webrcv:4000,websnd:3000,c_pop:500,c_imap:5000,imap:4000',
+						'perm_share': false,
+						'perm_advanced_imaging': true,
+						'pref_package_download': 1,
+						'pref_webmail_faces': '@all',
+						'perm_mail_fulltext_search': true,
+						'perm_ssl': true,
+						'perm_webmail_mmmail': true,
+						'pref_mail_archive_save_days': 0,
+						'perm_recall_mail': false,
+						'perm_func_trs': false,
+						'pref_trs_quota': 1024,
+						'pref_trs_max_file_size': 1048576,
+						'pref_trs_max_file_count': 200,
+						'pref_trs_file_expiry': 7,
+						'perm_mail_threading': false,
+						'pref_mail_preserving_days': 0,
+						'perm_attachment_manager': true,
+						'perm_web_login': true,
+						'perm_mail_summary': false,
+						'perm_active_sync': true,
+						'perm_webmail_oab': true,
+						'perm_send_virtual_user': true,
+						'perm_mail_smime': true,
+						'perm_mail_cipher': true,
+						'pref_mail_archive_lite_quota': 0,
+						'perm_calendar_sync': false,
+						'perm_mbox_share': false,
+						'pref_oab_scope': '1',
+						'perm_archive_personal_qry': false,
+						'perm_func_task': true,
+						'pref_mail_download_attachment': true,
+						'pref_cim_offline_file_expiry': 7,
+						'perm_enable_sending_mail_with_sms': true,
+						'perm_create_mail_list': false,
+						'pref_max_folder_nest_level': 5,
+						'pref_mail_folders': 100,
+						'pref_mail_rules': 100,
+						'pref_pab_contacts': 3000,
+						'pref_pop_agent_accounts': 8,
+						'pref_upload_size': -1,
+						'pref_webmail_risky_suffix': ''
+					},
+					subcos: '123,149,155',
+					folders: [{
+						'id': 1,
+						'name': '收件箱',
+						'flags': {
+							'system': true
+						},
+						'stats': {
+							'messageCount': 78,
+							'messageSize': 8556384,
+							'unreadMessageCount': 0,
+							'unreadMessageSize': 0
+						}
+					}, {
+						'id': 2,
+						'name': '草稿箱',
+						'flags': {
+							'system': true
+						},
+						'stats': {
+							'messageCount': 0,
+							'messageSize': 0,
+							'unreadMessageCount': 0,
+							'unreadMessageSize': 0
+						}
+					}, {
+						'id': 3,
+						'name': '已发送',
+						'flags': {
+							'system': true
+						},
+						'stats': {
+							'messageCount': 60,
+							'messageSize': 20664898,
+							'unreadMessageCount': 0,
+							'unreadMessageSize': 0
+						}
+					}, {
+						'id': 4,
+						'name': '已删除',
+						'flags': {
+							'system': true
+						},
+						'keepPeriod': 7,
+						'stats': {
+							'messageCount': 0,
+							'messageSize': 0,
+							'unreadMessageCount': 0,
+							'unreadMessageSize': 0
+						}
+					}, {
+						'id': 5,
+						'name': '垃圾邮件',
+						'flags': {
+							'system': true
+						},
+						'keepPeriod': 1,
+						'stats': {
+							'messageCount': 0,
+							'messageSize': 0,
+							'unreadMessageCount': 0,
+							'unreadMessageSize': 0
+						}
+					}, {
+						'id': 6,
+						'name': '病毒文件夹',
+						'flags': {
+							'system': true
+						},
+						'stats': {
+							'messageCount': 0,
+							'messageSize': 0,
+							'unreadMessageCount': 0,
+							'unreadMessageSize': 0
+						}
+					}],
+					folderStats: {
+						'1,3': {
+							'messageCount': 138,
+							'messageSize': 29221282,
+							'unreadMessageCount': 0,
+							'unreadMessageSize': 0
+						}
+					},
+					tags: [],
+					deferTotal: {
+						'all': {
+							'midcrc': 0,
+							'modcrc': 0,
+							'msgcnt': 0,
+							'msgid': '',
+							'msgsize': 0,
+							'newmsgcnt': 0,
+							'newmsgsize': 0,
+							'rectime': new Date(1, 0, 1, 8, 0, 0)
+						}
+					},
+					deferExpire: {
+						'all': {
+							'midcrc': 0,
+							'modcrc': 0,
+							'msgcnt': 0,
+							'msgid': '',
+							'msgsize': 0,
+							'newmsgcnt': 0,
+							'newmsgsize': 0,
+							'rectime': new Date(1, 0, 1, 8, 0, 0)
+						}
+					},
+					senders: {
+						'audited': [],
+						'unaudited': []
+					},
+					popAccounts: [] || [],
+					alias: [],
+					domainAliasUsers: null,
+					letterAngle: null,
+					orgId: "m"
+				};
+				if (oAttrs.user && oAttrs.user.maxlist == 0) {
+					oAttrs.user.maxlist = 20;
+				}
+				window.$G = window.$G || {};
+				$G.user = oUser;
+				$G.environment = oEnvironment;
+				$G.attrs = oAttrs;
+				$G.mailPattern = {
+					currentPattern: 'standard'
+				};
+				window.$Fix = {};
+				try {
+					$G.environment.promote.innerAdScript = 'http://mimg.127.net/external/js6promote2.min.js';
+				} catch (e) {}
+				try {
+					$G.environment.promote.bjAdScript = 'http://mimg.127.net/external/js6public163.js';
+				} catch (e) {}
+			})(window);
+		</script>
+		<link href="" rel="stylesheet" type="text/css" id="globeCss" />
+		<script>
+			(function() {
+				var o = new Image();
+				gCssType = 'overlay';
+				o.onload = function() {
+					gCssType = 'base64';
+					_();
+				};
+				o.onerror = function() {
+					_();
+				};
+				o.src = 'data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==';
+
+				function _() {
+					s = gCssType;
+					var nHd = window.devicePixelRatio;
+					var sStr = "";
+					if (s == "base64" && nHd > 1.5) {
+						sStr = "2x";
+					}
+					document.getElementById('globeCss').href = 'http://mimg.127.net/p/js6/6.0b1604201526/css/' + s + '_compress' + sStr + '.css';
+				}
+			})();
+		</script>
+		<link href="http://mimg.127.net/p/js6/6.0b1604201526/pattern/standard/css/standard.css" rel="stylesheet" type="text/css" id="patternCss" />
+		<link href="" rel="stylesheet" type="text/css" id="schemeCss">
+		<link href="http://mimg.127.net/p/js6/theme/build/skyblue/b8b427449f7d49bdc5c39c10d727b5f1.css" rel="stylesheet" type="text/css" id="styleCss" title="8">
+	</head>
+
+	<body class="ua-notIE skyblue"><b class="frame-isHD" style="visibility:hidden;position:absolute;left:0;top:-20px;line-height:normal;font-size:12px">isHD</b>
+		<header class="frame-head">
+			<div class="tY0">
+				<h1 class="tG0 sj0" id="h1Logo">   <a href="javascript:;" class="rP0"><img src="http://mimg.127.net/logo/163logo.gif" alt="163邮箱" id="imgLogo">   </a></h1>
+				<ul class="tO0" role="navigation"></ul>
+			</div>
+			<nav id="dvMultiTabWrapper" class="tV0" role="navigation">
+				<div class="wo0" id="dvMultiTab">
+					<h1 class="sZ0">邮箱选项卡</h1> </div>
+			</nav>
+		</header>
+		<div class="frame-nav" id="dvNavContainer">
+			<nav class="tT0" role="navigation">
+				<h1 class="tj0" id="dvNavTitle">邮件左侧导航</h1>
+				<div class="tx0" id="dvNavTop"></div>
+				<div class="sH0 nui-scroll" id="dvNavTree"></div>
+			</nav>
+		</div>
+		<div id="dvContentContainer" class="frame-main-outer">
+			<div id="dvContainer"></div>
+			<div id="dvSubContainer"></div>
+			<div id="dvSplitter" class="frame-main-sptln" style="display:none"><span class="frame-main-sptln-inner"><span class="frame-main-sptln-dot"></span><span class="frame-main-sptln-dot"></span><span class="frame-main-sptln-dot"></span></span>
+			</div>
+		</div>
+		<footer class="skin">
+			<div class="skin-item skin-top">
+				<div class="skin-top-inner"></div>
+				<div class="skin-top-inner2"></div>
+			</div>
+			<div class="skin-item skin-top-left"></div>
+			<div class="skin-item skin-top-right"></div>
+			<div class="skin-item skin-left" id="themeLeft"></div>
+			<div class="skin-item skin-left-top" id="themeLeftTop"></div>
+			<div class="skin-item skin-left-bottom" id="themeLeftBottom"></div>
+			<div class="skin-item skin-right"></div>
+			<div class="skin-item skin-right-top"></div>
+			<div class="skin-item skin-right-bottom"></div>
+			<div class="skin-item skin-bottom"></div>
+			<div class="skin-item skin-fullScreen" id="themeFullScreen"></div>
+			<div class="skin-imgProxy" id="themeImgProxy"></div>
+		</footer> <span class="nui-fGetout nui-txt-fNui">f</span> <span id="spnCheckCssLoaded" class="frame-isLoaded"></span> <span id="spnCheckFont" class="nui-fGetout">zz</span><iframe onload="this.setAttribute('loaded', 'loaded');" id="getMarkedContacts" src="../contacts/call.do?uid=guodong3415@163.com&sid=YAwQDTIkmByiwiaYTokktOGXzlQdZxTU&from=webmail&cmd=newapi.getContacts&vcardver=3.0&ctype=markedcontacts"
+			style="display:none;"></iframe>
+		<script type="text/javascript">
+			window.TopWindow = window.gUseInIframe ? window : top;
+		</script>
+		<script type="text/javascript" src="http://mimg.127.net/p/js6/6.0b1604201526/js/fix_v2_min.js"></script>
+		<script type="text/javascript" src="http://mimg.127.net/p/bjs/release/bjs-1.0.43.js"></script>
+		<script type="text/javascript" src="http://mimg.127.net/p/js6/6.0b1604201526/js/p0.js"></script>
+		<script type="text/javascript">
+			try {
+				if ($Fix.fix) {
+					$Fix.fix("p0");
+				}
+			} catch (e) {}
+		</script>
+		<script type="text/javascript">
+			(function() {
+				$G.appInitStep.init = false;
+				netease.mail.js6.appInit();
+				$G.appInitStep.init = true;
+				$G.appInitStep.start = false;
+			})();
+		</script>
+		<script src="http://mimg.127.net/p/js6/6.0b1604201526/js/p1.js"></script>
+		<script>
+			try {
+				if ($Fix.fix) {
+					$Fix.fix("p1");
+				}
+			} catch (e) {}
+			netease.mail.js6.appStart();
+			$G.appInitStep.start = true;
+		</script>
+		<script type="text/javascript" id="scriptReadAd" For="adRead" Event="FSCommand(command,args)">
+			try {
+				DoFSCommand(command, args);
+			} catch (e) {}
+		</script>
+		<script type="text/javascript">
+			$.Event.listen(window, "unload", function() {
+				fOnUnload();
+			});
+
+			function fOnUnload() {
+				var aDoms = document.body.childNodes;
+				for (var i = aDoms.length - 1; i > -1; i--) {
+					try {
+						$(aDoms[i]).remove();
+					} catch (e) {}
+				}
+			}
+		</script>
+	</body>
+
+</html>

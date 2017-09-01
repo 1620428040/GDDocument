@@ -1,0 +1,12 @@
+相关链接：
+http://www.cnblogs.com/skynet/archive/2011/05/03/2035105.html最全面的介绍
+http://www.cnblogs.com/cy163/archive/2007/05/31/766886.html
+Unicode，UTF-8百度百科
+
+概念：
+字符集（Charset）：是一个系统支持的所有抽象字符的集合。
+ASCII字符集、
+Latin,IBM
+GB2312字符集、BIG5字符集、GB18030字符集、
+Unicode字符集,UCS2是两个字节的Unicode码？
+字符编码（Character Encoding）：是一套法则，即在符号集合与数字系统之间建立对应关系。

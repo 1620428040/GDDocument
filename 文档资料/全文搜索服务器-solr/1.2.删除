@@ -1,0 +1,31 @@
+删除所有数据		http://localhost:8983/solr/collection1/update?stream.body=<delete><query>*:*</query></delete>&commit=true
+
+删除数据
+通过id删除指定的文档，或者通过一个查询来删除匹配的文档
+
+1
+2
+java -Ddata=args -jar post.jar "<delete><id>SOLR1000</id></delete>"
+java -Ddata=args -jar post.jar "<delete><query>name:DDR</query></delete>"
+此时solr.xml文档从索引中删除了，再次搜”solr”时不再返回结果。当然solr也有数据库中的事务，执行删除命令的时候事务自动提交了，文档就会立即从索引中删除。你也可以把commit设置为false，手动提交事务。
+
+1
+java -Ddata=args  -Dcommit=false -jar post.jar "<delete><id>3007WFP</id></delete>"
+执行完上面的命令时文档并没有真正删除，还是可以继续搜索相关结果，最后可以通过命令：
+
+1
+java -jar post.jar -
+提交事务，文档就彻底删除了。现在把刚刚删除的文件重新导入Solr中来，继续我们的学习。
+
+删除所有数据：
+
+1
+http://localhost:8983/solr/collection1/update?stream.body=<delete><query>*:*</query></delete>&commit=true
+删除指定数据
+
+1
+http://localhost:8983/solr/collection1/update?stream.body=<delete><query>title:abc</query></delete>&commit=true
+多条件删除
+
+1
+http://localhost:8983/solr/collection1/update?stream.body=<delete><query>title:abc 

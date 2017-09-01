@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var obj={};
+			obj.str="2333";
+			obj.fun=function(){
+				console.log(this.str);
+			}
+			obj.fun();//正常调用
+			
+			with(obj){
+				fun();//使用with后，默认的对象（或者是域），从window变成with调用的对象
+				this.fun();//使用with，并不会改变this所指对象
+				function fun(){
+					alert("2ddwd");
+				}
+				function fun2(){
+					alert("2ddwd");
+				}
+				console.dir(fun);
+				console.dir(fun2);
+			}
+			//with是运行缓慢的代码块，不推荐使用
+		</script>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<label>每月投资金额</label>
+		<input type="number" name="" id="money" value="1000" />
+		<br>
+		
+		<label>预期年利率</label>
+		<input type="number" name="" id="rate" value="3" />
+		<br>
+		
+		<label>时间(月)</label>
+		<input type="number" name="" id="time" value="120" />
+		<br>
+		
+		<input type="button" id="" value="计算" onclick="submit();"/>
+		<table id="result" border="" cellspacing="" cellpadding="">
+			<tr><th>每月投资金额</th><th>预期年利率</th><th>时间(月)</th><th>总投资</th><th>总金额</th><th>当月收益</th><th>总收益</th><th>收益率</th><th>备注</th></tr>
+		</table>
+		<script type="text/javascript">
+			function submit(){
+				var money=parseInt(document.getElementById("money").value);
+				var rate=parseInt(document.getElementById("rate").value);
+				var time=parseInt(document.getElementById("time").value);
+				var result=0,monthly=0;
+				var monthlyRate=(rate/1200);//月利率
+//				console.log(monthly);
+				for (var i=0;i<time;i++) {
+//					console.log("result:"+result);
+//					console.log("money:"+money);
+//					console.log("result+money:"+(result+money));
+					monthly=(result+money)*monthlyRate;
+					result+=monthly+money;
+				}
+				var total=money*time;
+				result=Math.round(result);
+				document.getElementById("result").innerHTML+=
+					"<tr><td>"+money+"</td><td>"+rate+"</td><td>"+time+"</td><td>"+total+"</td>"
+					+"<td>"+result+"</td><td>"+monthly+"</td><td>"+(result-total)+"</td><td>"+((result-total)/total)+"</td><td>"+(result*rate/100)+"</td><td></td></tr>";
+			}
+		</script>
+	</body>
+</html>

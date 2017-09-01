@@ -1,0 +1,37 @@
+基于asp.net和C#语言的web service
+
+创建
+在VS中创建web服务应用程序，可以创建一个简单的web service
+
+调用
+<form target="_blank" action='http://localhost:2719/Service1.asmx/HelloWorld' method="POST">
+<input type="submit" value="调用" class="button">
+</form>
+以POST方式发送请求
+
+方法
+[WebMethod] public string HelloWorld()
+在函数之前用[WebMethod]标记，会自动生成可以调用的服务方法
+
+参数
+函数需要的参数，需要在表单中传入，可以参考自动生成的请求页面
+
+
+对象
+web service可以传输对象
+asp.net端可以使用对象作为方法的参数和返回值
+php调用时
+$info["name"]="frth";
+$info["path"]="reh5y";
+$result=$client->info(array("info"=>$info));
+print_r($result->infoResult->name);
+
+$info["path"]和info->name的写法基本是等效的
+
+
+验证
+web service的验证还不会用，只能传入账号和密码，暂时
+
+引用
+在asp.net环境中引用，需要在项目中添加web引用，VS会自动生成 代码。然后像本地的类一样使用就可以（需要引用命名空间）
+在php中引用，需要更改代码中的设定，允许ajax脚本调用，并且生成wsdl文件

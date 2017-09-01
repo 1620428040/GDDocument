@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			say("sds");
+			//alert(arguments);
+			debugger;
+			say("this");
+			function say(word){
+				alert(word);
+				alert(arguments[0]);
+			}
+			var functionName=getFunctionName(say);
+			//alert(functionName);
+			//alert(""+say);
+			
+			function a() {
+				b();
+			}
+			function b() {
+				c();
+			}
+			function c() {
+				d();
+			}
+			function d() {
+		        var stack = [];
+		        
+		        caller = arguments.callee.caller;
+		        while (caller) {
+		            stack.unshift(getFunctionName(caller));
+		            caller = caller && caller.caller;
+		        }
+		        alert('functions on stack:' + '\n' + stack.join('\n'));
+			}
+			
+			//a();
+			/**
+			* 获取函数名称
+			*
+			* @param {Function} func 函数引用
+			* @return {String} 函数名称
+			*/
+			function getFunctionName(func) {
+			    if ( typeof func == 'function' || typeof func == 'object' ) {
+			        var name = ('' + func).match(/function\s*([\w\$]*)\s*\(/);
+			    }
+			    return name && name[1];
+			}
+			
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

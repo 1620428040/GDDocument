@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="../../../framework/jQuery/jquery/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/function.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/DataMagic.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var host="http://192.168.1.3:81/bgmobile/SeparateModule/DataMagic2.php";
+			var data0={
+				begin_time: "656574",
+				duty_content: "自动化测试功能",
+				duty_data: "1458144000",
+				duty_name: "济南市财政局",
+				duty_userid: "ID_NccosUser_118",
+				duty_username: "李晓非",
+				end_time: "565675",
+				file: "0",
+				file_name: "ytjtyjt",
+				inputuserid: "45",
+				inputusername: "jytj",
+				visitor: "0",
+				visitor_name: "jtyjyt"
+			}
+			
+			var model,data1,index;
+			function create(){
+				model=new DataMagic.Model("duty",sessionStorage,host,function(data){
+					console.log(model);
+					document.write("创建model成功"+"<br>");
+				});
+			}
+			function insert(){
+				model.insert(data0,function(data){
+					console.log(data);
+					if(data&&data.id){
+						document.write("插入数据成功，ID："+data.id+"<br>");
+					}
+				})
+			}
+			function update(){
+				var latest=model.data.length-1;
+				var data=model.data[latest];
+				data.duty_content="修改过后的内容";
+				model.update(data,function(data){
+					console.log(data);
+					if(data){
+						document.write("修改成功，ID："+data+"<br>");
+					}
+				})
+			}
+			function search1(){
+				model.search(null,function(data){
+					console.log(data);
+					if(data){
+						document.write("搜索成功"+"<br>");
+					}
+				})
+			}
+			function search2(){
+				model.search({duty_content: "werew"},function(data){
+					console.log(data);
+					if(data){
+						document.write("搜索成功"+"<br>");
+					}
+				})
+			}
+			function delete1(){
+				var latest=model.data.length-1;
+				model.delete([latest],function(data){
+					console.log(data);
+					if(data){
+						document.write("删除成功，ID："+data+"<br>");
+					}
+				})
+			}
+			function delete2(){
+				var latest=model.data.length-1;
+				model.delete([latest-1,latest],function(data){
+					console.log(data);
+					if(data){
+						document.write("删除成功，ID："+data+"<br>");
+					}
+				})
+			}
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

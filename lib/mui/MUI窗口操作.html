@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+		mui.init({
+    subpages:[{
+      url:'list.html',
+      id:'list.html',
+      styles:{
+        top:'45px',//mui标题栏默认高度为45px；
+        //bottom:'0px'//默认为0px，可不定义；
+      }
+    }]
+  });
+			function openNewWindow()
+			{
+				
+				mui.openWindow({
+					url: "list.html",
+					id:"index.html",
+					styles:{}
+					});
+				mui.close;
+				mui.back(-1);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

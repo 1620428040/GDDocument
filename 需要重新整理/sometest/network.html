@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body ononline="alert('this');">
+		<script type="text/javascript">
+			window.onLine=function(){
+				console.log(arguments);
+			}
+			window.addEventListener("online",function(){
+				console.log(arguments);
+			})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>基本的列表页面</title>
+		<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/DataMagic-base.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!--引用bootstrap框架中的文件和适配bootstrap的view部分-->
+		<link rel="stylesheet" type="text/css" href="view/bootstrap/bootstrap/css/bootstrap.min.css"/>
+		<script src="view/bootstrap/bootstrap/js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="view/bootstrap/bootstrap/bootstrap-datetimepicker.min.css"/>
+		<script src="view/bootstrap/bootstrap/bootstrap-datetimepicker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="view/bootstrap/DataMagic.bootstrap.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="view/bootstrap/DataMagic.bootstrap.css"/>
+		
+		<script type="text/javascript">
+			var department=new DataMagic.Controller("department",sessionStorage,"php/DataMagic2.php");
+		</script>
+	</head>
+	<body>
+		<div class="col-md-6">
+			<div class="panel panel-primary">
+			    <div class="panel-heading">
+			        <h3 class="panel-title">标题</h3>
+			    </div>
+			    <div class="panel-body">
+					<ul class="list-group DMList">
+						<li class="list-group-item DMItem">
+							<!--span class="badge">新</span>-->
+							<div>
+								<span data-field="title"></span>
+							</div>
+							<div style="font-size: 14px;color: gray;font-family: kaiti;">
+								<span data-field="people"></span>
+								<span data-field="date" class="pull-right"></span>
+							</div>
+						</li>
+					</ul>
+					<form role="form" class="DMForm"></form>
+			    </div>
+			    <div class="panel-footer">
+			    	<div class="btn-group DMToolbar">
+						<a class="btn btn-default DMButton" data-command="browse"><span>浏览</span></a>
+						<a class="btn btn-default DMButton" data-command="insert"><span>新建</span></a>
+						<a class="btn btn-default DMButton" data-command="deleteItems"><span>删除</span></a>
+						<a class="btn btn-default DMButton" data-command="update"><span>修改</span></a>
+						<a class="btn btn-default DMButton" data-command="search"><span>查找</span></a>
+						<a class="btn btn-default DMButton" data-command="save"><span>确认</span></a>
+						<a class="btn btn-default DMButton" data-command="cancel"><span>取消</span></a>
+						<a class="btn btn-default DMButton" data-command="refresh"><span>刷新</span></a>
+					</div>
+			    </div>
+			</div>
+		</div>
+		
+	</body>
+</html>

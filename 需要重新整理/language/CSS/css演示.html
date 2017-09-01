@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>CSS演示</title>
+		<meta charset="UTF-8"/>
+		<style>
+		/*选择器*/
+			/*class用.来声明*/
+			.title{
+			}
+			/*id用#来声明*/
+			#login{
+			}
+			/*标签可以直接声明*/
+			p{
+			}
+			/*混合的方式查找子标签也可以*/
+			.title p{
+			}
+			/*
+			 * 样式表可以在多个位置重复定义
+			 * 优先级：标签内部>文档头部>外部样式表>默认样式
+			 * 缺少的参数会自动补全
+			 */
+			.title p{
+				color: blueviolet;/*文字颜色*/
+				text-align: center;/*文字对齐（不影响所在元素的对齐）*/
+				font-size:40 ;/*文字大小*/
+				background-color: blue;/*背景颜色*/
+				width: 500px;/*元素宽度*/
+				/*height: 70px;*//*元素高度*/
+				/*position: absolute;*//*绝对定位*/
+				position: relative;/*相对定位*/
+				left: 100px;
+				top: 100px;
+				float: left;/*浮动*/
+				margin: 10px;/*外边距*/
+				padding: 10px;/*内边距*/
+				border: 10px solid red;/*边框*/
+				
+				/*
+				 * css里的一些元素，既可以像 border: 10px solid red 一样
+				 * 直接给出几项第一
+				 * 也可以像 border-color: red 一样
+				 * 分别给出
+				 * 系统会补全没有定义到的属性
+				 */
+				
+				/*将div居中*/
+				margin-left:auto; 
+				margin-right:auto;
+				
+				/*
+				 * 有时候网页会在左面和上面有一块空白，是因为body的外边距不为0！
+				 * 和html中的层级一样，body是包含在html中的，但html以外的部分颜色却根body的颜色一样！
+				 */
+			}
+			
+			
+			/*网页UI设计标准*/
+			/*在IE浏览器上，页面的宽度需要减少21px（1258px/1280px）*/
+			/*当分辨率为1280的情况下，正文宽度应该设置成980px，有背景图片的专题栏可设置成1440px*/
+			/*颜色应该选择256WEB安全色，或选择8位RGB颜色，否则色域太广有可能导致失色现象*/
+		</style>
+	</head>
+	<body>
+		<div class="title"><p>用来展示CSS的效果</p></div>
+		<div id="login">ghi</div>
+	</body>
+</html>

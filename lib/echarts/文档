@@ -1,0 +1,21 @@
+echarts的使用
+
+<!-- 引入echarts -->
+<script src="echarts.js"></script>
+<!-- 引入 vintage 主题 -->
+<script src="theme/vintage.js"></script>
+<script>
+// 第二个参数可以指定前面引入的主题
+var chart = echarts.init(document.getElementById('main'), 'vintage');
+chart.setOption({
+    ...
+});
+</script>
+
+option.series中可以包含若干个系列的图像
+option.series.data中是要显示的数据
+饼状图可以用{value:335, name:'直接访问'}的形式添加数据
+柱状图、折线图中可用[5, 20, 36, 10, 10, 20]表示数据，数据需要跟option.xAxis.data中的数据对应，比如: ["衬衫","羊毛衫","雪纺衫","裤子","高跟鞋","袜子"]
+气泡图、散点图用{name:"名称",value:[x,y,size]}表示数据
+
+直角坐标系（grid）、极坐标系（polar）

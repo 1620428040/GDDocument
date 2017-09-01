@@ -1,0 +1,17 @@
+<pre>foreach标签，可以直接用来输出select出的二维数组</pre>
+<ul><foreach name="data" item="item"><li>
+姓名：{$item.name}<br/>年龄：{$item.age}
+</li></foreach></ul>
+
+<pre>volist类似于foreach，但是提供更多的功能</pre>
+<ul><volist name="data" id="item"><li>
+姓名：{$item.name}<br/>年龄：{$item.age}
+</li></volist></ul>
+
+<switch name="level">
+    <case value="1">一级</case>
+    <case value="2">二级</case>
+    <default />零级
+</switch>
+
+<egt name="level" value="2">用户等级大于等于2</egt>

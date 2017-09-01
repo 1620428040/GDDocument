@@ -1,0 +1,39 @@
+{
+	"0": {
+		"0": {
+			"ClassName": "MimeType",
+			"description": "Shockwave Flash",
+			"suffixes": "swf",
+			"type": "application/x-shockwave-flash"
+		},
+		"1": {
+			"ClassName": "MimeType",
+			"description": "Shockwave Flash",
+			"suffixes": "spl",
+			"type": "application/futuresplash"
+		},
+		"ClassName": "Plugin",
+		"description": "Shockwave Flash 21.0 r0",
+		"filename": "Flash32_21_0_0_213.ocx",
+		"length": 2,
+		"name": "Shockwave Flash",
+		"version": "21.0.0.213",
+		"item": {
+			"ClassName": "Function"
+		},
+		"namedItem": {
+			"ClassName": "Function"
+		}
+	},
+	"ClassName": "PluginArray",
+	"length": 1,
+	"item": {
+		"ClassName": "Function"
+	},
+	"namedItem": {
+		"ClassName": "Function"
+	},
+	"refresh": {
+		"ClassName": "Function"
+	}
+} 

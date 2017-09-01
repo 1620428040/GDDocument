@@ -1,0 +1,26 @@
+在aspx文件中插入C#脚本用到的标签
+
+插入一段服务器脚本
+<% %>或<script runat="server"></script>
+例如
+<% 
+    model.title = "title";
+    site.name = "name";
+%>
+这段脚本运行在服务器端，但不会被编译，可以在运行时修改，这点跟在.cs中的代码不同
+
+
+插入一句C#代码，结尾不能加";"分号
+<%#Eval("title") %>	调用一个方法，结果会输出到页面上
+<%=model.title %>	插入一个变量，结果会输出到页面上
+
+
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="video_show.aspx.cs" Inherits="DTcms.Web.video_show" %>
+页面设置
+Language		.net脚本语言
+AutoEventWireup	自动传递事件
+CodeBehind		对应的cs文件
+Inherits		对应的类
+MasterPageFile	母版页
+
+<%@ Import namespace="DTcms.Common" %>包含命名空间

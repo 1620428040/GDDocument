@@ -1,0 +1,391 @@
+{
+	"describe": "用户",
+	"bindTable": "oa_v_user",
+	"primaryFields": "id",
+	"tools": [
+		"browse",
+		"delete",
+		"search",
+		"refresh"
+	],
+	"alias": {
+		"parent":"dept_id",
+		"people": "",
+		"title": "",
+		"date": ""
+	},
+	"fieldList": {
+		"id": {
+			"title": "nccosID",
+			"notNull": false,
+			"dataType": "char",
+			"maxlength": 32
+		},
+		"uid": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"ukey": {
+			"title": "nccosID",
+			"notNull": false,
+			"dataType": "char",
+			"maxlength": 32
+		},
+		"username": {
+			"title": "",
+			"notNull": false,
+			"dataType": "char",
+			"maxlength": 15
+		},
+		"lastlgip": {
+			"title": "最后登录ip",
+			"notNull": false,
+			"dataType": "char",
+			"maxlength": 15
+		},
+		"lastlgtime": {
+			"title": "最后登录时间",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Date"
+		},
+		"dyncardid": {
+			"title": "动态口令卡ID",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"verification": {
+			"title": "验证方式",
+			"notNull": false,
+			"dataType": "char",
+			"maxlength": 8
+		},
+		"lgtimes": {
+			"title": "从注册开始，登录的总次数",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"ustate": {
+			"title": "用户状态（0正常|1锁定|2待激活）",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"emp_id": {
+			"title": "员工ID",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"emp_no": {
+			"title": "员工编号",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"name": {
+			"title": "姓名",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"gender": {
+			"title": "性别",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 6,
+			"type": "Base"
+		},
+		"marital_status": {
+			"title": "婚姻",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 16,
+			"type": "Base"
+		},
+		"birthdate": {
+			"title": "出生日期",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"idcard": {
+			"title": "身份证号",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"schootag": {
+			"title": "毕业学校",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 80,
+			"type": "LongText"
+		},
+		"education": {
+			"title": "最高学历",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"degree": {
+			"title": "学位",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"technical_title": {
+			"title": "职称",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"post": {
+			"title": "职务",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"comp_id": {
+			"title": "所属公司ID",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 10,
+			"type": "Base"
+		},
+		"comp_name": {
+			"title": "所属公司名称",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"dept_id": {
+			"title": "部门ID",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"dept_name": {
+			"title": "部门名称",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"mobile": {
+			"title": "手机号码",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"officephone": {
+			"title": "座机",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"homephone": {
+			"title": "家庭电话",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"email": {
+			"title": "EMAIL",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"address": {
+			"title": "家庭住址",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200,
+			"type": "LongText"
+		},
+		"domicile": {
+			"title": "户口所在址",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200,
+			"type": "LongText"
+		},
+		"native_place": {
+			"title": "籍贯",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200,
+			"type": "LongText"
+		},
+		"employed_date": {
+			"title": "入职时间",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Number"
+		},
+		"state": {
+			"title": "状态：在职、离职、病体、退休",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"level_type": {
+			"title": "离职类型：自愿离职，非自愿离职",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"leave_detail_type": {
+			"title": "离职类型细分 自愿离职:竞争淘汰、人才流失、退休 非自愿离职:辞退、裁员",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30,
+			"type": "Base"
+		},
+		"leave_reason": {
+			"title": "离职原因：发展机会、薪酬问题、主管问题、文化环境、工作挑战性、工作中学到知识、与同事关系、工作与生活平衡",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"leave_other_reason": {
+			"title": "离职其它原因",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"remark": {
+			"title": "备注",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 200,
+			"type": "LongText"
+		},
+		"graduation_time": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Date"
+		},
+		"leave_time": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 11,
+			"type": "Date"
+		},
+		"fileAddress": {
+			"title": "档案所在地",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"politicsStatus": {
+			"title": "政治面",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"empType": {
+			"title": "员工性质",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30,
+			"type": "Base"
+		},
+		"empIdentity": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"emergencyContact": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"contactWay": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30,
+			"type": "Base"
+		},
+		"firstname": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"lastname": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 20,
+			"type": "Base"
+		},
+		"fileNum": {
+			"title": "",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 30,
+			"type": "Base"
+		},
+		"avatar": {
+			"title": "头像",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 255,
+			"type": "LongText"
+		},
+		"signature": {
+			"title": "个人签名",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 255,
+			"type": "LongText"
+		},
+		"displayStatus": {
+			"title": "0为显示，1为不显示",
+			"notNull": false,
+			"dataType": "tinyint",
+			"maxlength": 1
+		}
+	}
+}

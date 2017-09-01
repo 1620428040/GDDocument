@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="aop.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//用来测试的函数
+			var obj={
+				test:function(mess,number){
+					alert("say:"+mess+"  number:"+number);
+					return "返回值";
+				}
+			}
+			console.log(obj.test("原始的消息","第一次"));
+			
+			//在测试函数前面加一段代码，可以改变传入的值
+			aopBefore(obj,"test",function(mess,number){
+				mess="改变了消息的内容";
+				return arguments;
+			});
+			//在测试函数后面加一段代码，可以修改返回值
+			aopAfter(obj,"test",function(mess,number,result){
+				alert("在测试函数运行过之后:"+result);
+				return "改变过的返回值";
+			});
+			console.log(obj.test("原始的消息","第二次"));
+			
+			
+			aopClear(obj,"test");
+			console.log(obj.test("原始的消息","第三次"));
+		</script>
+	</body>
+</html>

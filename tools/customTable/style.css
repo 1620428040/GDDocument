@@ -1,0 +1,11 @@
+.default{
+	border-width: 1px;
+	border-style: dashed;
+	border-color: lightblue;
+}
+.default tr:first-of-type{
+	background-color: lightsalmon;
+}
+.default tr:nth-child(2n+3){
+	background-color: lightgray;
+}

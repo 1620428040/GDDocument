@@ -1,0 +1,81 @@
+## Controller的含义等同于之前版本的Action
+
+## 单字母函数
+- A 生成控制器
+- U 生成URL链接
+- D 生成数据库类的实例
+- M 生成模型类的实例
+
+## 模板变量
+模板变量可以这样在模板文件中使用，也可以直接用PHP输出
+```php
+class PageController extends Controller{
+    public function index(){
+        $string="hello world !";
+        $list=["action","boy","controller","data","echo","fire","group"];
+        $array=[
+            "a"=>"action",
+            "b"=>"boy",
+            "c"=>"controller",
+            "d"=>"data",
+            "e"=>"echo",
+            "f"=>"fire",
+            "g"=>"group"
+        ];
+        $boolean=true;
+
+        $this->assign("str",$string);
+        $this->assign("li",$list);
+        $this->assign("arr",$array);
+        $this->assign("bool",$boolean);
+
+        $this->display();
+    }
+}
+```
+
+```html
+<?php echo $value?>
+string:
+{$str}
+<br/>
+
+list:
+{$li.1}
+<br/>
+{$li[2]}
+<br/>
+
+array:
+{$arr.a}
+<br/>
+{$arr[b]}
+<br/>
+
+{$bool}
+<br/>
+```
+
+## 模板继承
+类似于ASP的母版页
+
+在被继承的页面中，可以用block标签留出可以被替换的位置
+```html
+<block name="title"><title>标题</title></block>
+```
+在继承的页面中
+```html
+<extend name="base" />
+<block name="title"><title>{$title}</title></block>
+```
+
+## 引用文件
+在模板文件中，需要用include标签才能引用其他的文件
+```html
+<include file="Public/header,Public/menu" />
+```
+
+## 内置标签
+
+
+

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript">
+			var pluginList=navigator.plugins;
+			
+			for(var i=0;i<pluginList.length;i++){
+				var des=pluginList[i].toString();
+				for(var key in pluginList[i]){
+					des+=key+":"+pluginList[i][key]+"\n";
+				}
+				alert(des);
+				
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="border">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			.border{
+				border: solid 1px aqua;
+			}
+			.horizontalCenter{
+				width: 1080px;
+				margin: auto;
+				left: 0px;
+				right: 0px;
+			}
+			.header{
+				height: 200px;
+			}
+			.navigation{
+				height: 30px;
+			}
+			.banner{
+				height: 100px;
+			}
+			.main{
+				position: relative;
+			}
+			.side{
+				width: 200px;
+				height: 100px;
+				float: left;
+			}
+			.content{
+				position: relative;
+				left: 200px;
+				width: 880px;
+				height: 1000px;
+			}
+			.box{
+				position: fixed;
+				top: 100px;
+				left: 100px;
+				
+				right: 100px;
+				bottom: 100px;
+				
+				height: 100px;
+				width: 100px;
+				background-color: black;
+			}
+		</style>
+		<script src="../../../framework/jQuery/jquery/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(document).ready(addBorder);
+			function addBorder(){
+				var jqs=$("*");
+				for (var i=0;i<jqs.length;i++) {
+					var jq=$(jqs[i]);
+					jq.addClass("border");
+					jq.attr("style","border-color: "+randColor()+";");
+				}
+			}
+			function randColor(){
+				var strPol = "0123456789ABCDE";
+				var color="#";
+				for (var i=0;i<6;i++) {
+					color+=strPol[Math.round(Math.random()*16)];
+				}
+				//alert(color);
+				return color;
+			}
+			
+		</script>
+	</head>
+	<body class="border">
+		<div class="border horizontalCenter header">
+			
+		</div>
+		<div class="border horizontalCenter navigation">
+			
+		</div>
+		<div class="border horizontalCenter banner">
+			
+		</div>
+		<div class="border horizontalCenter main">
+			<div class="border side">
+				
+			</div>
+			<div class="border content">
+			</div>
+		</div>
+	</body>
+</html>

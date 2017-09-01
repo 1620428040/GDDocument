@@ -1,0 +1,14 @@
+数据库相关的类，在System.Data命名空间中
+DataSet本身相当于一个数据库，其中的Tables（DataTable[]）是几张数据表,数据表中，Rows是记录，再下一级是DataColumn
+
+
+包含关系
+DataSet set=null;
+DataTable table = set.Tables[0];
+DataRow row=table.Rows[0];
+object column = row[0];
+
+
+数量set.Tables.Count
+row["name"]可以输出相应键（数据库中的字段名）的值
+

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<script src="../framework/jQuery/jquery/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<title></title>
+	</head>
+	<body>
+		
+		<div class="ellipse">
+			一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。
+		</div>
+		
+		<div class="ellipse">
+			一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。
+		</div>
+		
+		<div class="ellipse">
+			一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。一个非常长的字符串，需要自动的截取。
+		</div>
+		
+		<script>
+			$.textEllipse=function(selector,ellipseFlag){
+				if(selector==null){selector=".ellipse"};
+				if(ellipseFlag==null){ellipseFlag="...";}
+				$("body").append('<div style="position: fixed;visibility: hidden;width: 10000px;" class="ellipse-widthTest"></div>');
+				$(selector).each(function(){
+					var originText=$(this).html();
+					$(".ellipse-widthTest").html("<span>"+originText+"</span>");
+					var span=$(".ellipse-widthTest").children("span");
+					var containerWidth=$(this).width();
+					var textWidth=span.width();
+					var ellipseLength=parseInt(originText.length*containerWidth/textWidth);
+					while(textWidth>containerWidth){
+						var ellipseText=originText.substr(0,ellipseLength);
+						span.html(ellipseText+ellipseFlag);
+						textWidth=span.width();
+						ellipseLength-=1;
+					}
+					$(this).html(ellipseText+ellipseFlag);
+				});
+				$(".ellipse-widthTest").remove();
+			}
+			$.textEllipse();
+		</script>
+	</body>
+</html>

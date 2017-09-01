@@ -1,0 +1,61 @@
+{
+	"describe": null,
+	"bindTable": "questionscore",
+	"primaryFields": "id",
+	"feature": [
+		"browse",
+		"search",
+		"refresh"
+	],
+	"alias":{
+		"people":"name",
+		"title":"testName",
+		"date":"time"
+	},
+	"fieldList": {
+		"id": {
+			"title": "编号",
+			"type": "number",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 20
+		},
+		"username": {
+			"title": "用户名",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"name": {
+			"title": "姓名",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"dept_name": {
+			"title": "部门",
+			"notNull": true,
+			"dataType": "varchar",
+			"maxlength": 64
+		},
+		"time": {
+			"title": "时间",
+			"type": "number",
+			"notNull": true,
+			"dataType": "int",
+			"maxlength": 11
+		},
+		"testName": {
+			"title": "试题",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 20
+		},
+		"score": {
+			"title": "分数",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 5
+		}
+	}
+}

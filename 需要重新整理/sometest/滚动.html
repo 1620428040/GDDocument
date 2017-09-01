@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+		<script src="../framework/jQuery/jquery/jquery-3.0.0.js"></script>
+	</head>
+	<body>
+		<div style="width: 300px;height: 30px;font-size: 20px;overflow: hidden;">
+			<p style="margin: 0px;white-space:nowrap;" id="text">
+				<span style="position: relative;">人不过富而分为服务而过分无法歌dfvf舞废物狗废物分别为而无法为各位</span>
+			</p>
+		</div>
+		<script>
+			$("span").bind("mouseenter",function(){
+				var gap=$(this).width()-$(this).parent().eq(0).width();
+				if(gap>0){
+					$(this).animate({left:"-"+gap+"px"},gap*30,"linear",function(){
+						$(this).animate({left:"0px"},gap*30,"linear");
+					});
+				}
+			});
+			
+			//qx，改变表格的行的光标
+			var rows=$(".qooxdoo-table-cell").parent();
+			rows.attr("style","cursor: pointer;");
+		</script>
+	</body>
+</html>

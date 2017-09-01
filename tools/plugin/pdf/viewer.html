@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8"/>
+		<script src="../plugin.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var request={};
+			var paprms=location.href.split("?");
+			if(paprms.length>1){
+				var paprms=paprms[1].split("&");
+				for (var i=0;i<paprms.length;i++) {
+					var papr=paprms[i].split("=");
+					request[papr[0]]=papr[1];
+				}
+			}
+			
+			var defaultPath="/GDTestCode/sometest/pdf/123.pdf";
+			var filePath=request["file"]||defaultPath;
+			document.write(insertPDFViewer(filePath,800,600));
+		</script>
+	</body>
+</html>

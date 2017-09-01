@@ -1,0 +1,1129 @@
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":"1,2,3,4,5,6",
+    "primaryField":"1",
+    "columns":[
+        {
+            "id":"1",
+            "title":"编号",
+            "field":"id",
+            "type":"number"
+        },
+        {
+            "id":"2",
+            "title":"姓名",
+            "field":"name",
+            "type":"text"
+        },
+        {
+            "id":"3",
+            "title":"生日",
+            "field":"birthDay",
+            "type":"date"
+        },
+        {
+            "id":"4",
+            "title":"民族",
+            "field":"nation",
+            "type":"text"
+        },
+        {
+            "id":"5",
+            "title":"性别",
+            "field":"sex",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        {
+            "id":"6",
+            "title":"年龄",
+            "field":"age",
+            "type":"number"
+        }
+    ]
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":"1,2,3,4,5,6",
+    "primaryField":"1",
+    "columns":[
+        {
+            "id":"1",
+            "title":"编号",
+            "field":"id",
+            "type":"number"
+        },
+        {
+            "id":"2",
+            "title":"姓名",
+            "field":"name",
+            "type":"text"
+        },
+        {
+            "id":"3",
+            "title":"生日",
+            "field":"birthDay",
+            "type":"date"
+        },
+        {
+            "id":"4",
+            "title":"民族",
+            "field":"nation",
+            "type":"text"
+        },
+        {
+            "id":"5",
+            "title":"性别",
+            "field":"sex",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        {
+            "id":"6",
+            "title":"年龄",
+            "field":"age",
+            "type":"number"
+        }
+    ]
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":"1,2,3,4,5,6",
+    "primaryField":"1",
+    "columns":[
+        {
+            "id":"1",
+            "title":"编号",
+            "field":"id",
+            "type":"number"
+        },
+        {
+            "id":"2",
+            "title":"姓名",
+            "field":"name",
+            "type":"text"
+        },
+        {
+            "id":"3",
+            "title":"生日",
+            "field":"birthDay",
+            "type":"date"
+        },
+        {
+            "id":"4",
+            "title":"民族",
+            "field":"nation",
+            "type":"text"
+        },
+        {
+            "id":"5",
+            "title":"性别",
+            "field":"sex",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        {
+            "id":"6",
+            "title":"年龄",
+            "field":"age",
+            "type":"number"
+        }
+    ]
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":"1,2,3,4,5,6",
+    "primaryField":"1",
+    "columns":[
+        {
+            "id":"1",
+            "title":"编号",
+            "field":"id",
+            "type":"number"
+        },
+        {
+            "id":"2",
+            "title":"姓名",
+            "field":"name",
+            "type":"text"
+        },
+        {
+            "id":"3",
+            "title":"生日",
+            "field":"birthDay",
+            "type":"date"
+        },
+        {
+            "id":"4",
+            "title":"民族",
+            "field":"nation",
+            "type":"text"
+        },
+        {
+            "id":"5",
+            "title":"性别",
+            "field":"sex",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        {
+            "id":"6",
+            "title":"年龄",
+            "field":"age",
+            "type":"number"
+        }
+    ]
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":"1,2,3,4,5,6",
+    "primaryField":"1",
+    "columns":[
+        {
+            "id":"1",
+            "title":"编号",
+            "field":"id",
+            "type":"number"
+        },
+        {
+            "id":"2",
+            "title":"姓名",
+            "field":"name",
+            "type":"text"
+        },
+        {
+            "id":"3",
+            "title":"生日",
+            "field":"birthDay",
+            "type":"date"
+        },
+        {
+            "id":"4",
+            "title":"民族",
+            "field":"nation",
+            "type":"text"
+        },
+        {
+            "id":"5",
+            "title":"性别",
+            "field":"sex",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        {
+            "id":"6",
+            "title":"年龄",
+            "field":"age",
+            "type":"number"
+        }
+    ]
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "extend":,
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":"1,2,3,4,5,6",
+    "condition":,
+    "cellDblclick":,
+    "showIndex":,
+    "allowMove":,
+    "primaryField":"1",
+    "hiddenFields":,
+    "prohibitEdit":,
+    "prohibitChange":,
+    "columns":[
+        {
+            "id":"1",
+            "title":"编号",
+            "field":"id",
+            "type":"number"
+        },
+        {
+            "id":"2",
+            "title":"姓名",
+            "field":"name",
+            "type":"text"
+        },
+        {
+            "id":"3",
+            "title":"生日",
+            "field":"birthDay",
+            "type":"date"
+        },
+        {
+            "id":"4",
+            "title":"民族",
+            "field":"nation",
+            "type":"text"
+        },
+        {
+            "id":"5",
+            "title":"性别",
+            "field":"sex",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        {
+            "id":"6",
+            "title":"年龄",
+            "field":"age",
+            "type":"number"
+        }
+    ]
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":"1,2,3,4,5,6",
+    "primaryField":"1",
+    "columns":[
+        {
+            "id":"1",
+            "title":"编号",
+            "field":"id",
+            "type":"number",
+            "maxlength":,
+            "notNull":,
+            "regexp":,
+            "describe":,
+            "valueRange":,
+            "defaultValue":,
+            "columnWidth":
+        },
+        {
+            "id":"2",
+            "title":"姓名",
+            "field":"name",
+            "type":"text",
+            "maxlength":,
+            "notNull":,
+            "regexp":,
+            "describe":,
+            "valueRange":,
+            "defaultValue":,
+            "columnWidth":
+        },
+        {
+            "id":"3",
+            "title":"生日",
+            "field":"birthDay",
+            "type":"date",
+            "maxlength":,
+            "notNull":,
+            "regexp":,
+            "describe":,
+            "valueRange":,
+            "defaultValue":,
+            "columnWidth":
+        },
+        {
+            "id":"4",
+            "title":"民族",
+            "field":"nation",
+            "type":"text",
+            "maxlength":,
+            "notNull":,
+            "regexp":,
+            "describe":,
+            "valueRange":,
+            "defaultValue":,
+            "columnWidth":
+        },
+        {
+            "id":"5",
+            "title":"性别",
+            "field":"sex",
+            "type":"singleSelector",
+            "maxlength":,
+            "notNull":,
+            "regexp":,
+            "describe":,
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man",
+            "columnWidth":
+        },
+        {
+            "id":"6",
+            "title":"年龄",
+            "field":"age",
+            "type":"number",
+            "maxlength":,
+            "notNull":,
+            "regexp":,
+            "describe":,
+            "valueRange":,
+            "defaultValue":,
+            "columnWidth":
+        }
+    ]
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":"1",
+    "columns":[
+    ]
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":"1"
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":[
+    ],
+    "primaryField":
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":[
+    ],
+    "primaryField":"1"
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":"id"
+}
+
+
+类型：数组
+{
+    "id":"1",
+    "name":"person",
+    "type":"table",
+    "describe":"人物表",
+    "bindTable":"person",
+    "fieldList":{
+        "id":{
+            "id":"1",
+            "title":"编号",
+            "type":"number"
+        },
+        "name":{
+            "id":"2",
+            "title":"姓名",
+            "type":"text"
+        },
+        "birthDay":{
+            "id":"3",
+            "title":"生日",
+            "type":"date"
+        },
+        "nation":{
+            "id":"4",
+            "title":"民族",
+            "type":"text"
+        },
+        "sex":{
+            "id":"5",
+            "title":"性别",
+            "type":"singleSelector",
+            "valueRange":"man,男;woman,女;",
+            "defaultValue":"man"
+        },
+        "age":{
+            "id":"6",
+            "title":"年龄",
+            "type":"number"
+        }
+    },
+    "primaryField":"id",
+    "feature":[
+        "create",
+        "delete",
+        "update",
+        "search"
+    ]
+}
+
+
+类型：字符串
+"{"id":"1","name":"person","type":"table","describe":"\u4eba\u7269\u8868","bindTable":"person","fieldList":{"id":{"id":"1","title":"\u7f16\u53f7","type":"number"},"name":{"id":"2","title":"\u59d3\u540d","type":"text"},"birthDay":{"id":"3","title":"\u751f\u65e5","type":"date"},"nation":{"id":"4","title":"\u6c11\u65cf","type":"text"},"sex":{"id":"5","title":"\u6027\u522b","type":"singleSelector","valueRange":"man,\u7537;woman,\u5973;","defaultValue":"man"},"age":{"id":"6","title":"\u5e74\u9f84","type":"number"}},"primaryField":"id","feature":["create","delete","update","search"]}"
+
+
+类型：字符串
+"{"id":"1","name":"person","type":"table","describe":"\u4eba\u7269\u8868","bindTable":"person","fieldList":{"id":{"id":"1","title":"\u7f16\u53f7","type":"number"},"name":{"id":"2","title":"\u59d3\u540d","type":"text"},"birthDay":{"id":"3","title":"\u751f\u65e5","type":"date"},"nation":{"id":"4","title":"\u6c11\u65cf","type":"text"},"sex":{"id":"5","title":"\u6027\u522b","type":"singleSelector","valueRange":"man,\u7537;woman,\u5973;","defaultValue":"man"},"age":{"id":"6","title":"\u5e74\u9f84","type":"number"}},"primaryField":"id","feature":["create","delete","update","search"]}"
+

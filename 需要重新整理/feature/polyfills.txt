@@ -1,0 +1,5 @@
+尽管旧浏览器缺少很多 HTML5 新 API ，不过JavaScript 是一个不可思议的修复语言，可以追加很多浏览器原生不支持的特性
+Polyfilling 是由 RemySharp 提出的一个术语，它是用来描述复制缺少的 API 和API 功能的行为。你可以使用它编写单独应用的代码而不用担心其他浏览器原生是不是支持。
+还可以用来补充旧版浏览器中缺少的HTML5 的新语义元素
+
+相关链接：http://blog.csdn.net/wang16510/article/details/8960312

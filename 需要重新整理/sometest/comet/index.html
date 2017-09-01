@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Comet demo</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="text/javascript" src="./jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="./json2.js"></script>
+<script>
+    var timestamp = 0;
+    var url = 'backend.php';
+    var error = false;
+    // 通过ajax建立和php端处理函数的连接(通过递归调用建立长时间的连接)
+    function connect(){
+        $.ajax({
+            data : {'timestamp' : timestamp},
+            url : url,
+            type : 'get',
+            timeout : 0,
+            success : function(response){
+                var data = JSON.parse(response);
+                error = false;
+                timestamp = data.timestamp;
+                if (data.msg != undefined && data.msg != "")
+                {
+                    $("#content").append("<div>" + data.msg + "</div>");
+                }
+            },
+            error : function(){
+                error = true;
+                setTimeout(function(){ connect();}, 5000);
+            },
+            complete : function(){
+                if (error)
+                    // 请求有错误时,延迟5s再连接
+                    setTimeout(function(){connect();}, 5000);
+                else
+                    connect();
+            }
+        })
+    }
+    // 发送信息
+    function send(msg){
+        $.ajax({
+            data : {'msg' : msg},
+            type : 'get',
+            url : url
+        })
+    }
+    // 创建长时间的连接
+    $(document).ready(function(){
+        connect();
+    })
+</script>
+</head>
+<body>
+    <div id="content"></div>
+        <form action="" method="get" 
+onsubmit="send($('#word').val());$('#word').val('');return false;">
+            <input type="text" name="word" id="word" value="" />
+            <input type="submit" name="submit" value="Send" />
+        </form>
+    </body>
+</html>

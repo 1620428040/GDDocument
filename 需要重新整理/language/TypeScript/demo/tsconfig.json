@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outFile": "auto.js",
+        "sourceMap": true
+    },
+    "files": [
+        "demo.ts"
+    ]
+}

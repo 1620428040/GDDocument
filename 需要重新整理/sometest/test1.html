@@ -1,0 +1,31 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+		<script src="../framework/jQuery/jquery/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<em>
+            <input id="keywords" name="keywords" class="people_input w117" type="text" onkeydown="if(event.keyCode==13){SiteSearch('/search.aspx', '#keywords');return false};" placeholder="输入回车搜索" x-webkit-speech="" />
+            <input class="people_button_n" type="submit" onclick="SiteSearch('/search.aspx', '#keywords');" value="搜索" />
+        </em>
+		<script type="text/javascript">
+			function SiteSearch(send_url, divTgs, channel_name) {
+	            var strwhere = "";
+	            if (channel_name !== undefined) {
+	                strwhere = "&channel_name=" + channel_name
+	            }
+	            
+	            var str = $.trim($(divTgs).val());
+	            if (str.length > 0 && str != "输入关健字") {
+	            	var href=send_url + "?keyword=" + encodeURI($(divTgs).val()) + strwhere;
+	            	alert(href);
+	                //window.location.href = send_url + "?keyword=" + encodeURI($(divTgs).val()) + strwhere;
+	            }
+	            //	/search.aspx?keyword=bfgbf
+	            //	/search.aspx?keyword=bfgbf
+	            return false;
+	        }
+		</script>
+	</body>
+</html>

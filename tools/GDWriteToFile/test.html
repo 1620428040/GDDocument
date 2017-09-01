@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title></title>
+		<meta charset="UTF-8"/>
+		<script src="../common/js/json2.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../common/js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../common/js/compare.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var pluginList=navigator.plugins;
+			
+			var obj1={
+				"a":"2222",
+				"b":{
+					"ba":"erger",
+					"bb":["dgr","rgre"]
+				},
+				"c":"reerg"
+			};
+			obj1["d"]=obj1;
+			
+			try{
+				var jsonString=jsonEncode(obj1);
+				document.write(jsonString);
+			}catch(e){
+				alert(e);
+			}
+			
+			function jsonEncode(obj){
+				var params={
+					"obj":obj,//当前对象
+					"reject":[],//需要排除的对象
+					"newObject":{}
+				}
+				var newParams=resolveObject(params);
+				var jsonString=JSON.stringify(newParams.newObject);
+				return jsonString;
+			}
+			function resolveObject(params){
+				for (var i=0;i<params.reject.length;i++) {
+					if(compareObjectSimple(params.obj,params.reject[i].obj)==true){
+						params.newObject="重复："+params.obj,params.reject[i].path;
+						return params;
+					}
+				}
+				
+				var type=getObjectType(params.obj);
+				if(isPrimitiveType(type)){
+					params.newObject=params.obj;
+					return params;
+				}
+				
+				params.reject.push({"obj":params.obj,"path":"test"});
+				for (var keyName in params.obj) {
+					var newParams={
+						"obj":params.obj[keyName],
+						"reject":params.reject,
+						"newObject":{}
+					};
+					newParams=resolveObject(newParams);
+					params.newObject[keyName]=newParams.newObject;
+					params.reject=newParams.reject;
+				}
+				
+				
+				return params;
+			}
+			
+		</script>
+	</body>
+</html>

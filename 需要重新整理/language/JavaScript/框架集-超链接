@@ -1,0 +1,19 @@
+<a href="pref.html" target="view_window">Preface</a>
+<a>标签的target属性，指定了在何处打开新页面，target属性可以使用的值如下
+
+值			描述
+_blank		在新窗口中打开被链接文档。
+_self		默认。在相同的框架中打开被链接文档。
+_parent		在父框架集中打开被链接文档。
+_top		在整个窗口中打开被链接文档。
+framename	在指定的框架中打开被链接文档。
+
+如果target的值是一个特定的name，浏览器会检查当前的框架集和已经打开的页面中是否有name相同的页面，如果有，则覆盖。如果没有则打开新页面
+
+
+
+<frameset cols="100,*">
+  <frame src="toc.html">
+  <frame src="pref.html" name="view_frame">
+</frameset>
+<frame>中的name属性，也能作为a target属性的framename。从而实现只刷新特定的子页面

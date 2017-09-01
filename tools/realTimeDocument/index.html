@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body onload='showDocument(window,null,"window");'>
+		<div id="doc">
+			
+				
+			
+		</div>
+		<script type="text/javascript">
+			var doc,current;
+			var stack=[];
+			var data={
+				"window":{
+					"explain":"窗口对象",
+					"details":"这个对象是指当前的窗口对象"
+				},
+				"localStorage":{
+					"explain":"本地存储"
+				}
+			}
+			function showDocument(object,superObject,keyName){
+				stack.push({"object":object,"superObject":superObject,"keyName":keyName});
+				current=object;
+				switch (typeof object){
+					case "function":
+						showDocumentForFunction(object,superObject,keyName);
+						break;
+					default:
+						showDocumentForObject(object,superObject,keyName);
+						break;
+				}
+			}
+			function showDocumentForObject(object,superObject,keyName){
+				doc="";
+				if(superObject){
+					doc+='<span onclick="showDocumentForSuperObject();">所在对象:'+superObject+'</span><br/>';
+				}
+				if(keyName){
+					doc+="<span>当前键名:"+keyName+"</span>&nbsp;&nbsp;"+"<br/>";
+					if(data[keyName]){
+						doc+="<span>说明:"+data[keyName].explain+"</span><br/>";
+						doc+="<span>详情:"+data[keyName].details+"</span><br/>";
+					}
+				}
+				doc+="类名:"+Object.prototype.toString.call(object)+"<br/>";
+				var kvInfo="";
+				for(var key in object){
+					var value=object[key];
+					kvInfo+='<tr><td onclick="showDocumentForThis(this);">'+key
+						+'</td><td onclick="showInConsole(\''+key+'\');">输出'
+						+'</td><td>'+Object.prototype.toString.call(value)
+						+'</td><td>'+(data[key]?data[key].explain:"")+'</td></tr>';
+				}
+				if(kvInfo!==""){
+					doc+='<table border="" cellspacing="" cellpadding=""><tr><th>键名</th><th>健值</th><th>类型</th><th>说明</th></tr>'+kvInfo+'</table>';;
+				}
+				document.getElementById("doc").innerHTML=doc;
+			}
+			function showDocumentForFunction(object,superObject,keyName){
+				doc="";
+				if(superObject){
+					doc+="<span>所在对象:"+superObject+"</span><br/>";
+				}
+				if(keyName){
+					doc+="<span>当前键名:"+keyName+"</span>&nbsp;&nbsp;"+"<br/>";
+					if(data[keyName]){
+						doc+="<span>说明:"+data[keyName].explain+"</span><br/>";
+						doc+="<span>详情:"+data[keyName].details+"</span><br/>";
+					}
+				}
+				doc+="类名:"+Object.prototype.toString.call(object)+"<br/>";
+				doc+="函数体:<pre>"+object+"</pre><br/>";
+				var kvInfo="";
+				for(var key in object){
+					var value=object[key];
+					kvInfo+='<tr><td onclick="showDocumentForThis(this);">'+key
+						+'</td><td onclick="showInConsole(\''+key+'\');">输出'
+						+'</td><td>'+Object.prototype.toString.call(value)
+						+'</td><td>'+(data[key]?data[key].explain:"")+'</td></tr>';
+				}
+				if(kvInfo!==""){
+					doc+='<table border="" cellspacing="" cellpadding=""><tr><th>键名</th><th>健值</th><th>类型</th><th>说明</th></tr>'+kvInfo+'</table>';;
+				}
+				document.getElementById("doc").innerHTML=doc;
+			}
+			function showDocumentForThis(ele){
+				var keyName=ele.innerText;
+				showDocument(current[keyName],current,keyName);
+			}
+			function showDocumentForSuperObject(){
+				stack.pop();
+				var sup=stack.pop();
+				showDocument(sup.object,sup.superObject,sup.keyName);
+			}
+			function showInConsole(keyName){
+				console.log(current[keyName]);
+			}
+		</script>
+	</body>
+</html>

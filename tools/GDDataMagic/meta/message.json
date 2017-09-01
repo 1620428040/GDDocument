@@ -1,0 +1,122 @@
+{
+	"describe": "消息",
+	"bindTable": "oa_msg",
+	"primaryFields": "id",
+	"feature": [
+		"browse",
+		"delete",
+		"search",
+		"refresh"
+	],
+	"alias": {
+		"people": "sender",
+		"title": "title",
+		"date": "createtime"
+	},
+	"fieldList": {
+		"id": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"msgid": {
+			"title": "消息ID",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"myid": {
+			"title": "当前用户ID",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"mytype": {
+			"title": "当前类型0:发件|1:收件",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"sender": {
+			"title": "发送人",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"senderid": {
+			"title": "发送人ID",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		},
+		"receivers": {
+			"title": "收件人",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 500,
+			"type": "LongText"
+		},
+		"type": {
+			"title": "1:系统消息|2:邮件|4:短信",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"title": {
+			"title": "标题",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 256,
+			"type": "LongText"
+		},
+		"content": {
+			"title": "",
+			"notNull": true,
+			"dataType": "mediumtext",
+			"maxlength": 0
+		},
+		"aid": {
+			"title": "附件id",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"createtime": {
+			"title": "",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"isdeleted": {
+			"title": "删除标记",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"hasread": {
+			"title": "是否已读（仅用于收件箱）",
+			"notNull": false,
+			"dataType": "int",
+			"maxlength": 10,
+			"type": "Number"
+		},
+		"folder": {
+			"title": "文件夹",
+			"notNull": false,
+			"dataType": "varchar",
+			"maxlength": 50,
+			"type": "Base"
+		}
+	}
+}

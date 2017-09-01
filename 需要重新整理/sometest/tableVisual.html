@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML表格</title>
+		<script src="../framework/jQuery/jquery/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var fileManagerVisualConfig={
+				defaultConfig:{
+					fileNameColumnIndex:1,
+					topOffset:5,
+					leftOffset:5,
+					topIncrement:0,
+					leftIncrement:0
+				},
+				slant:{
+					topOffset:25,
+					leftOffset:25,
+					topIncrement:25,
+					leftIncrement:45
+				}
+			}
+			$(function(){
+				$(".fileManagerVisual").each(function(index){
+					//调整参数
+					var config=fileManagerVisualConfig.defaultConfig;
+					var classList=$(this).attr("class").split(" ");
+					for (var i=0;i<classList.length;i++) {
+						if(fileManagerVisualConfig[classList[i]]!=null){
+							var config2=fileManagerVisualConfig[classList[i]];
+							for (var keyName in config2) {
+								config[keyName]=config2[keyName];
+							}
+						}
+					}
+					
+					var theadCount=0;
+					$(this).find("tr").each(function(index){
+						var tds=$(this).find("td");
+						
+						//忽略标题行
+						if(tds.length<config.fileNameColumnIndex+1){
+							theadCount++;
+							return;
+						}
+						
+						//将tr改造成文件节点
+						var fileNode=$(this);
+						var nodeIndex=index-theadCount;
+						fileNode.addClass("node");
+						var top=config.topIncrement*nodeIndex+config.topOffset;
+						var left=config.leftIncrement*nodeIndex+config.leftOffset;
+						var nodeStyle=fileNode.attr("style")==null?"":fileNode.attr("style")+";";
+						fileNode.attr("style",nodeStyle+"top: "+top+"px;left: "+left+"px;");
+
+						//文件名
+						var fileName=fileNode.find("td").eq(config.fileNameColumnIndex).html();
+						fileName='<div class="fileName">'+fileName+'</div>';
+						fileNode.html(fileName);
+						
+						//添加点击事件
+						fileNode.click(function(){
+							$(".node-selected").removeClass("node-selected");
+							$(this).addClass("node-selected");
+						});
+						
+						//检测是否允许打开
+						fileNode.addClass("node-deny");
+						
+						//检测是否是文件以及文件类型
+						if(index===3){
+							fileNode.addClass("docx");
+						}
+					});
+				});
+				
+			})
+			
+		</script>
+		<style>
+			/*图形化文件管理，通用的样式表*/
+			.fileManagerVisual{
+				visibility: hidden;
+			}
+			.fileManagerVisual th{
+				display: none;
+			}
+			.fileManagerVisual .node{
+				visibility: visible;
+				margin:5px;
+				background-size: 100% 100%;
+			}
+			.fileManagerVisual .node-selected{
+				background-color: rgba(200,150,100,0.3);
+				border: dotted 2px lightblue;
+				margin: 3px;
+			}
+			.fileManagerVisual td{
+				visibility: hidden;
+			}
+			
+			/*添加给表格的，作为可以切换的“皮肤”*/
+			/*档案室中的文件柜（斜着排列的）*/
+			.slant{
+				
+			}
+			.slant .node{
+				position: absolute;
+				height: 292px;
+				width: 155px;
+				background-image: url(image/cabinet.png);
+			}
+			.slant .fileName{
+				position: relative;
+				top: 50px;
+				left: 30px;
+			}
+			/*文件柜*/
+			.cabinet{
+				
+			}
+			.cabinet .node{
+				position: relative;
+				float: left;
+				height: 269px;
+				width: 152px;
+				background-image: url(image/cabinet_allow.png);
+			}
+			.cabinet .node-deny{
+				background-image: url(image/cabinet_deny.png);
+			}
+			.cabinet .fileName{
+				position: relative;
+				top: 50px;
+				left: 35px;
+			}
+			/*抽屉*/
+			.drawer{
+				
+			}
+			.drawer .node{
+				position: relative;
+				float: left;
+				height: 79px;
+				width: 163px;
+				background-image: url(image/drawer-blue.png);
+			}
+			.drawer .fileName{
+				position: relative;
+				top: 20px;
+				left: 30px;
+			}
+			/*文件夹、各种文件通用的样式表(默认是文件夹，各类文件需要读取文件类型之后添加相应的类)*/
+			.fileNode{
+				
+			}
+			.fileNode .node{
+				position: relative;
+				float: left;
+				height: 120px;
+				width: 120px;
+				background-image: url(image/folder_allow.png);
+				background-size: 48px 48px;
+				background-repeat: no-repeat;
+				background-origin: content-box;
+				background-position: 36px 10px;
+			}
+			.fileNode .fileName{
+				position: relative;
+				top: 80px;
+				width: 100%;
+				text-align: center;
+			}
+			
+			/*添加给fileNode的，根据文件类型不同，切换图片*/
+			.fileManagerVisual .docx{
+				background-image: url(image/fileIcon/application-msword.png);
+			}
+		</style>
+		
+	</head>
+
+	<body>
+		<table class="fileManagerVisual fileNode">
+			<thead>
+				<tr>
+					<th>编号</th>
+					<th>产品</th>
+					<th>交付时间</th>
+					<th>状态</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>1</td>
+					<td>一</td>
+					<td>01/04/2012</td>
+					<td>Approved</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>二</td>
+					<td>02/04/2012</td>
+					<td>Declined</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>三</td>
+					<td>03/04/2012</td>
+					<td>Pending</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>四</td>
+					<td>04/04/2012</td>
+					<td>Call in to confirm</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>一</td>
+					<td>01/04/2012</td>
+					<td>Approved</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>二</td>
+					<td>02/04/2012</td>
+					<td>Declined</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>三</td>
+					<td>03/04/2012</td>
+					<td>Pending</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>四</td>
+					<td>04/04/2012</td>
+					<td>Call in to confirm</td>
+				</tr>
+				<tr>
+					<td>1</td>
+					<td>一</td>
+					<td>01/04/2012</td>
+					<td>Approved</td>
+				</tr>
+				<tr>
+					<td>2</td>
+					<td>二</td>
+					<td>02/04/2012</td>
+					<td>Declined</td>
+				</tr>
+				<tr>
+					<td>3</td>
+					<td>三</td>
+					<td>03/04/2012</td>
+					<td>Pending</td>
+				</tr>
+				<tr>
+					<td>4</td>
+					<td>四</td>
+					<td>04/04/2012</td>
+					<td>Call in to confirm</td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+
+</html>

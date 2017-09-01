@@ -1,0 +1,36 @@
+参考链接：
+http://blog.csdn.net/rainysia/article/details/8131174	HTTP协议header标头详解
+http://netsecurity.51cto.com/art/201311/419179.htm		跨域资源共享(CORS)安全性浅析
+
+简介：
+设置服务器的返回头解决跨域访问问题，需要浏览器支持CORS（跨域资源共享，Cross Origin Resourse-Sharing）功能
+提起浏览器的同源策略，大家都很熟悉。不同域的客户端脚本不能读写对方的资源。
+但是实践中有一些场景需要跨域的读写，所以出现了一些hack的方式来跨域。
+比如在同域内做一个代理，JSON-P等。但这些方式都存在缺陷，无法完美的实现跨域读写。
+所以在XMLHttpRequest v2标准下，提出了CORS(Cross Origin Resourse-Sharing)的模型，试图提供安全方便的跨域读写资源。
+目前主流浏览器均支持CORS。
+
+Access-Control-Allow-Methods: 	
+Access-Control-Allow-Headers:X-Requested-With		允许自定义的头部，以逗号隔开，大小写不敏感
+Access-Control-Allow-Origin: *						允许任意来源的请求
+Access-Control-Allow-Methods: POST, GET, OPTIONS	允许使用的请求方法，以逗号隔开
+Access-Control-Max-Age: 1728000						CORS 相关配置的缓存存在的时间？
+Access-Control-Allow-Credentials:					请求时带上验证信息（cookie）
+
+使用方法：
+php		header("Access-Control-Allow-Headers:X-Requested-With");
+c#		response.addHeader("Access-Control-Allow-Headers", "Origin, No-Cache, X-Requested-With, If-Modified-Since, Pragma, Last-Modified, Cache-Control, Expires, Content-Type, X-E4M-With");
+
+
+注意事项：
+服务器接收到跨域请求的时候，并没有先验证，而是先处理了请求。
+所以从某种程度上来说。在支持cors的浏览器上实现跨域的写资源，打破了传统同源策略下不能跨域读写资源。
+如果将Access-Control-Allow-Origin设置为允许来自所有域的跨域请求。那么cors的安全机制几乎就无效了。
+
+这里在设计的时候有一个很好的限制。
+xmlhttprequest发送的请求需要使用“withCredentials”来带上cookie，如果一个目标域设置成了允许任意域的跨域请求，这个请求又带着cookie的话，这个请求是不合法的。
+(就是如果需要实现带cookie的跨域请求，需要明确的配置允许来源的域，使用任意域的配置是不合法的)浏览器会屏蔽掉返回的结果。javascript就没法获取返回的数据了。
+这是cors模型最后一道防线。假如没有这个限制的话，那么javascript就可以获取返回数据中的csrf token，以及各种敏感数据。这个限制极大的降低了cors的风险。
+
+
+设置浏览器允许跨域访问	Internet选项-安全-自定义级别-通过域访问数据源

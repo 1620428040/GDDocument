@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+<body>
+	<meta charset="UTF-8"/>
+
+
+<video width="320" height="240" controls="controls" loop="loop" id="video1" autoplay="autoplay" onclick="playPause()">
+  <source src="http://www.w3school.com.cn/i/movie.ogg" type="video/ogg">
+  <source src="http://www.w3school.com.cn/i/movie.mp4" type="video/mp4">
+Your browser does not support the video tag.
+</video>
+
+<button onclick="playPause()">播放/暂停</button> 
+<button onclick="makeBig()">大</button>
+<button onclick="makeNormal()">中</button>
+<button onclick="makeSmall()">小</button>
+<script type="text/javascript">
+var myVideo=document.getElementById("video1");
+function playPause()
+{ 
+	if(myVideo.paused)
+	{
+		myVideo.play();
+	}
+	else
+	{
+		myVideo.pause();
+	}
+}
+
+function makeBig()
+{ 
+myVideo.width=560; 
+} 
+
+function makeSmall()
+{ 
+myVideo.width=320; 
+} 
+
+function makeNormal()
+{ 
+myVideo.width=420; 
+} 
+</script> 
+</body>
+</html>

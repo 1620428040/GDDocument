@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script> 
+	</head>
+	<body>
+		<script type="text/javascript">
+			var str="hello world";
+		</script>
+		<!--<div ng-app="" ng-init="points=[1,15,19,2,40];str='100'">
+			<p>第三个值为 <span ng-bind="points[2]"></span></p>
+			<div>
+				{{str}}
+			</div>
+			<div ng-bind="str">
+				
+			</div>
+		</div>-->
+		
+		<div ng-app="" ng-init="names=[
+			{name:'Jani',country:'Norway'},
+			{name:'Hege',country:'Sweden'},
+			{name:'Kai',country:'Denmark'}]">
+		
+		<p>循环对象:</p>
+		<ul>
+			<li ng-repeat="x in names">
+				{{ x.name + ', ' + x.country }}
+			</li>
+		</ul>
+		
+		</div>
+	</body>
+</html>

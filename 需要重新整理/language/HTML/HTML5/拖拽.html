@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+	</head>
+
+	<body>
+		<meta charset="UTF-8" />
+		<p>请把 W3School 的图片拖放到矩形中：</p>
+		<style type="text/css">
+			#div1 {
+				width: 488px;
+				height: 70px;
+				padding: 10px;
+				border: 1px solid #aaaaaa;
+			}
+		</style>
+		<script type="text/javascript">
+			//如果不阻止默认的操作，是不能将对象放置到其他位置的
+			function allowDrop(ev) {//console.log(ev);
+				ev.preventDefault();//阻止事件的默认操作，拖拽事件的默认操作是打开新的链接
+			}
+			//拖拽
+			function drag(ev) {
+				ev.dataTransfer.setData("Text", ev.target.id);//记录被拖拽对象的id
+			}
+			//放置
+			function drop(ev) {
+				ev.preventDefault();
+				var data = ev.dataTransfer.getData("Text");
+				ev.target.appendChild(document.getElementById(data));//根据被拖拽对象的id，将它放到目标中
+			}
+		</script>
+		<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		<br />
+		<img id="drag1" src="http://www.w3school.com.cn/i/w3school_banner.gif" draggable="true" ondragstart="drag(event)"/>
+		
+		<br />
+		<script src="../../../../framework/jQuery/jquery/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var oldX=0;
+			var oldY=0;
+			function dragstart(ev){
+				oldX=ev.x;
+				oldY=ev.y;
+			}
+			function dragend(ev){
+				var offset = $('#drag2').offset();
+				var newX=offset.left+ev.x-oldX;
+				var newY=offset.top+ev.y-oldY;
+				ev.target.style.setProperty("left",newX+"px");
+				ev.target.style.setProperty("top",newY+"px");
+			}
+		</script>
+		<div id="drag2" style="position: absolute;" draggable="true" ondragstart="dragstart(event);" ondragend="dragend(event);">
+			拖动后会固定到指定位置
+		</div>
+	</body>
+
+</html>

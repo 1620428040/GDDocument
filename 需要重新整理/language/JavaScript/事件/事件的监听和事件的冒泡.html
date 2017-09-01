@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+		<title></title>
+		<script src="../../../framework/jQuery/jquery/jquery-3.0.0.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<form action="event.html">
+			<!--
+            	作者：guodong3415@163.com
+            	时间：2016-07-27
+            	描述：在表单中创建一个搜索框，但不将请求发送到后台，直接在前台跳转到搜索页面
+            -->
+			<input id="keywords" name="keywords" class="people_input w117" type="text" onkeydown="if(event.keyCode==13){SiteSearch('/search.aspx', '#keywords');return false};" placeholder="输入回车搜索" x-webkit-speech="" />
+            <!--点击回车键，开始搜索，并且不提交表单-->
+            <button class="people_button_n" type="button" onclick="SiteSearch('/search.aspx', '#keywords');">搜索</button>
+            <!--创建一个type="button"的button控件(必须定义type)，不会提交表单-->
+            <input class="people_button_n" type="submit" onclick="SiteSearch('/search.aspx', '#keywords'); return false;" value="搜索" />
+            <!--点击submit按钮时，停止事件冒泡-->
+		</form>
+		<script type="text/javascript">
+			//onclick="SiteSearch('/search.aspx', '#keywords'); return false;"
+			//实际上是创建了一个匿名函数
+			//相当于
+			$(".people_button_n").onclick=function(){
+				SiteSearch('/search.aspx', '#keywords'); 
+				return false;
+			}
+			//return false;可以停止事件冒泡
+			
+			//onclick="test();"
+			function test(){
+				SiteSearch('/search.aspx', '#keywords'); 
+				return false;
+			}
+			//这样写表示事件处理函数调用了另一个函数
+			//所以return false;也不能停止事件冒泡
+		</script>
+	</body>
+</html>
