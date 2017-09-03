@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Record-showList</title>
+    <script src="__PUBLIC__\..\..\..\lib\jQuery\jquery-3.0.0.min.js"></script>
+</head>
+<body>
+    <table>
+        <thead>
+            <td>标题</td>
+            <td>类型</td>
+            <td>内容</td>
+            <td>时间</td>
+            <td>操作</td>
+            <td>AJAX操作</td>
+        </thead>
+        <tbody><foreach name="records" item="record">
+            <tr>
+                <td>{$record.title}</td>
+                <td>{$record.type}</td>
+                <td>{$record.content}</td>
+                <td>{$record.time}</td>
+                <td>
+                    <a href="{:U("update",array("id"=>$record["id"]))}"><button >修改</button></a>
+                    <a href="{:U("delete",array("id"=>$record["id"]))}"><button >删除</button></a>
+                </td>
+                <td>
+                    <button onclick="ajaxSubmit(this)" data-url="{:U("Api/Record/delete",array("id"=>$record["id"]))}">删除</button>
+                </td>
+            </tr>
+        </foreach></tbody>
+    </table>
+    <div>
+        <a href="{:U("create")}"><button >添加</button></a>
+    </div>
+    <pre id="result"></pre>
+    <script>
+        function ajaxSubmit(ele){
+            var url=$(ele).data("url");
+            $.get(url,null,function(res){
+                $("#result").html("result:"+res);
+            });
+        }
+    </script>
+</body>
+</html>

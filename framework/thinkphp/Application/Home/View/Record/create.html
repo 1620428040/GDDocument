@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="__PUBLIC__\..\..\..\lib\jQuery\jquery-3.0.0.min.js"></script>
+    <title>Record</title>
+</head>
+<body>
+    <form action="{:U("doCreate")}" method="post" id="record-form">
+        <div>
+            <label for="title">标题：</label>
+            <input type="text" name="title" id="title">
+        </div>
+        <div>
+            <label for="type">类型：</label>
+            <select name="type" id="type">
+                <option value="1">正常</option>
+                <option value="2">报错</option>
+                <option value="3">崩溃</option>
+            </select>
+        </div>
+        <div>
+            <label for="content">内容：</label>
+            <textarea name="content" id="content" cols="30" rows="10"></textarea>
+        </div>
+        <!-- <div>
+            <label for="frequency">出现频率：</label>
+            <input type="number" name="frequency" id="frequency">
+        </div>
+        <div>
+            <label for="date">首次出现时间：</label>
+            <input type="date" name="time" id="time">
+        </div>
+        <div>
+            <label for="mail">联系人：</label>
+            <input type="email" name="mail" id="mail">
+        </div> -->
+        <a href="{:U("showList")}"><button type="button">返回列表</button></a>
+        <button type="submit">提交</button>
+        <button type="button" onclick="ajaxSubmit()">AJAX提交</button>
+    </form>
+    <pre id="result"></pre>
+    <script>
+        function ajaxSubmit(){
+            $.post('{:U("Api/Record/create")}',$("#record-form").serialize(),function(res){
+                $("#result").html(res);
+            });
+        }
+    </script>
+</body>
+</html>

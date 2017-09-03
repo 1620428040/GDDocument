@@ -1,8 +1,9 @@
 <?php
-namespace Home\Controller;
+namespace Api\Controller;
 use Think\Controller;
 
-//这个例子需要sql进阶语法.md中的创建的demo数据库
+//这个例子是不使用Model自动创建数据对象时的写法
+//需要sql进阶语法.md中的创建的demo数据库
 class ApiController extends Controller{
     public function create(){
         $name = I('name','');
