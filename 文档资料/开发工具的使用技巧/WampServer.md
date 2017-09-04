@@ -8,3 +8,8 @@ wampserver允许在菜单里直接创建虚拟目录
 
 ### Put Online/Offline
 在比较高的版本上，这个选项放在了任务栏 => wampserver => 右键菜单 => Setting 里
+
+
+### php.ini修改
+实际生效的php.ini文件的路径为：wamp64\bin\php\phpX.X.X\php.ini
+wamp刚安装时，默认在页面上显示错误，需要设置：display_errors = Off
