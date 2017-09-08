@@ -38,7 +38,7 @@ public function __unset($name)
 protected function _initialize()
 
 //对保存到数据库的数据进行处理
-    protected function _facade($data)
+protected function _facade($data)
 // 写入数据前的回调方法 包括新增和更新
 protected function _before_write(&$data)
 

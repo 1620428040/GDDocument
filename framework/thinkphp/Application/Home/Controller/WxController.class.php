@@ -4,15 +4,16 @@ use Think\Controller;
 
 class WxController extends Controller {
     private $appid="wxd07db81313cd477b";
-    private $secret="4105ab810af7951e6188dbaae327c547";
+    private $secret="9f8d951e0fc7433c36a873554541d111";
     public function login(){
+        
         $code=I("code","");
         if($code===""){
             $this->ajaxReturn(["code"=>-1,"info"=>"code不能为空！"]);
         }
         $result=$this->curlGet("https://api.weixin.qq.com/sns/jscode2session",[
-            "appid"=>$appid,
-            "secret"=>$secret,
+            "appid"=>$this->appid,
+            "secret"=>$this->secret,
             "js_code"=>$code,
             "grant_type"=>"authorization_code"
         ]);
@@ -28,7 +29,8 @@ class WxController extends Controller {
         else{
             $data["code"]=-3;
             $data["info"]="请检查参数是否错误";
-            $this->ajaxReturn($data);
+            // echo json_encode($data,JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT);
+            $this->ajaxReturn($data);//,JSON_UNESCAPED_UNICODE|JSON_PRETTY_PRINT
         }
     }
     public function addToCart(){
@@ -48,7 +50,7 @@ class WxController extends Controller {
 
     }
     //以get方式发送curl请求
-    private function curlGet($url,$data){
+    private function curlGet($url,$data){echo json_encode($data);
         $url.= (strpos($url,"?")===false ? "?" : "&") .http_build_query($data);
         $ch=curl_init();
         curl_setopt($ch, CURLOPT_URL, $url);
