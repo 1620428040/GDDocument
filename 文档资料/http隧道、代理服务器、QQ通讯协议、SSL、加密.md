@@ -1,8 +1,9 @@
-[QQ通信协议](http://blog.csdn.net/realxie/article/details/7270119)
-[什么是HTTP隧道，怎么理解HTTP隧道呢？](https://www.zhihu.com/question/21955083)
-[免费代理服务器每小时更新](http://31f.cn/)
-[(腾讯)免费版DVSSL证书](https://console.cloud.tencent.com/ssl?apply=1&fromSource=ssl)
-[openssl基本原理 + 生成证书 + 使用实例](http://blog.csdn.net/oldmtn/article/details/52208747)
+### 参考链接
+- [QQ通信协议](http://blog.csdn.net/realxie/article/details/7270119)
+- [什么是HTTP隧道，怎么理解HTTP隧道呢？](https://www.zhihu.com/question/21955083)
+- [免费代理服务器每小时更新](http://31f.cn/)
+- [(腾讯)免费版DVSSL证书](https://console.cloud.tencent.com/ssl?apply=1&fromSource=ssl)
+- [openssl基本原理 + 生成证书 + 使用实例](http://blog.csdn.net/oldmtn/article/details/52208747)
 
 
 ### 非对称加密
@@ -37,3 +38,7 @@ p12     二进制编码秘钥(PKCS#12：个人信息交换语法标准；文件�
 
 
 ### 例如-在iOS开发时创建证书和秘钥
+
+
+### 例如-支付宝支付签名
+

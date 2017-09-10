@@ -138,7 +138,7 @@ ORDER BY SUM(`o`.`money`) DESC;
 视图是基于 SQL 语句的结果集的可视化的表。
 视图包含行和列，就像一个真实的表。视图中的字段就是来自一个或多个数据库中的真实的表中的字段
 ```sql
-CREATE VIEW person_order AS
+CREATE VIEW `person_order` AS
 SELECT `o`.`pid`,`p`.`lastName`,`p`.`firstName`,count(`o`.`id`) AS `order`,SUM(`o`.`money`) AS `total`
 FROM `person` AS `p` INNER JOIN `order` AS `o` ON `p`.`id`=`o`.`pid`
 GROUP BY `o`.`pid`;
