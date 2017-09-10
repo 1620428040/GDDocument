@@ -18,7 +18,7 @@ IN 操作符允许我们在 WHERE 子句中规定多个值。
 ```sql
 SELECT `id`,`lastName` ,`firstName` FROM `person` WHERE id IN (1,2);
 ```
-####子查询
+#### 子查询
 在IN语句中，允许使用独立的查询，这称为子查询
 ```sql
 SELECT `id`,`num`,`pid`,`money` FROM `order` WHERE `pid` IN 
@@ -26,7 +26,7 @@ SELECT `id`,`num`,`pid`,`money` FROM `order` WHERE `pid` IN
 ```
 
 
-###BETWEEN 操作符
+### BETWEEN 操作符
 操作符 BETWEEN ... AND 会选取介于两个值之间的数据范围。这些值可以是数值、文本或者日期。
 ```sql
 SELECT `id`,`lastName` ,`firstName` FROM `person` WHERE `id` BETWEEN 1 AND 3;
@@ -34,7 +34,7 @@ SELECT `id`,`lastName` ,`firstName` FROM `person` WHERE `id` BETWEEN 1 AND 3;
 - 不同数据库，对是否包含边界上的数据，处理方式不同。
 
 
-###Alias 别名
+### Alias 别名
 表的 SQL Alias 语法
 ```sql
 SELECT `id`,`lastName` ,`firstName` FROM `person` AS `people`;
@@ -48,14 +48,14 @@ SELECT `id` AS `编号`,`lastName` AS `姓` ,`firstName` AS `名` FROM `person`;
 ```
 
 
-###多表联合查询
+### 多表联合查询
 引用多个表中的数据
 ```sql
 SELECT `o`.`id`,`o`.`num`, `p`.`lastName`, `p`.`firstName`
 FROM `person` AS `p`, `order` AS `o`
 WHERE `p`.`id`=`o`.`pid`;
 ```
-####多表联合查询，会在多个表的数据的所有组合中，选出符合条件的组合。如果条件不足，会输出不合适的组合
+#### 多表联合查询，会在多个表的数据的所有组合中，选出符合条件的组合。如果条件不足，会输出不合适的组合
 ```sql
 SELECT `o`.`id`,`o`.`num`, `p`.`lastName`, `p`.`firstName`
 FROM `person` AS `p`, `order` AS `o`
@@ -63,22 +63,22 @@ WHERE `p`.`lastName`='Adams' AND `p`.`firstName`='John';
 ```
 
 
-###JOIN 连接
+### JOIN 连接
 用于根据两个或多个表中的列之间的关系，从这些表中查询数据。
 ```sql
 SELECT `o`.`id`,`o`.`num`, `p`.`lastName`, `p`.`firstName`
 FROM `person` AS `p` INNER JOIN `order` AS `o` ON `p`.`id`=`o`.`pid`
 ORDER BY `o`.`num`;
 ```
-####以上语句与多表联合查询效果一样
-####连接查询的其他选项
+#### 以上语句与多表联合查询效果一样
+#### 连接查询的其他选项
 - INNER JOIN: 如果表中有至少一个匹配，则返回行
 - LEFT JOIN: 即使右表中没有匹配，也从左表返回所有的行
 - RIGHT JOIN: 即使左表中没有匹配，也从右表返回所有的行
 - FULL JOIN: 只要其中一个表中存在匹配，就返回行。但是MySQL不支持FULL JOIN
 
 
-###UNION 合并
+### UNION 合并
 UNION 操作符用于合并两个或多个 SELECT 语句的结果集。
 ```sql
 SELECT `id`,`lastName`,`firstName` FROM `employees_cn`
@@ -89,16 +89,16 @@ SELECT `id`,`lastName`,`firstName` FROM `employees_us`;
 - UNION 命令只会选取不同的值。UNION ALL 命令会列出所有的值。
 
 
-###SELECT INTO
+### SELECT INTO
 您可以把所有的列插入新表
 ```sql
 SELECT * INTO `order_backup` FROM `order`;
 ```
-####MySQL不支持SELECT INTO，可以用CREATE语法替代
+#### MySQL不支持SELECT INTO，可以用CREATE语法替代
 ```sql
 CREATE TABLE `order_backup` (SELECT * FROM `order`);
 ```
-####可以用INSERT INTO实现类似的功能
+#### 可以用INSERT INTO实现类似的功能
 ```sql
 INSERT INTO `order_backup`(`num`,`pid`,`money`) SELECT `num`,`pid`,`money` FROM `order`;
 ```
@@ -106,14 +106,14 @@ INSERT INTO `order_backup`(`num`,`pid`,`money`) SELECT `num`,`pid`,`money` FROM 
 - SELECT INTO创建的表，没有复制原表的主键，自增等设置
 
 
-###GROUP BY 分组
+### GROUP BY 分组
 GROUP BY 语句用于结合合计函数，根据一个或多个列对结果集进行分组。
 ```sql
 SELECT `pid`,count(`id`) AS `order`,SUM(`money`) AS `total` FROM `order` GROUP BY `pid`;
 ```
 - GROUP BY可以将数据按照某一个（或多个）字段的值的不同，将数据分组
 - 返回的数据是对这个组进行统计，而不是某条数据的值
-####分组加联合查询，统计每个用户的订单的数量和总额，按照订单总额排序
+#### 分组加联合查询，统计每个用户的订单的数量和总额，按照订单总额排序
 ```sql
 SELECT `o`.`pid`,`p`.`lastName`,`p`.`firstName`,count(`o`.`id`) AS `order`,SUM(`o`.`money`) AS `total`
 FROM `person` AS `p` INNER JOIN `order` AS `o` ON `p`.`id`=`o`.`pid`
@@ -122,7 +122,7 @@ ORDER BY SUM(`o`.`money`) DESC;
 ```
 
 
-####HAVING
+#### HAVING
 在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与合计函数一起使用。
 HAVING 子句可以实现将函数的结果作为查询条件
 ```sql
@@ -134,7 +134,7 @@ ORDER BY SUM(`o`.`money`) DESC;
 ```
 
 
-###VIEW
+### VIEW
 视图是基于 SQL 语句的结果集的可视化的表。
 视图包含行和列，就像一个真实的表。视图中的字段就是来自一个或多个数据库中的真实的表中的字段
 ```sql
@@ -145,7 +145,7 @@ GROUP BY `o`.`pid`;
 ```
 
 
-###统计函数
+### 统计函数
 - avg()     平均
 - count()   个数
 - first()   第一个，MySQL不支持
@@ -164,7 +164,7 @@ min(`money`) AS `min`
 FROM `order` GROUP BY `pid`;
 ```
 
-###字符串处理
+### 字符串处理
 - ucase()   转换为大写
 - lcase()   转换为小写
 - mid()     提取字符    column_name,start[,length]
@@ -180,7 +180,7 @@ FROM `person`;
 ```
 
 
-###其他函数
+### 其他函数
 - round()   把数值字段舍入为指定的小数位数 column_name,decimals
 - now()     当前系统的日期和时间
 - format()  用于对字段的显示进行格式化   column_name,format
@@ -196,10 +196,10 @@ FROM `user`;
 ```
 
 
-###FOREIGN KEY 外键
+### FOREIGN KEY 外键
 外键约束是约束的一种。约束这玩意用起来很麻烦，有时候还不起作用。反正也没啥用。
 
-####在创建数据表时，添加外键
+#### 在创建数据表时，添加外键
 ```sql
 -- 创建一个带有外键的数据表
 CREATE TABLE  `order2` (
@@ -219,7 +219,7 @@ INSERT INTO `order2` (`num`,`pid`,`money`) VALUES
 (43212,65,7545);
 ```
 
-####给已经存在的数据表插入外键
+#### 给已经存在的数据表插入外键
 ```sql
 ALTER TABLE `order2`
 ADD CONSTRAINT `fk_PerOrders` FOREIGN KEY (`pid`)
@@ -230,7 +230,7 @@ ADD FOREIGN KEY (`pid`)
 REFERENCES `person`(`id`);
 ```
 
-####删除外键
+#### 删除外键
 ```sql
 ALTER TABLE `order2`
 DROP FOREIGN KEY `fk_PerOrders`;
