@@ -116,7 +116,8 @@ SELECT `pid`,count(`id`) AS `order`,SUM(`money`) AS `total` FROM `order` GROUP B
 ####分组加联合查询，统计每个用户的订单的数量和总额，按照订单总额排序
 ```sql
 SELECT `o`.`pid`,`p`.`lastName`,`p`.`firstName`,count(`o`.`id`) AS `order`,SUM(`o`.`money`) AS `total`
-FROM `person` AS `p` INNER JOIN `order` AS `o` ON `p`.`id`=`o`.`pid`
+FROM `person` AS `p` 
+INNER JOIN `order` AS `o` ON `p`.`id`=`o`.`pid`
 GROUP BY `o`.`pid`
 ORDER BY SUM(`o`.`money`) DESC;
 ```
@@ -127,8 +128,8 @@ ORDER BY SUM(`o`.`money`) DESC;
 HAVING 子句可以实现将函数的结果作为查询条件
 ```sql
 SELECT `o`.`pid`,`p`.`lastName`,`p`.`firstName`,count(`o`.`id`) AS `order`,SUM(`o`.`money`) AS `total`
-FROM `person` AS `p` INNER JOIN `order` AS `o` ON `p`.`id`=`o`.`pid`
-GROUP BY `o`.`pid`
+FROM `person` AS `p` 
+INNER JOIN `order` AS `o` ON `p`.`id`=`o`.`pid` GROUP BY `o`.`pid`
 HAVING SUM(`o`.`money`)>=200
 ORDER BY SUM(`o`.`money`) DESC;
 ```
@@ -237,4 +238,143 @@ DROP FOREIGN KEY `fk_PerOrders`;
 -- 如果没有给约束起名
 ALTER TABLE `order2`
 DROP FOREIGN KEY `pid`
+```
+
+### 复杂的多表联查
+做众筹网站的时候，实现过一个功能，需要从投票表、用户投票记录表、用户投资表中统计用户的投票结果（以投资总额为权重）
+```sql
+SELECT `v`.`id` AS `vid`,`f`.`pid`,`f`.`uid`,sum(`f`.`money`) AS `money`,`vu`.`vote`,`v`.`status`
+FROM `tp_fund` AS `f`
+INNER JOIN `tp_vote` AS `v` ON `v`.`pid`=`f`.`pid`
+INNER JOIN `tp_vote_user` AS `vu` ON `vu`.`uid`=`f`.`uid` AND `vu`.`vid`=`v`.`id`
+GROUP BY `f`.`pid`,`f`.`uid`,`vu`.`vote`,`vid`,`v`.`status`
+HAVING `v`.`status` = 'run'
+```
+这种多表联查比较复杂，很容易被迷惑。最好先在纸上画出相应的表的结构图和关联字段
+然后逐个添加表和相关字段，此时产生的结果是几个表中所有数据的组合
+然后添加分组，此时需要注意，所有要输出的字段，要么需要添加到GROUP BY关键字后，作为分组的依据，要么作为统计函数的参数。否则就会出错
+最后用HAVING子句添加搜索条件
+如果需要重复使用这个查询，可以根据这个查询新建视图
+
+
+### 更复杂的多表联查，使用内连接和子查询完成
+功能更复杂了，重新组织了一下。
+用某个表作为主表，从其它表中查询数据做补充
+在原来是表名的位置，使用子查询，构建符合条件的虚表，从而避免将所有搜索条件都混杂在一起
+构建视图时，使用"CREATE OR REPLACE VIEW"代替"CREATE VIEW"
+"[tablename].*"可以代替某个表中的所有字段
+每次修改数据库中相关的表，都要用下面的脚本更新视图，否则视图中的字段不会自动更新
+
+```sql
+-- 项目表扩展视图
+CREATE OR REPLACE VIEW `tp_project_view` AS
+SELECT 
+`p`.*,# 项目的基本信息
+`a`.`username`,# 创建项目的管理员的用户名
+ifnull(`f`.`money`,0) AS `had`,# 已经筹集的金额
+ifnull(`v`.`money`,0) AS `vote`,# 投票中或投票成功的出售金额
+ifnull(`vu`.`count`,0) AS `support`,# 投票支持出售的人数
+`register`.`time` AS `register_time`,# 注册时间
+`begin`.`time` AS `begin_time`,# 众筹开始时间
+`end`.`time` AS `end_time`,# 众筹结束时间
+`complete`.`time` AS `complete_time`# 项目结束时间
+FROM `tp_project` AS `p`
+LEFT JOIN(
+    -- 每个管理员的用户名
+    SELECT `id`,`username` 
+    FROM `tp_admin`
+) AS `a` ON `p`.`uid`=`a`.`id`
+LEFT JOIN(
+    -- 每个项目的投资总额
+    SELECT `pid`,sum(`money`) AS `money` 
+    FROM `tp_fund` 
+    GROUP BY `pid`
+) AS `f` ON `p`.`id`=`f`.`pid`
+LEFT JOIN(
+    -- 每个项目的投票价格
+    SELECT `id`,`pid`,`money`
+    FROM `tp_vote`
+    WHERE `status` in ('run','success')
+) AS `v` ON `p`.`id`=`v`.`pid`
+LEFT JOIN(
+    -- 每个项目的对应的投票的支持人数
+    SELECT `vid`,count(*) AS `count`
+    FROM `tp_vote_user`
+    GROUP BY `vid`,`vote`
+    HAVING `vote`= 'support'
+) AS `vu` ON `v`.`id`=`vu`.`vid`
+LEFT JOIN(
+    -- 每个项目的注册时间
+    SELECT `pid`,`time` FROM `tp_evolve` WHERE `event` = 'register'
+) AS `register` ON `register`.`pid`=`p`.`id`
+LEFT JOIN(
+    -- 每个项目的筹款开始时间
+    SELECT `pid`,`time` FROM `tp_evolve` WHERE `event` = 'fund_begin'
+) AS `begin` ON `begin`.`pid`=`p`.`id`
+LEFT JOIN(
+    -- 每个项目的筹款结束时间
+    SELECT `pid`,`time` FROM `tp_evolve` WHERE `event` = 'fund_end'
+) AS `end` ON `end`.`pid`=`p`.`id`
+LEFT JOIN(
+    -- 每个项目的完成时间
+    SELECT `pid`,`time` FROM `tp_evolve` WHERE `event` = 'complete'
+) AS `complete` ON `complete`.`pid`=`p`.`id`
+
+
+-- 用户投票记录表扩展视图
+CREATE OR REPLACE VIEW `tp_vote_user_view` AS
+SELECT `vu`.*,# 用户投票的基本信息
+`v`.`pid`,# 投票对应的项目ID
+`f`.`total`# 投票的权重(投票的人在此项目的投资总额)
+FROM `tp_vote_user` AS `vu`
+INNER JOIN(
+    -- 每个投票的pid
+    SELECT `id`,`pid`
+    FROM `tp_vote`
+) AS `v` ON `v`.`id`=`vu`.`vid`
+INNER JOIN(
+    -- 每个项目中每个人的投资总额
+    SELECT `pid`,`uid`,sum(`money`) AS `total`
+    FROM `tp_fund`
+    GROUP BY `pid`,`uid`
+) AS `f` ON `f`.`pid`=`v`.`pid` AND `f`.`uid`=`vu`.`uid`
+
+
+-- 投票表扩展视图
+CREATE OR REPLACE VIEW `tp_vote_view` AS
+SELECT `v`.*,# 投票的基本信息
+`f`.`total`,# 对应项目的投资总额
+ifnull(`support`.`total`,0) AS `support`,# 投支持票的用户的投资总额
+ifnull(`oppose`.`total`,0) AS `oppose`,# 投反对票的用户的投资总额
+`begin`.`time` AS `begin_time`,# 投票开始时间
+`end`.`time` AS `end_time`# 投票结束时间
+FROM `tp_vote` AS `v`
+LEFT JOIN(
+    -- 每个项目的投资总额
+    SELECT `pid`,sum(`money`) AS `total` 
+    FROM `tp_fund`
+    GROUP BY `pid`
+) AS `f` ON `v`.`pid`=`f`.`pid`
+LEFT JOIN(
+    -- 每个投票中反对票的总额
+    SELECT `vid`,`pid`,sum(`total`) AS `total`
+    FROM `tp_vote_user_view`
+    GROUP BY `vid`,`pid`,`vote`
+    HAVING `vote` = 'support'
+) AS `support` ON `support`.`vid`=`v`.`id`
+LEFT JOIN(
+    -- 每个投票中反对票的总额
+    SELECT `vid`,`pid`,sum(`total`) AS `total`
+    FROM `tp_vote_user_view`
+    GROUP BY `vid`,`pid`,`vote`
+    HAVING `vote` = 'oppose'
+) AS `oppose` ON `oppose`.`vid`=`v`.`id`
+LEFT JOIN(
+    -- 每个项目的筹款开始时间
+    SELECT `vid`,`time` FROM `tp_evolve` WHERE `event` = 'vote_begin'
+) AS `begin` ON `begin`.`vid`=`v`.`id`
+LEFT JOIN(
+    -- 每个项目的筹款开始时间
+    SELECT `vid`,`time` FROM `tp_evolve` WHERE `event` = 'vote_end'
+) AS `end` ON `end`.`vid`=`v`.`id`
 ```
