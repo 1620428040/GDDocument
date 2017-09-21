@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="{:U("doQuery")}" method="post" target="_blank">
+        <div>
+            <label for="out_trade_no">商户订单号：</label>
+            <input type="text" name="out_trade_no" id="out_trade_no">
+        </div>
+        
+        <div>
+            <label for="trade_no">订单名称：</label>
+            <input type="text" name="trade_no" id="trade_no">
+        </div>
+
+        <div>
+            <input type="submit" value="查询">
+        </div>
+    </form>
+</body>
+</html>
+

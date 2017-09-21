@@ -8,8 +8,7 @@
 class AlipayTradeQueryRequest
 {
 	/** 
-	 * 统一收单线下交易查询
-修改路由策略到R
+	 * 统一收单线下交易查询修改路由策略到R
 	 **/
 	private $bizContent;
 

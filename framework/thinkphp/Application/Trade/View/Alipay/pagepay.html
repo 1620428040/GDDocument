@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script src="http://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <body>
-    <form action="{:U("doPagepay")}" method="post" target="_blank">
+    <form action="{:U("doPagepay")}" method="post" target="_blank" id="trade">
         <div>
             <label for="out_trade_no">商户订单号：</label>
             <input type="text" name="out_trade_no" id="out_trade_no">
@@ -30,9 +31,11 @@
 
         <div>
             <input type="submit" value="付款">
+            <button type="button" onclick="getSignature()">生成签名</button>
         </div>
 
     </form>
+    <pre id="result"></pre>
     <script>
         function GetDateNow() {
             var vNow = new Date();
@@ -50,6 +53,12 @@
             document.getElementById("body").value = "页面支付接口demo";
         }
         GetDateNow();
+
+        function getSignature(){
+            $.post('{:U("signature")}',$("#trade").serialize(),function(data){
+                $("#result").text(data);
+            })
+        }
     </script>
 </body>
 </html>

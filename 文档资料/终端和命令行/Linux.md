@@ -114,7 +114,7 @@ cd：切换目录
 pwd：显示目前的目录
 mkdir：创建一个新的目录
 rmdir：删除一个空的目录
-cp: 复制文件或目录
+cp: 复制文件或目录(cp /test1/file1 /test3/file2 -r)
 rm: 移除文件或目录
 chmod:修改文件的权限
 
@@ -128,3 +128,24 @@ cd 到apachectl所在的目录下，
 ./apachectl restart
 ```
 
+MySQL
+通过mysqld服务控制
+```shell
+ps -ef      查看正在运行的服务
+service mysqld start
+service mysqld stop
+service mysqld restart
+```
+
+通过脚本或者可执行文件
+```shell
+$mysql_dir/bin/mysqladmin -uroot -p shutdown
+$mysql_dir/bin/mysqld_safe &
+```
+
+[备份和恢复](http://www.cnblogs.com/feichexia/p/MysqlDataBackup.html)
+```shell
+mysqldump -uroot -pPassword --all-databases > [dump file]
+mysqldump -uroot -pPassword [database name] > [dump file]
+mysql -uroot -pPassword [database name] < [backup file name]
+```
