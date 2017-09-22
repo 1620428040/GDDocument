@@ -149,3 +149,53 @@ mysqldump -uroot -pPassword --all-databases > [dump file]
 mysqldump -uroot -pPassword [database name] > [dump file]
 mysql -uroot -pPassword [database name] < [backup file name]
 ```
+
+
+### 安装软件
+[yum](http://www.runoob.com/linux/linux-yum.html)
+yum [options] [command] [package ...]
+options：可选，选项包括-h（帮助），-y（当安装过程提示选择全部为"yes"），-q（不显示安装的过程）等等。
+command：要进行的操作。check update update install update list remove search clean
+package操作的对象。
+```shell
+yum install git
+```
+
+
+### git
+[在 Linux 下搭建 Git 服务器](http://www.cnblogs.com/dee0912/p/5815267.html)
+
+usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects]
+           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
+           [--help] COMMAND [ARGS]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory                           复制一个版本库到一个新的目录
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one    创建一个空的git存储库或重新初始化一个现有的git存储库
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+
+--bare  使用这个选项，会创建一个只用来提交的仓库
+
+```shell
+git init gitzc  创建一个新的仓库
+```
