@@ -3,6 +3,7 @@ CREATE TABLE IF NOT EXISTS `alipay` (
   `trade_no` varchar(20) NOT NULL,
   `alipay_trade_no` varchar(30) DEFAULT NULL,
   `trade_type` varchar(10) NOT NULL,
+  `request` varchar(20) NOT NULL,
   `name` varchar(20) NOT NULL,
   `total` float(11,2) NOT NULL,
   `description` varchar(100) NOT NULL,
@@ -11,6 +12,5 @@ CREATE TABLE IF NOT EXISTS `alipay` (
   `return_time` datetime DEFAULT NULL,
   `notify_status` varchar(20) DEFAULT NULL,
   `notify_time` datetime DEFAULT NULL,
-  `trade_data` text,
-  `submit` varchar(20) DEFAULT NULL
+  `trade_data` text
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;

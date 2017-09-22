@@ -39,7 +39,7 @@ class AlipayController extends Controller {
         $trade=$this->getTradeObject();
         $content=$model->createTrade($trade,$_POST);
         if($content===false){
-            echo $model->info;
+            $this->error(json_encode($model->info,JSON_UNESCAPED_UNICODE));
         }
         else{
             echo $model->signature($content);

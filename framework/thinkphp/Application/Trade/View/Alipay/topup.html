@@ -31,6 +31,7 @@
         function getSignature(){
             $.post('{:U("signature")}',$("#trade").serialize(),function(data){
                 $("#result").text(data);
+                console.log(data);
             })
         }
     </script>
